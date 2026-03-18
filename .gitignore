@@ -1,20 +1,39 @@
-.vscode/
-.idea/
-.DS_Store
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.tox/
+.nox/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.pyre/
+
+# Environments
+.env
+.venv
 env/
 venv/
-.env
-.gemini/
-.agents/
-.agent/
-_agents/
-_agent/
-node_modules/
-.ipynb_checkpoints/
+ENV/
+env.bak/
+venv.bak/
+
+# Project Specific
+logs/
 *.log
-/private/tmp/
+storage/
+data/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
