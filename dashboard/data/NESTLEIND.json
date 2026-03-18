@@ -345,7 +345,8 @@
       "free_cash_flow_margin": 4.62,
       "cfo_to_net_profit": 0.92,
       "revenue_growth_pct": 19.58,
-      "profit_growth_pct": 34.18
+      "profit_growth_pct": 34.18,
+      "roce": 36.51
     },
     "FY2022": {
       "net_profit_margin": 14.24,
@@ -354,7 +355,8 @@
       "debt_to_equity": 0.01,
       "debt_to_assets": 0.0,
       "free_cash_flow_margin": 13.03,
-      "cfo_to_net_profit": 1.15
+      "cfo_to_net_profit": 1.15,
+      "roce": 37.98
     }
   },
   "ratios": {
@@ -3040,6 +3042,7 @@
     ],
     "last_updated": "2026-03-18T09:08:10.939918+00:00",
     "parser_version": "v2.0",
-    "validation_passed": true
+    "validation_passed": true,
+    "post_processed": "2026-03-18T18:05:02.051366"
   }
 }
