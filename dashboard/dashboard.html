@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nifty50 AI Analyzer | Institutional Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: '#10b981', success: '#10b981', danger: '#ef4444' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        
+        .mesh-bg {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(161, 84%, 93%, 1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(210, 40%, 96%, 1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(161, 84%, 93%, 1) 0, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(210, 40%, 98%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 50%, hsla(161, 84%, 95%, 1) 0, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(161, 84%, 93%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 100%, hsla(210, 40%, 96%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(161, 84%, 93%, 1) 0, transparent 50%);
+        }
+
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .ticker-content { display: flex; animation: scroll 30s linear infinite; }
+        html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-900 mesh-bg flex flex-col h-screen overflow-hidden">
+
+    <!-- Sticky Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 z-50 shrink-0">
+        <div class="bg-slate-900 text-white text-[10px] py-1 whitespace-nowrap overflow-hidden">
+            <div class="ticker-content flex space-x-12 px-4 italic font-medium">
+                <span>NIFTY 50: 22,023.25 <span class="text-success">+0.65%</span></span>
+                <span>SENSEX: 72,580.40 <span class="text-success">+0.67%</span></span>
+                <span>RELIANCE: 2,945.10 <span class="text-danger">-0.45%</span></span>
+                <span>TCS: 4,120.30 <span class="text-success">+1.20%</span></span>
+                <span>HDFC BANK: 1,450.15 <span class="text-danger">-0.15%</span></span>
+                <span>NIFTY 50: 22,023.25 <span class="text-success">+0.65%</span></span>
+            </div>
+        </div>
+        <nav class="flex items-center justify-between px-6 py-3">
+            <div class="flex items-center space-x-8">
+                <div class="flex items-center space-x-2 cursor-pointer" onclick="window.location.reload()">
+                    <div class="bg-brand w-8 h-8 rounded-lg flex items-center justify-center text-white font-black">N</div>
+                    <span class="text-xl font-bold tracking-tight">Nifty50 <span class="text-brand">AI</span></span>
+                </div>
+                <div class="relative w-96 hidden md:block">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    </span>
+                    <input id="company-search" class="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-xl bg-white/50 text-sm focus:ring-brand transition-all outline-none" placeholder="Search universe..." type="text"/>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="text-right hidden sm:block">
+                    <p class="text-xs font-bold text-slate-900 leading-none">Alexander Thorne</p>
+                    <p class="text-[10px] text-slate-500 font-medium uppercase tracking-widest mt-1">Institutional Pro</p>
+                </div>
+                <div class="size-9 rounded-full border border-slate-200 bg-slate-100 flex items-center justify-center font-bold text-xs">AT</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden min-h-0 bg-transparent">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white/40 backdrop-blur-xl border-r border-slate-200 flex flex-col hidden lg:flex shrink-0">
+            <div class="p-4 space-y-1 overflow-y-auto flex-1 custom-scrollbar" id="company-list">
+                <div class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] px-3 mb-4">Universe</div>
+                <div class="animate-pulse space-y-4 px-3">
+                    <div class="h-3 bg-slate-200 rounded w-full"></div>
+                    <div class="h-3 bg-slate-200 rounded w-2/3"></div>
+                </div>
+            </div>
+            <div class="p-6 border-t border-slate-200/50">
+                <div class="p-3 rounded-xl bg-brand/5 border border-brand/10 text-[9px] font-black text-brand leading-relaxed uppercase tracking-widest">Aida Verified Protocol Active</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto custom-scrollbar relative flex flex-col min-w-0" id="main-panel">
+            
+            <div id="welcome-screen" class="min-h-full flex flex-col items-center justify-center p-12 text-center">
+                <div class="size-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-brand/10">
+                    <svg class="size-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </div>
+                <h2 class="text-4xl font-black text-slate-900 tracking-tight">Financial Intelligence Hub</h2>
+                <p class="text-slate-500 mt-4 max-w-sm mx-auto font-medium">Institutional workflow for verified Nifty constituents.</p>
+            </div>
+
+            <div id="loader" class="hidden min-h-full flex flex-col items-center justify-center">
+                <div class="size-10 border-4 border-slate-200 border-t-brand rounded-full animate-spin"></div>
+            </div>
+
+            <div id="dashboard-content" class="hidden w-full max-w-7xl mx-auto px-8 py-10 space-y-10 flex flex-col">
+                
+                <div class="flex border-b border-slate-200/60 mb-2 overflow-x-auto shrink-0 gap-2">
+                    <button id="tab-main" onclick="switchTab('main')" class="px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand whitespace-nowrap transition-all">Verified Analysis</button>
+                    <button id="tab-peers" onclick="switchTab('peers')" class="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand transition-all whitespace-nowrap">Peer Competition</button>
+                    <button id="tab-docs" onclick="switchTab('docs')" class="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand transition-all whitespace-nowrap">Exchange Filings</button>
+                </div>
+
+                <div id="view-main" class="space-y-10">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                        <div>
+                            <div class="flex items-center gap-4 mb-3">
+                                <h1 id="display-name" class="text-4xl font-black text-slate-900 tracking-tight">Loading...</h1>
+                                <span id="header-symbol" class="text-[10px] font-black bg-brand/5 text-brand px-2.5 py-1.5 rounded-lg border border-brand/10 uppercase tracking-widest">SYMBOL</span>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <span id="display-sector" class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] bg-white shadow-sm border border-slate-100 px-3 py-1.5 rounded-xl">Sector</span>
+                                <div class="flex items-center gap-2 text-brand font-black text-lg">
+                                    <span class="material-symbols-outlined text-lg">trending_up</span>
+                                    <span id="display-price">₹0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="flex bg-white/50 backdrop-blur-md p-1 rounded-2xl border border-slate-200 text-[10px] font-black shadow-sm">
+                                <button id="btn-cons" onclick="setType('consolidated')" class="px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50">Consolidated</button>
+                                <button id="btn-std" onclick="setType('standalone')" class="px-5 py-2.5 rounded-xl hover:text-brand transition-all">Standalone</button>
+                            </div>
+                            <div class="flex bg-white/50 backdrop-blur-md p-1 rounded-2xl border border-slate-200 text-[10px] font-black shadow-sm">
+                                <button id="btn-ann" onclick="setPeriod('annual')" class="px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50">Annual</button>
+                                <button id="btn-qtr" onclick="setPeriod('quarterly')" class="px-5 py-2.5 rounded-xl hover:text-brand transition-all">Quarterly</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="metrics-grid" class="grid grid-cols-2 lg:grid-cols-5 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-2xl shrink-0">
+                        <!-- Dynamic -->
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-10">
+                        <div class="lg:col-span-2 space-y-10 min-w-0">
+                            <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white p-8 shadow-sm">
+                                <h3 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em] mb-8">Revenue Momentum</h3>
+                                <div class="h-80 w-full">
+                                    <canvas id="performanceChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white shadow-sm overflow-hidden">
+                                <div class="p-8 border-b border-slate-100 flex items-center justify-between">
+                                    <h3 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em]">Verified Multi-Year Financials</h3>
+                                    <select id="stmt-selector" onchange="renderTable()" class="text-[10px] font-black p-3 border border-slate-100 rounded-xl outline-none bg-white/50 uppercase tracking-widest cursor-pointer shadow-sm">
+                                        <option value="pl">Profit & Loss</option>
+                                        <option value="bs">Balance Sheet</option>
+                                        <option value="cf">Cash Flow</option>
+                                    </select>
+                                </div>
+                                <div class="overflow-x-auto custom-scrollbar">
+                                    <table class="w-full text-sm text-left border-collapse" id="financial-table">
+                                        <!-- Dynamic -->
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-10 shrink-0">
+                            <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white shadow-sm overflow-hidden flex flex-col h-fit">
+                                <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                                    <h3 class="text-[10px] font-black text-slate-800 uppercase tracking-widest flex items-center">
+                                        <svg class="size-4 text-brand mr-2" fill="currentColor" viewbox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path></svg>
+                                        AI Signal Hub
+                                    </h3>
+                                </div>
+                                <div class="p-6 space-y-6" id="ai-panel">
+                                    <!-- Dynamic -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-peers" class="hidden space-y-10">
+                    <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white p-8 shadow-sm overflow-hidden">
+                        <h3 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em] mb-6">Sector Peer Benchmarking</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-50/50 border-b border-slate-100">
+                                        <th class="px-6 py-4 font-black text-slate-400 text-[10px] uppercase tracking-widest text-left">Peer Stock</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Revenue (Cr)</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Net Profit (Cr)</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">M-Cap (Cr)</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="peer-table-body" class="divide-y divide-slate-50"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-docs" class="hidden space-y-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="docs-grid">
+                        <!-- Dynamic -->
+                    </div>
+                </div>
+
+                <div class="pt-20 pb-12 text-center border-t border-slate-200/50">
+                    <p class="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em]">Institutional Grade Verification Engine v2.0</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<script>
+let allCompanies = [];
+let currentSymbol = null;
+let currentData = null;
+let currentType = 'consolidated';
+let currentPeriod = 'annual';
+let performanceChart = null;
+
+const TBL_MAP = {
+    pl: { key: 'profit_loss', fields: [{k:'revenue_from_operations', l:'Total Revenue'}, {k:'ebitda', l:'EBITDA'}, {k:'interest', l:'Finance Costs'}, {k:'net_profit', l:'Net Profit (PAT)'}, {k:'eps', l:'Earnings Per Share'}] },
+    bs: { key: 'balance_sheet', fields: [{k:'total_assets', l:'Total Assets'}, {k:'total_equity', l:'Equity Share Capital'}, {k:'total_debt', l:'Borrowings'}, {k:'current_assets', l:'Liquid Assets'}] },
+    cf: { key: 'cash_flow', fields: [{k:'cash_from_operations', l:'Cash from Ops'}, {k:'capital_expenditure', l:'Internal Capex'}, {k:'free_cash_flow', l:'Free Cash Flow'}] }
+};
+
+(async function startup() {
+    try {
+        const r = await fetch(`companies.json?t=${Date.now()}`);
+        allCompanies = await r.json();
+        renderSidebar(allCompanies);
+    } catch(e) { console.error(e); }
+})();
+
+document.getElementById('company-search').addEventListener('input', e => {
+    const q = e.target.value.toUpperCase();
+    renderSidebar(allCompanies.filter(c => (c.symbol?.toUpperCase().includes(q) || c.name?.toUpperCase().includes(q))));
+});
+
+function renderSidebar(list) {
+    const box = document.getElementById('company-list');
+    if (!box) return;
+    box.innerHTML = `<div class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] px-3 mb-4">Universe</div>` + 
+        list.map(c => `
+            <div onclick="loadCompany('${c.symbol}')" class="co-item flex items-center space-x-3 px-3 py-3 rounded-2xl transition-all cursor-pointer hover:bg-white/60 ${currentSymbol === c.symbol ? 'bg-white shadow-sm ring-1 ring-slate-200 text-brand' : 'text-slate-600'}">
+                <span class="text-[9px] font-black bg-white px-2 py-1 rounded-lg border border-slate-100 shadow-sm transition-colors uppercase tracking-widest">${c.symbol.slice(0,4)}</span>
+                <span class="truncate text-xs font-bold leading-none tracking-tight">${c.name}</span>
+            </div>
+        `).join('');
+}
+
+async function loadCompany(symbol) {
+    if (symbol === currentSymbol) return;
+    currentSymbol = symbol;
+    document.getElementById('welcome-screen').classList.add('hidden');
+    document.getElementById('dashboard-content').classList.add('hidden');
+    document.getElementById('loader').classList.remove('hidden');
+    renderSidebar(allCompanies);
+
+    try {
+        const res = await fetch(`data/${symbol}.json?t=${Date.now()}`);
+        currentData = await res.json();
+        renderBaseInfo();
+        renderPage();
+        document.getElementById('loader').classList.add('hidden');
+        document.getElementById('dashboard-content').classList.remove('hidden');
+    } catch(err) {
+        document.getElementById('loader').classList.add('hidden');
+        document.getElementById('welcome-screen').classList.remove('hidden');
+    }
+}
+
+function renderBaseInfo() {
+    const co = currentData.company || {};
+    const md = currentData.market_data || {};
+    document.getElementById('display-name').textContent = co.name || 'Unknown';
+    document.getElementById('header-symbol').textContent = co.symbol || 'SYM';
+    document.getElementById('display-sector').textContent = co.sector || 'General';
+    document.getElementById('display-price').textContent = `₹${parseFloat(md.price || 0).toLocaleString('en-IN')}`;
+    
+    // Standalone logic fix
+    const hasS = !!currentData.standalone_profit_loss;
+    const bs = document.getElementById('btn-std');
+    if (bs) {
+        bs.disabled = !hasS;
+        bs.classList.toggle('opacity-30', !hasS);
+    }
+}
+
+function renderPage() {
+    renderRatios();
+    renderCharts();
+    renderTable();
+    renderAI();
+    renderDocs();
+    renderPeers();
+}
+
+function renderRatios() {
+    const dm = currentData.derived_metrics || {};
+    const yr = Object.keys(dm).sort().reverse()[0] || 'FY2025';
+    const m = dm[yr] || {};
+    const md = currentData.market_data || {};
+    const items = [
+        { l: 'M-Cap (Cr)', v: md.market_cap ? `₹${fmt(md.market_cap)}` : '—' },
+        { l: 'Growth (YoY)', v: m.revenue_growth_pct ? `${m.revenue_growth_pct}%` : '—' },
+        { l: 'ROCE', v: m.roce ? `${m.roce}%` : '—' },
+        { l: 'ROE', v: m.roe ? `${m.roe}%` : '—' },
+        { l: 'Profit Margin', v: m.net_profit_margin ? `${m.net_profit_margin}%` : '—' }
+    ];
+    document.getElementById('metrics-grid').innerHTML = items.map(i => `<div class="bg-white p-6 shadow-sm"><div class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">${i.l}</div><div class="text-lg font-black text-slate-900 leading-none">${i.v}</div></div>`).join('');
+}
+
+function renderCharts() {
+    if (performanceChart) performanceChart.destroy();
+    const gd = currentData.graph_data || {};
+    const series = gd['revenue']?.[currentPeriod] || [];
+    if (!series.length) return;
+    performanceChart = new Chart(document.getElementById('performanceChart').getContext('2d'), {
+        type: 'line',
+        data: { labels: series.map(s => s.period), datasets: [{ data: series.map(s => parseFloat(s.value)), borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.05)', borderWidth: 4, fill: true, tension: 0.3, pointRadius: 5, pointBackgroundColor: '#fff' }] },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { ticks: { font: { size: 10, weight: 'bold' }, color: '#94a3b8' } }, x: { grid: { display: false }, ticks: { font: { size: 10, weight: 'bold' }, color: '#94a3b8' } } } }
+    });
+}
+
+function renderTable() {
+    const key = TBL_MAP[document.getElementById('stmt-selector').value].key;
+    const isS = currentType === 'standalone';
+    const dat = (isS ? currentData['standalone_'+key] : currentData[key])?.[currentPeriod] || {};
+    const fields = TBL_MAP[document.getElementById('stmt-selector').value].fields;
+    const p = Object.keys(dat).sort((a,b)=>b.localeCompare(a)).slice(0, 8);
+    let h = `<thead><tr class='bg-slate-50/50'><th class='px-6 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest'>Line Items</th>${p.map(pr => `<th class='px-6 py-5 text-[10px] font-black text-slate-700 text-right'>${pr}</th>`).join('')}</tr></thead><tbody class='divide-y divide-slate-100'>`;
+    fields.forEach(f => {
+        h += `<tr><td class='px-6 py-5 text-xs font-bold text-slate-800'>${f.l}</td>`;
+        p.forEach(pr => {
+            const v = dat[pr]?.[f.k];
+            h += `<td class='px-6 py-5 text-xs text-right font-bold ${v < 0 ? 'text-danger' : 'text-slate-600'} tracking-tight'>₹${fmt(v)}</td>`;
+        });
+        h += `</tr>`;
+    });
+    document.getElementById('financial-table').innerHTML = h + `</tbody>`;
+}
+
+function renderPeers() {
+    const sector = currentData.company?.sector;
+    const peers = allCompanies.filter(c => c.sector === sector && c.symbol !== currentSymbol).slice(0, 10);
+    const body = document.getElementById('peer-table-body');
+    body.innerHTML = peers.map(p => `
+        <tr class="hover:bg-slate-50/50 transition-colors">
+            <td class="px-6 py-5 flex items-center gap-3">
+                <span class="text-[9px] font-black bg-white px-2 py-1 rounded border border-slate-100 uppercase tracking-widest">${p.symbol.slice(0,4)}</span>
+                <span class="text-xs font-bold text-slate-800">${p.name}</span>
+            </td>
+            <td class="px-6 py-5 text-right text-xs font-black text-slate-600 italic">Analysing...</td>
+            <td class="px-6 py-5 text-right text-xs font-black text-slate-600 italic">Analysing...</td>
+            <td class="px-6 py-5 text-right text-xs font-black text-slate-600 italic">Calculating...</td>
+            <td class="px-6 py-5 text-right">
+                <button onclick="loadCompany('${p.symbol}')" class="text-[9px] font-black text-brand uppercase hover:underline">View Insight</button>
+            </td>
+        </tr>
+    `).join('');
+}
+
+function renderAI() {
+    const ins = currentData.insights || [], anom = currentData.anomalies || [], sent = currentData.sentiment || {};
+    let h = '';
+    if (sent.sentiment) h += `<div class='p-5 rounded-2xl bg-white/50 border border-white shadow-sm'><div class='flex justify-between mb-3'><span class='text-[9px] font-black text-slate-400 uppercase'>Sentiment</span><span class='text-[9px] text-brand font-black'>${sent.sentiment}</span></div><p class='text-[11px] text-slate-600 leading-relaxed font-bold'>${sent.summary || ""}</p></div>`;
+    const pos = ins.filter(i => i.severity === 'positive');
+    if (pos.length) h += `<div class='pt-6 border-t border-slate-100'><div class='text-[9px] font-black text-brand uppercase mb-4 tracking-widest'>Growth Signal</div>` + pos.slice(0,2).map(i => `<div class='bg-brand/5 border-l-2 border-brand p-4 rounded-r-2xl mb-2'><p class='text-[11px] font-bold text-slate-800'>${i.message}</p></div>`).join('') + `</div>`;
+    document.getElementById('ai-panel').innerHTML = h || `<div class='py-12 text-center text-[10px] font-bold text-slate-400 italic'>Monitoring...</div>`;
+}
+
+function renderDocs() {
+    const d = currentData.documents || [];
+    const box = document.getElementById('docs-grid');
+    if (!d.length) { box.innerHTML = "<div class='col-span-full py-20 text-center text-slate-400 italic font-medium'>No filings found.</div>"; return; }
+    box.innerHTML = d.map(doc => `<a href="${doc.url}" target="_blank" class="p-8 bg-white/60 backdrop-blur-md border border-white rounded-3xl hover:border-brand/40 hover:shadow-2xl transition-all group"><div class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-4">${doc.type} | ${doc.date || ""}</div><h4 class="text-xs font-black text-slate-900 leading-relaxed uppercase mb-6">${doc.title}</h4><div class="text-[10px] font-black text-brand tracking-widest transition-transform group-hover:translate-x-1">VIEW FILING →</div></a>`).join('');
+}
+
+function fmt(v) { return v === null || v === undefined ? '—' : parseFloat(v).toLocaleString('en-IN', {minimumFractionDigits: 1, maximumFractionDigits: 1}); }
+function switchTab(t) {
+    document.getElementById('view-main').classList.toggle('hidden', t !== 'main');
+    document.getElementById('view-peers').classList.toggle('hidden', t !== 'peers');
+    document.getElementById('view-docs').classList.toggle('hidden', t !== 'docs');
+    document.getElementById('tab-main').className = t === 'main' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
+    document.getElementById('tab-peers').className = t === 'peers' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
+    document.getElementById('tab-docs').className = t === 'docs' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
+}
+function setType(t) { currentType = t; document.getElementById('btn-cons').className = t==='consolidated' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; document.getElementById('btn-std').className = t==='standalone' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; if(t==='standalone' && !currentData.standalone_profit_loss) return; renderPage(); }
+function setPeriod(p) { currentPeriod = p; document.getElementById('btn-ann').className = p==='annual' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; document.getElementById('btn-qtr').className = p==='quarterly' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; renderPage(); }
+
+</script>
+</body>
+</html>

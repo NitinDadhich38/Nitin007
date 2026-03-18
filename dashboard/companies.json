@@ -1,0 +1,302 @@
+[
+  {
+    "symbol": "ADANIENT",
+    "name": "Adani Enterprises Limited",
+    "sector": "Services",
+    "path": "data/ADANIENT.json"
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "name": "Adani Ports and Special Economic Zone Limited",
+    "sector": "Services",
+    "path": "data/ADANIPORTS.json"
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "name": "Apollo Hospitals Enterprise Limited",
+    "sector": "Healthcare",
+    "path": "data/APOLLOHOSP.json"
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints Limited",
+    "sector": "Consumer Durables",
+    "path": "data/ASIANPAINT.json"
+  },
+  {
+    "symbol": "AXISBANK",
+    "name": "Axis Bank Limited",
+    "sector": "Financial Services",
+    "path": "data/AXISBANK.json"
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "name": "Bajaj Auto Limited",
+    "sector": "Automobile and Auto Components",
+    "path": "data/BAJAJ-AUTO.json"
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "name": "Bajaj Finserv Limited",
+    "sector": "Financial Services",
+    "path": "data/BAJAJFINSV.json"
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "name": "Bajaj Finance Limited",
+    "sector": "Financial Services",
+    "path": "data/BAJFINANCE.json"
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel Limited",
+    "sector": "Telecommunication",
+    "path": "data/BHARTIARTL.json"
+  },
+  {
+    "symbol": "BPCL",
+    "name": "Bharat Petroleum Corporation Limited",
+    "sector": "Energy",
+    "path": "data/BPCL.json"
+  },
+  {
+    "symbol": "BRITANNIA",
+    "name": "Britannia Industries Limited",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/BRITANNIA.json"
+  },
+  {
+    "symbol": "CIPLA",
+    "name": "Cipla Limited",
+    "sector": "Healthcare",
+    "path": "data/CIPLA.json"
+  },
+  {
+    "symbol": "COALINDIA",
+    "name": "Coal India Limited",
+    "sector": "Metals & Mining",
+    "path": "data/COALINDIA.json"
+  },
+  {
+    "symbol": "DIVISLAB",
+    "name": "Divi's Laboratories Limited",
+    "sector": "Healthcare",
+    "path": "data/DIVISLAB.json"
+  },
+  {
+    "symbol": "DRREDDY",
+    "name": "Dr. Reddy's Laboratories Limited",
+    "sector": "Healthcare",
+    "path": "data/DRREDDY.json"
+  },
+  {
+    "symbol": "EICHERMOT",
+    "name": "Eicher Motors Limited",
+    "sector": "Automobile and Auto Components",
+    "path": "data/EICHERMOT.json"
+  },
+  {
+    "symbol": "GRASIM",
+    "name": "Grasim Industries Limited",
+    "sector": "Construction Materials",
+    "path": "data/GRASIM.json"
+  },
+  {
+    "symbol": "HCLTECH",
+    "name": "HCL Technologies Limited",
+    "sector": "IT",
+    "path": "data/HCLTECH.json"
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank Limited",
+    "sector": "Financial Services",
+    "path": "data/HDFCBANK.json"
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "name": "HDFC Life Insurance Company Limited",
+    "sector": "Financial Services",
+    "path": "data/HDFCLIFE.json"
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "name": "Hero MotoCorp Limited",
+    "sector": "Automobile and Auto Components",
+    "path": "data/HEROMOTOCO.json"
+  },
+  {
+    "symbol": "HINDALCO",
+    "name": "Hindalco Industries Limited",
+    "sector": "Metals & Mining",
+    "path": "data/HINDALCO.json"
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever Limited",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/HINDUNILVR.json"
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank Limited",
+    "sector": "Financial Services",
+    "path": "data/ICICIBANK.json"
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "name": "IndusInd Bank Limited",
+    "sector": "Financial Services",
+    "path": "data/INDUSINDBK.json"
+  },
+  {
+    "symbol": "INFY",
+    "name": "Infosys Limited",
+    "sector": "IT",
+    "path": "data/INFY.json"
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC Limited",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/ITC.json"
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "name": "JSW Steel Limited",
+    "sector": "Metals & Mining",
+    "path": "data/JSWSTEEL.json"
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "name": "Kotak Mahindra Bank Limited",
+    "sector": "Financial Services",
+    "path": "data/KOTAKBANK.json"
+  },
+  {
+    "symbol": "LT",
+    "name": "Larsen & Toubro Limited",
+    "sector": "Construction",
+    "path": "data/LT.json"
+  },
+  {
+    "symbol": "M&M",
+    "name": "Mahindra & Mahindra Limited",
+    "sector": "Automobile and Auto Components",
+    "path": "data/M&M.json"
+  },
+  {
+    "symbol": "MARUTI",
+    "name": "Maruti Suzuki India Limited",
+    "sector": "Automobile and Auto Components",
+    "path": "data/MARUTI.json"
+  },
+  {
+    "symbol": "NESTLEIND",
+    "name": "Nestle India Limited",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/NESTLEIND.json"
+  },
+  {
+    "symbol": "NTPC",
+    "name": "NTPC Limited",
+    "sector": "Power",
+    "path": "data/NTPC.json"
+  },
+  {
+    "symbol": "ONGC",
+    "name": "Oil and Natural Gas Corporation Limited",
+    "sector": "Energy",
+    "path": "data/ONGC.json"
+  },
+  {
+    "symbol": "POWERGRID",
+    "name": "Power Grid Corporation of India Limited",
+    "sector": "Power",
+    "path": "data/POWERGRID.json"
+  },
+  {
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries Limited",
+    "sector": "Energy",
+    "path": "data/RELIANCE.json"
+  },
+  {
+    "symbol": "SBILIFE",
+    "name": "SBI Life Insurance Company Limited",
+    "sector": "Financial Services",
+    "path": "data/SBILIFE.json"
+  },
+  {
+    "symbol": "SBIN",
+    "name": "State Bank of India",
+    "sector": "Financial Services",
+    "path": "data/SBIN.json"
+  },
+  {
+    "symbol": "SHREECEM",
+    "name": "Shree Cement Limited",
+    "sector": "Construction Materials",
+    "path": "data/SHREECEM.json"
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharmaceutical Industries Limited",
+    "sector": "Healthcare",
+    "path": "data/SUNPHARMA.json"
+  },
+  {
+    "symbol": "TATACONSUM",
+    "name": "Tata Consumer Products Limited",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/TATACONSUM.json"
+  },
+  {
+    "symbol": "TATAMOTORS",
+    "name": "Tata Motors Limited",
+    "sector": "Automobile and Auto Components",
+    "path": "data/TATAMOTORS.json"
+  },
+  {
+    "symbol": "TATASTEEL",
+    "name": "Tata Steel Limited",
+    "sector": "Metals & Mining",
+    "path": "data/TATASTEEL.json"
+  },
+  {
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services Limited",
+    "sector": "IT",
+    "path": "data/TCS.json"
+  },
+  {
+    "symbol": "TECHM",
+    "name": "Tech Mahindra Limited",
+    "sector": "IT",
+    "path": "data/TECHM.json"
+  },
+  {
+    "symbol": "TITAN",
+    "name": "Titan Company Limited",
+    "sector": "Consumer Durables",
+    "path": "data/TITAN.json"
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "name": "UltraTech Cement Limited",
+    "sector": "Construction Materials",
+    "path": "data/ULTRACEMCO.json"
+  },
+  {
+    "symbol": "UPL",
+    "name": "UPL Limited",
+    "sector": "Chemicals",
+    "path": "data/UPL.json"
+  },
+  {
+    "symbol": "WIPRO",
+    "name": "Wipro Limited",
+    "sector": "IT",
+    "path": "data/WIPRO.json"
+  }
+]

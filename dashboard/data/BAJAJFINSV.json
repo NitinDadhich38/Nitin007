@@ -1,0 +1,5590 @@
+{
+  "company": {
+    "ticker": "BAJAJFINSV",
+    "name": "Bajaj Finserv Limited",
+    "symbol": "BAJAJFINSV",
+    "exchange": "NSE/BSE",
+    "sector": "Financial Services",
+    "industry": "Finance",
+    "currency": "INR",
+    "unit": "\u20b9 Crores",
+    "has_standalone": false
+  },
+  "market_data": {
+    "price": 1792.6,
+    "market_cap": 286914.59,
+    "pe": 0.0
+  },
+  "profit_loss": {
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 70.82,
+        "other_income": 9.57,
+        "total_income": 80.39,
+        "operating_expenses": null,
+        "ebitda": 15.46,
+        "ebit": 14.55,
+        "interest": 0.0,
+        "depreciation": 0.91,
+        "profit_before_tax": 14.55,
+        "tax": 3.86,
+        "net_profit": 10.69,
+        "eps": 0.1,
+        "exceptional_items": 0.0
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 1217.11,
+        "other_income": 10.03,
+        "total_income": 1227.14,
+        "operating_expenses": null,
+        "ebitda": 1166.66,
+        "ebit": 1165.75,
+        "interest": 0.0,
+        "depreciation": 0.91,
+        "profit_before_tax": 1165.75,
+        "tax": 258.18,
+        "net_profit": 907.57,
+        "eps": 5.7,
+        "exceptional_items": 0.0
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 909.11,
+        "other_income": 8.63,
+        "total_income": 917.74,
+        "operating_expenses": null,
+        "ebitda": 858.33,
+        "ebit": 857.44,
+        "interest": 0.0,
+        "depreciation": 0.89,
+        "profit_before_tax": 857.44,
+        "tax": 224.4,
+        "net_profit": 633.04,
+        "eps": 4.0,
+        "exceptional_items": 0.0
+      },
+      "Mar 2024": {
+        "revenue_from_operations": 43.63,
+        "other_income": 10.64,
+        "total_income": 54.27,
+        "operating_expenses": null,
+        "ebitda": 15.18,
+        "ebit": 14.3,
+        "interest": 0.0,
+        "depreciation": 0.88,
+        "profit_before_tax": 14.3,
+        "tax": 6.48,
+        "net_profit": 7.82,
+        "eps": 0.05,
+        "exceptional_items": 0.0
+      },
+      "Dec 2023": {
+        "revenue_from_operations": 49.4,
+        "other_income": 7.9,
+        "total_income": 57.3,
+        "operating_expenses": null,
+        "ebitda": 8.26,
+        "ebit": 7.37,
+        "interest": 0.0,
+        "depreciation": 0.89,
+        "profit_before_tax": 7.37,
+        "tax": 2.98,
+        "net_profit": 4.39,
+        "eps": 0.03,
+        "exceptional_items": 0.0
+      },
+      "Dec 2025": {
+        "revenue_from_operations": 32619.45,
+        "other_income": 611.1,
+        "total_income": 33230.55,
+        "operating_expenses": null,
+        "ebitda": null,
+        "ebit": 13158.73,
+        "interest": 7232.45,
+        "depreciation": null,
+        "profit_before_tax": 5926.28,
+        "tax": 1558.71,
+        "net_profit": 2229.15,
+        "eps": 0.0,
+        "exceptional_items": null
+      },
+      "Sep 2025": {
+        "revenue_from_operations": 31564.28,
+        "other_income": 637.76,
+        "total_income": 32202.04,
+        "operating_expenses": null,
+        "ebitda": null,
+        "ebit": 13726.46,
+        "interest": 6901.33,
+        "depreciation": null,
+        "profit_before_tax": 6825.13,
+        "tax": 2078.66,
+        "net_profit": 2244.1,
+        "eps": 0.0,
+        "exceptional_items": null
+      },
+      "Jun 2025": {
+        "revenue_from_operations": 30230.91,
+        "other_income": 532.78,
+        "total_income": 30763.69,
+        "operating_expenses": null,
+        "ebitda": null,
+        "ebit": 14010.14,
+        "interest": 6807.1,
+        "depreciation": null,
+        "profit_before_tax": 7203.04,
+        "tax": 1874.47,
+        "net_profit": 2789.05,
+        "eps": 0.0,
+        "exceptional_items": null
+      },
+      "Mar 2025": {
+        "revenue_from_operations": 38313.9,
+        "other_income": -408.27,
+        "total_income": 37905.63,
+        "operating_expenses": null,
+        "ebitda": null,
+        "ebit": 12398.11,
+        "interest": 6395.79,
+        "depreciation": null,
+        "profit_before_tax": 6002.32,
+        "tax": 1246.0,
+        "net_profit": 2416.64,
+        "eps": null,
+        "exceptional_items": null
+      }
+    },
+    "annual": {
+      "FY2025": {
+        "revenue_from_operations": 121192.48,
+        "other_income": 1473.94,
+        "total_income": 122666.42,
+        "operating_expenses": null,
+        "ebitda": 48413.93,
+        "ebit": 48057.91,
+        "interest": 24309.7,
+        "depreciation": 356.02,
+        "profit_before_tax": 23748.21,
+        "tax": 6190.57,
+        "net_profit": 8872.31,
+        "eps": 0.0,
+        "exceptional_items": null
+      },
+      "FY2024": {
+        "revenue_from_operations": 99880.07,
+        "other_income": 351.11,
+        "total_income": 100231.18,
+        "operating_expenses": null,
+        "ebitda": 40031.79,
+        "ebit": 39774.54,
+        "interest": 18399.51,
+        "depreciation": 257.25,
+        "profit_before_tax": 21375.03,
+        "tax": 5779.67,
+        "net_profit": 8147.79,
+        "eps": 0.0,
+        "exceptional_items": null
+      },
+      "FY2023": {
+        "revenue_from_operations": 73845.92,
+        "other_income": 57.94,
+        "total_income": 73903.86,
+        "operating_expenses": null,
+        "ebitda": 29210.12,
+        "ebit": 29012.55,
+        "interest": 12201.42,
+        "depreciation": 197.57,
+        "profit_before_tax": 16811.13,
+        "tax": 4601.59,
+        "net_profit": 6417.28,
+        "eps": 0.0,
+        "exceptional_items": null
+      },
+      "FY2022": {
+        "revenue_from_operations": 61516.0,
+        "other_income": 383.01,
+        "total_income": 61899.01,
+        "operating_expenses": null,
+        "ebitda": 20922.39,
+        "ebit": 20768.84,
+        "interest": 9498.26,
+        "depreciation": 153.55,
+        "profit_before_tax": 11270.58,
+        "tax": 2957.05,
+        "net_profit": 4556.77,
+        "eps": 0.0,
+        "exceptional_items": null
+      }
+    }
+  },
+  "standalone_profit_loss": {
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 70.82,
+        "other_income": 9.57,
+        "total_income": 80.39,
+        "operating_expenses": null,
+        "ebitda": 15.46,
+        "ebit": 14.55,
+        "interest": 0.0,
+        "depreciation": 0.91,
+        "profit_before_tax": 14.55,
+        "tax": 3.86,
+        "net_profit": 10.69,
+        "eps": 0.1,
+        "exceptional_items": 0.0
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 1217.11,
+        "other_income": 10.03,
+        "total_income": 1227.14,
+        "operating_expenses": null,
+        "ebitda": 1166.66,
+        "ebit": 1165.75,
+        "interest": 0.0,
+        "depreciation": 0.91,
+        "profit_before_tax": 1165.75,
+        "tax": 258.18,
+        "net_profit": 907.57,
+        "eps": 5.7,
+        "exceptional_items": 0.0
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 909.11,
+        "other_income": 8.63,
+        "total_income": 917.74,
+        "operating_expenses": null,
+        "ebitda": 858.33,
+        "ebit": 857.44,
+        "interest": 0.0,
+        "depreciation": 0.89,
+        "profit_before_tax": 857.44,
+        "tax": 224.4,
+        "net_profit": 633.04,
+        "eps": 4.0,
+        "exceptional_items": 0.0
+      },
+      "Mar 2024": {
+        "revenue_from_operations": 43.63,
+        "other_income": 10.64,
+        "total_income": 54.27,
+        "operating_expenses": null,
+        "ebitda": 15.18,
+        "ebit": 14.3,
+        "interest": 0.0,
+        "depreciation": 0.88,
+        "profit_before_tax": 14.3,
+        "tax": 6.48,
+        "net_profit": 7.82,
+        "eps": 0.05,
+        "exceptional_items": 0.0
+      },
+      "Dec 2023": {
+        "revenue_from_operations": 49.4,
+        "other_income": 7.9,
+        "total_income": 57.3,
+        "operating_expenses": null,
+        "ebitda": 8.26,
+        "ebit": 7.37,
+        "interest": 0.0,
+        "depreciation": 0.89,
+        "profit_before_tax": 7.37,
+        "tax": 2.98,
+        "net_profit": 4.39,
+        "eps": 0.03,
+        "exceptional_items": 0.0
+      }
+    },
+    "annual": {}
+  },
+  "balance_sheet": {
+    "annual": {
+      "FY2025": {
+        "equity_share_capital": null,
+        "reserves": null,
+        "total_equity": 72395.31,
+        "total_debt": 282946.71,
+        "long_term_borrowings": 251702.49,
+        "short_term_borrowings": 31244.22,
+        "total_liabilities": 523797.38,
+        "total_assets": 652231.61,
+        "cash_and_equivalents": 5817.0,
+        "investments": null,
+        "receivables": 8319.35,
+        "inventory": null,
+        "ppe": null,
+        "intangible_assets": null,
+        "current_assets": null,
+        "current_liabilities": null,
+        "non_controlling_interest": null,
+        "deferred_tax_assets": null,
+        "deferred_tax_liabilities": null,
+        "working_capital": null,
+        "book_value": null,
+        "shares_outstanding": null
+      },
+      "FY2024": {
+        "equity_share_capital": null,
+        "reserves": null,
+        "total_equity": 60328.62,
+        "total_debt": 227447.91,
+        "long_term_borrowings": 201937.08,
+        "short_term_borrowings": 25510.83,
+        "total_liabilities": 434153.8,
+        "total_assets": 537929.63,
+        "cash_and_equivalents": 5765.02,
+        "investments": null,
+        "receivables": 5973.86,
+        "inventory": null,
+        "ppe": null,
+        "intangible_assets": null,
+        "current_assets": null,
+        "current_liabilities": null,
+        "non_controlling_interest": null,
+        "deferred_tax_assets": null,
+        "deferred_tax_liabilities": null,
+        "working_capital": null,
+        "book_value": null,
+        "shares_outstanding": null
+      },
+      "FY2023": {
+        "equity_share_capital": null,
+        "reserves": null,
+        "total_equity": 46407.34,
+        "total_debt": 166775.72,
+        "long_term_borrowings": 154422.4,
+        "short_term_borrowings": 12353.32,
+        "total_liabilities": 327911.11,
+        "total_assets": 405509.19,
+        "cash_and_equivalents": 2593.62,
+        "investments": null,
+        "receivables": 3458.64,
+        "inventory": null,
+        "ppe": null,
+        "intangible_assets": null,
+        "current_assets": null,
+        "current_liabilities": null,
+        "non_controlling_interest": null,
+        "deferred_tax_assets": null,
+        "deferred_tax_liabilities": null,
+        "working_capital": null,
+        "book_value": null,
+        "shares_outstanding": null
+      },
+      "FY2022": {
+        "equity_share_capital": null,
+        "reserves": null,
+        "total_equity": 40246.8,
+        "total_debt": 129714.88,
+        "long_term_borrowings": 118301.55,
+        "short_term_borrowings": 11413.33,
+        "total_liabilities": 267399.04,
+        "total_assets": 333718.96,
+        "cash_and_equivalents": 4087.16,
+        "investments": null,
+        "receivables": 3004.81,
+        "inventory": null,
+        "ppe": null,
+        "intangible_assets": null,
+        "current_assets": null,
+        "current_liabilities": null,
+        "non_controlling_interest": null,
+        "deferred_tax_assets": null,
+        "deferred_tax_liabilities": null,
+        "working_capital": null,
+        "book_value": null,
+        "shares_outstanding": null
+      }
+    },
+    "quarterly": {}
+  },
+  "cash_flow": {
+    "annual": {
+      "FY2025": {
+        "cash_from_operations": -62113.25,
+        "capital_expenditure": -1863.57,
+        "cash_from_investing": -7986.54,
+        "cash_from_financing": 70191.31,
+        "dividends_paid": null,
+        "net_cash_flow": null,
+        "free_cash_flow": -63976.82
+      },
+      "FY2024": {
+        "cash_from_operations": -65502.04,
+        "capital_expenditure": -1435.46,
+        "cash_from_investing": -14131.71,
+        "cash_from_financing": 82708.61,
+        "dividends_paid": null,
+        "net_cash_flow": null,
+        "free_cash_flow": -66937.5
+      },
+      "FY2023": {
+        "cash_from_operations": -39479.54,
+        "capital_expenditure": -1220.49,
+        "cash_from_investing": -13945.21,
+        "cash_from_financing": 51016.06,
+        "dividends_paid": null,
+        "net_cash_flow": null,
+        "free_cash_flow": -40700.03
+      },
+      "FY2022": {
+        "cash_from_operations": -33669.99,
+        "capital_expenditure": -909.8,
+        "cash_from_investing": 1445.43,
+        "cash_from_financing": 32325.76,
+        "dividends_paid": null,
+        "net_cash_flow": null,
+        "free_cash_flow": -34579.79
+      }
+    },
+    "quarterly": {}
+  },
+  "standalone_balance_sheet": {
+    "annual": {},
+    "quarterly": {}
+  },
+  "standalone_cash_flow": {
+    "annual": {},
+    "quarterly": {}
+  },
+  "derived_metrics": {
+    "FY2025": {
+      "net_profit_margin": 7.32,
+      "operating_margin": 39.95,
+      "roe": 12.26,
+      "roa": 1.36,
+      "debt_to_equity": 3.91,
+      "debt_to_assets": 0.43,
+      "free_cash_flow_margin": -52.79,
+      "cfo_to_net_profit": -7.0,
+      "revenue_growth_pct": 21.34,
+      "profit_growth_pct": 8.89
+    },
+    "FY2024": {
+      "net_profit_margin": 8.16,
+      "operating_margin": 40.08,
+      "roe": 13.51,
+      "roa": 1.51,
+      "debt_to_equity": 3.77,
+      "debt_to_assets": 0.42,
+      "free_cash_flow_margin": -67.02,
+      "cfo_to_net_profit": -8.04,
+      "revenue_growth_pct": 35.25,
+      "profit_growth_pct": 26.97
+    },
+    "FY2023": {
+      "net_profit_margin": 8.69,
+      "operating_margin": 39.56,
+      "roe": 13.83,
+      "roa": 1.58,
+      "debt_to_equity": 3.59,
+      "debt_to_assets": 0.41,
+      "free_cash_flow_margin": -55.11,
+      "cfo_to_net_profit": -6.15,
+      "revenue_growth_pct": 20.04,
+      "profit_growth_pct": 40.83
+    },
+    "FY2022": {
+      "net_profit_margin": 7.41,
+      "operating_margin": 34.01,
+      "roe": 11.32,
+      "roa": 1.37,
+      "debt_to_equity": 3.22,
+      "debt_to_assets": 0.39,
+      "free_cash_flow_margin": -56.21,
+      "cfo_to_net_profit": -7.39
+    }
+  },
+  "ratios": {
+    "annual": {
+      "FY2025": {
+        "net_profit_margin": 7.32,
+        "operating_margin": 39.95,
+        "roe": 12.26,
+        "roa": 1.36,
+        "debt_to_equity": 3.91,
+        "debt_to_assets": 0.43,
+        "free_cash_flow_margin": -52.79,
+        "cfo_to_net_profit": -7.0,
+        "revenue_growth_pct": 21.34,
+        "profit_growth_pct": 8.89
+      },
+      "FY2024": {
+        "net_profit_margin": 8.16,
+        "operating_margin": 40.08,
+        "roe": 13.51,
+        "roa": 1.51,
+        "debt_to_equity": 3.77,
+        "debt_to_assets": 0.42,
+        "free_cash_flow_margin": -67.02,
+        "cfo_to_net_profit": -8.04,
+        "revenue_growth_pct": 35.25,
+        "profit_growth_pct": 26.97
+      },
+      "FY2023": {
+        "net_profit_margin": 8.69,
+        "operating_margin": 39.56,
+        "roe": 13.83,
+        "roa": 1.58,
+        "debt_to_equity": 3.59,
+        "debt_to_assets": 0.41,
+        "free_cash_flow_margin": -55.11,
+        "cfo_to_net_profit": -6.15,
+        "revenue_growth_pct": 20.04,
+        "profit_growth_pct": 40.83
+      },
+      "FY2022": {
+        "net_profit_margin": 7.41,
+        "operating_margin": 34.01,
+        "roe": 11.32,
+        "roa": 1.37,
+        "debt_to_equity": 3.22,
+        "debt_to_assets": 0.39,
+        "free_cash_flow_margin": -56.21,
+        "cfo_to_net_profit": -7.39
+      }
+    },
+    "quarterly": {}
+  },
+  "growth": {
+    "annual": {
+      "revenue_yoy_pct": {
+        "FY2025": 21.34,
+        "FY2024": 35.25,
+        "FY2023": 20.04
+      },
+      "net_profit_yoy_pct": {
+        "FY2025": 8.89,
+        "FY2024": 26.97,
+        "FY2023": 40.83
+      }
+    },
+    "quarterly": {}
+  },
+  "graph_data": {
+    "revenue": {
+      "label": "Revenue",
+      "unit": "\u20b9 Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 49.4
+        },
+        {
+          "period": "Mar 2024",
+          "value": 43.63
+        },
+        {
+          "period": "Jun 2024",
+          "value": 909.11
+        },
+        {
+          "period": "Sep 2024",
+          "value": 1217.11
+        },
+        {
+          "period": "Dec 2024",
+          "value": 70.82
+        },
+        {
+          "period": "Mar 2025",
+          "value": 38313.9
+        },
+        {
+          "period": "Jun 2025",
+          "value": 30230.91
+        },
+        {
+          "period": "Sep 2025",
+          "value": 31564.28
+        },
+        {
+          "period": "Dec 2025",
+          "value": 32619.45
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 61516.0
+        },
+        {
+          "period": "FY2023",
+          "value": 73845.92
+        },
+        {
+          "period": "FY2024",
+          "value": 99880.07
+        },
+        {
+          "period": "FY2025",
+          "value": 121192.48
+        }
+      ]
+    },
+    "net_profit": {
+      "label": "Net_profit",
+      "unit": "\u20b9 Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 4.39
+        },
+        {
+          "period": "Mar 2024",
+          "value": 7.82
+        },
+        {
+          "period": "Jun 2024",
+          "value": 633.04
+        },
+        {
+          "period": "Sep 2024",
+          "value": 907.57
+        },
+        {
+          "period": "Dec 2024",
+          "value": 10.69
+        },
+        {
+          "period": "Mar 2025",
+          "value": 2416.64
+        },
+        {
+          "period": "Jun 2025",
+          "value": 2789.05
+        },
+        {
+          "period": "Sep 2025",
+          "value": 2244.1
+        },
+        {
+          "period": "Dec 2025",
+          "value": 2229.15
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 4556.77
+        },
+        {
+          "period": "FY2023",
+          "value": 6417.28
+        },
+        {
+          "period": "FY2024",
+          "value": 8147.79
+        },
+        {
+          "period": "FY2025",
+          "value": 8872.31
+        }
+      ]
+    },
+    "ebitda": {
+      "label": "Ebitda",
+      "unit": "\u20b9 Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 8.26
+        },
+        {
+          "period": "Mar 2024",
+          "value": 15.18
+        },
+        {
+          "period": "Jun 2024",
+          "value": 858.33
+        },
+        {
+          "period": "Sep 2024",
+          "value": 1166.66
+        },
+        {
+          "period": "Dec 2024",
+          "value": 15.46
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 20922.39
+        },
+        {
+          "period": "FY2023",
+          "value": 29210.12
+        },
+        {
+          "period": "FY2024",
+          "value": 40031.79
+        },
+        {
+          "period": "FY2025",
+          "value": 48413.93
+        }
+      ]
+    },
+    "eps": {
+      "label": "Eps",
+      "unit": "EPS (\u20b9)",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 0.03
+        },
+        {
+          "period": "Mar 2024",
+          "value": 0.05
+        },
+        {
+          "period": "Jun 2024",
+          "value": 4.0
+        },
+        {
+          "period": "Sep 2024",
+          "value": 5.7
+        },
+        {
+          "period": "Dec 2024",
+          "value": 0.1
+        },
+        {
+          "period": "Jun 2025",
+          "value": 0.0
+        },
+        {
+          "period": "Sep 2025",
+          "value": 0.0
+        },
+        {
+          "period": "Dec 2025",
+          "value": 0.0
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 0.0
+        },
+        {
+          "period": "FY2023",
+          "value": 0.0
+        },
+        {
+          "period": "FY2024",
+          "value": 0.0
+        },
+        {
+          "period": "FY2025",
+          "value": 0.0
+        }
+      ]
+    },
+    "profit_before_tax": {
+      "label": "Profit_before_tax",
+      "unit": "\u20b9 Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 7.37
+        },
+        {
+          "period": "Mar 2024",
+          "value": 14.3
+        },
+        {
+          "period": "Jun 2024",
+          "value": 857.44
+        },
+        {
+          "period": "Sep 2024",
+          "value": 1165.75
+        },
+        {
+          "period": "Dec 2024",
+          "value": 14.55
+        },
+        {
+          "period": "Mar 2025",
+          "value": 6002.32
+        },
+        {
+          "period": "Jun 2025",
+          "value": 7203.04
+        },
+        {
+          "period": "Sep 2025",
+          "value": 6825.13
+        },
+        {
+          "period": "Dec 2025",
+          "value": 5926.28
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 11270.58
+        },
+        {
+          "period": "FY2023",
+          "value": 16811.13
+        },
+        {
+          "period": "FY2024",
+          "value": 21375.03
+        },
+        {
+          "period": "FY2025",
+          "value": 23748.21
+        }
+      ]
+    },
+    "interest": {
+      "label": "Interest",
+      "unit": "\u20b9 Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 0.0
+        },
+        {
+          "period": "Mar 2024",
+          "value": 0.0
+        },
+        {
+          "period": "Jun 2024",
+          "value": 0.0
+        },
+        {
+          "period": "Sep 2024",
+          "value": 0.0
+        },
+        {
+          "period": "Dec 2024",
+          "value": 0.0
+        },
+        {
+          "period": "Mar 2025",
+          "value": 6395.79
+        },
+        {
+          "period": "Jun 2025",
+          "value": 6807.1
+        },
+        {
+          "period": "Sep 2025",
+          "value": 6901.33
+        },
+        {
+          "period": "Dec 2025",
+          "value": 7232.45
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 9498.26
+        },
+        {
+          "period": "FY2023",
+          "value": 12201.42
+        },
+        {
+          "period": "FY2024",
+          "value": 18399.51
+        },
+        {
+          "period": "FY2025",
+          "value": 24309.7
+        }
+      ]
+    },
+    "Total Debt": {
+      "label": "Total debt",
+      "unit": "\u20b9 Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 129714.88
+        },
+        {
+          "period": "FY2023",
+          "value": 166775.72
+        },
+        {
+          "period": "FY2024",
+          "value": 227447.91
+        },
+        {
+          "period": "FY2025",
+          "value": 282946.71
+        }
+      ]
+    },
+    "Total Equity": {
+      "label": "Total equity",
+      "unit": "\u20b9 Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 40246.8
+        },
+        {
+          "period": "FY2023",
+          "value": 46407.34
+        },
+        {
+          "period": "FY2024",
+          "value": 60328.62
+        },
+        {
+          "period": "FY2025",
+          "value": 72395.31
+        }
+      ]
+    },
+    "Total Assets": {
+      "label": "Total assets",
+      "unit": "\u20b9 Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 333718.96
+        },
+        {
+          "period": "FY2023",
+          "value": 405509.19
+        },
+        {
+          "period": "FY2024",
+          "value": 537929.63
+        },
+        {
+          "period": "FY2025",
+          "value": 652231.61
+        }
+      ]
+    },
+    "Cash from Operations": {
+      "label": "Cash from operations",
+      "unit": "\u20b9 Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": -33669.99
+        },
+        {
+          "period": "FY2023",
+          "value": -39479.54
+        },
+        {
+          "period": "FY2024",
+          "value": -65502.04
+        },
+        {
+          "period": "FY2025",
+          "value": -62113.25
+        }
+      ]
+    },
+    "Free Cash Flow": {
+      "label": "Free cash flow",
+      "unit": "\u20b9 Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": -34579.79
+        },
+        {
+          "period": "FY2023",
+          "value": -40700.03
+        },
+        {
+          "period": "FY2024",
+          "value": -66937.5
+        },
+        {
+          "period": "FY2025",
+          "value": -63976.82
+        }
+      ]
+    },
+    "Capex": {
+      "label": "Capex",
+      "unit": "\u20b9 Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": -909.8
+        },
+        {
+          "period": "FY2023",
+          "value": -1220.49
+        },
+        {
+          "period": "FY2024",
+          "value": -1435.46
+        },
+        {
+          "period": "FY2025",
+          "value": -1863.57
+        }
+      ]
+    }
+  },
+  "insights": [
+    {
+      "rule_id": "roe_moderate",
+      "message": "Moderate capital efficiency \u2014 ROE 12.3% in FY2025",
+      "severity": "neutral",
+      "basis": "ROE=12.3%"
+    },
+    {
+      "rule_id": "high_leverage",
+      "message": "High leverage risk \u2014 Debt/Equity ratio 3.91x (>2x) in FY2025",
+      "severity": "negative",
+      "basis": "D/E=3.91x"
+    },
+    {
+      "rule_id": "poor_cash_conversion",
+      "message": "Poor cash conversion \u2014 negative CFO despite reported profit in FY2025",
+      "severity": "negative",
+      "basis": "CFO/NP=-7.00x"
+    },
+    {
+      "rule_id": "negative_fcf",
+      "message": "Negative Free Cash Flow margin -52.8% in FY2025 \u2014 heavy capex phase",
+      "severity": "warning",
+      "basis": "FCFMargin=-52.8%"
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "negative_fcf",
+      "period": "FY2024",
+      "value": null,
+      "severity": "warning",
+      "message": "Free cash flow has been negative for 2+ consecutive years ending FY2024 \u2014 sustained cash burn",
+      "source": "DETERMINISTIC_RULE"
+    },
+    {
+      "type": "negative_fcf",
+      "period": "FY2023",
+      "value": null,
+      "severity": "warning",
+      "message": "Free cash flow has been negative for 3+ consecutive years ending FY2023 \u2014 sustained cash burn",
+      "source": "DETERMINISTIC_RULE"
+    }
+  ],
+  "documents": [
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "12032026112014",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_12032026111949_BFSAllianzTransactionCompletion12March2025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "09032026171356",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_09032026171335_BFSBGILBLILUPSIFeb25.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "17022026183631",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17022026183603_BFS_ESOP_Intimation.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "11022026192247",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11022026192236_BFSCALLTRANSCRIPTQ3FY26.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07022026184527",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07022026184508_SE_intimation_InsuranceCos_Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "05022026194150",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_05022026194056_ConferenceCall_Recordings.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "04022026172704",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_04022026172636_BFSIP040226.pdf",
+      "category": ""
+    },
+    {
+      "title": "Issue of Securities",
+      "type": "Other",
+      "date": "04022026132317",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_04022026132304_BFSISSUEOFSEC.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "04022026132002",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_04022026131803_BFSOUTCOMEOFBM040226.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "04022026131541",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_04022026131518_BFSOUTCOMEOFBM040226.pdf",
+      "category": ""
+    },
+    {
+      "title": "Resignation",
+      "type": "Other",
+      "date": "31012026191700",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_31012026191632_BFSSEPURAVJHAVERI310126.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23012026163832",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_23012026163753_BFSSEINTIMATION230126.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "16012026181721",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16012026181645_BFSAcquisitionBFDL2026.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "14012026120209",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_14012026120140_74_Intimation.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "08012026173327",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_08012026173256_BFSSEintimation8Jan2026.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "29122025191735",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29122025191712_BFSTradingwindowclosure29122025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08122025200027",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_08122025195952_BFSBGILBLILUPSINOV25Final.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "05122025203651",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_05122025203624_BFSInvestorDay051225.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "05122025085052",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_05122025085038_BFSInvestorDayPresentation5122025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "02122025200232",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_02122025200207_BFSIC_021225.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "01122025182123",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_01122025182058_BFSInvestorDay051225.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "17112025201116",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17112025201056_BFSH1171125.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "17112025131738",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17112025131710_BFSCALLTRANSCRIPTQ2FY26.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "14112025184930",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_14112025184908_BFS-SE_Intimation-Avendus.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "12112025185601",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_12112025185544_BFSVolumeclarification121125.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "11112025204427",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11112025204348_BFSAudiorecording11November2025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "11112025183848",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11112025183827_BFSBAGICBALICUPSIOCT25Final.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "11112025135930",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11112025135918_BFSIP11November2025SE.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "11112025134850",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11112025134637_BFSOutcomeofBM11November2025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "11112025134403",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11112025134341_BFSOutcomeofBM11November2025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "03112025185954",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_03112025185928_BFSSEINTIMATIONSCHEDULE031125.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "01112025182237",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_01112025182124_BFSSEGROUPCHRO01112025_SG.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "14102025195949",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_14102025195922_BFSREG74FINAL__002_.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "11102025135940",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11102025135914_BFSBAGICBALICUPSISEP25Final.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "07102025175204",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07102025175127_SEIntimationReg30071025SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "26092025202230",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_26092025202204_BFSTWC260925.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "18092025223732",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_18092025223718_BFSINVESTORMEETCALLSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "17092025202029",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17092025202018_BFSCONFERENCECALLSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "15092025192115",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_15092025192055_BFSFAIRDISCLOSURECODE.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12092025192547",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_12092025192532_BFSCONFERENCECALL.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "10092025185858",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_10092025185813_BFSBAGICBALICUPSIAUG25.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "29082025212932",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29082025212904_BFS-Appointment_SE_Intimation_SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "26082025215009",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_26082025214743_SE_Initimation_Step_down_subsidiary_260825.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "26082025164046",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_26082025164015_BFS_SEINTIMATION_NEWSUBSIDIARY.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "18082025165947",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_18082025165934_BFSROADSHOW180825SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "18082025165727",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_18082025165715_BFSROADSHOW180825SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "18082025165543",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_18082025165452_BFSROADSHOW180825SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "12082025172615",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_12082025172558_BFSSEINTIMATION120825SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08082025160756",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_08082025160737_BFSBAGICBALICUPSIJULY25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "01082025190136",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_01082025190119_BFSROADSHOWPPT010825SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "01082025162050",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_01082025162034_BFSINVESTORCALLTRANSCRIPTSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "31072025212319",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_31072025212301_BFSROADSHOW310725SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "31072025212143",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_31072025212015_BFSROADSHOW310725SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "31072025211746",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_31072025211708_BFSROADSHOW310725SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "28072025190639",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_28072025190615_BFS_VotingResults_signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "26072025164401",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_26072025164240_BFSInvestorsConferenceCall_AudiocallSD_1.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "25072025200614",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_25072025200417_AGMproceedings_BFS.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "25072025153928",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_25072025153917_InvestorPresentation2.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "25072025120516",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_25072025120459_OUTCOMEBSENSE.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "25072025120336",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_25072025120308_OUTCOMEBSENSE.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "15072025232505",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_15072025232444_BFSSEINTIMATION150725SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "15072025164736",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_15072025164636_BFSINVESTORCALLQ1FY26.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "08072025151344",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_08072025151323_BFS_-_74_5__Stock_Exchange_Intimation.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "03072025171645",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_03072025171616_BFSNewspaperADIntimationSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "02072025210658",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_02072025210631_BRSRIntimationSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "02072025204755",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_02072025204728_BFSAnnualReportIntimationSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "30062025203455",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30062025203436_BFSTWC300625SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "10062025125853",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_10062025125809_BFSBAGICBALICUPSIMAY25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "10062025100252",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_10062025100200_BFS-Appointment_SE_Intimation.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07062025175236",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07062025175206_BFSTDSCOMMUNICATION070625SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "21052025095644",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_21052025095532_SE_letter_Allianz.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "20052025171057",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_20052025170902_BFSPBVOTINGRESULTS.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "10052025130134",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_10052025130114_BFS_Investormeetppt.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "09052025204007",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_09052025203843_BFSOUTCOME290425v2.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08052025110732",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_08052025110702_BFSBAGICBALICUPSIAPRIL25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07052025191617",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07052025191602_BFS_Roadshowintimation_sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07052025191113",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07052025191100_BFS_Transcriptintimation_sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "07052025185153",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07052025185125_BFSALLOTMENTOFSECURITIESSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "30042025172912",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30042025172859_BFSAUDIORECORDINGQ4FY25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "29042025211350",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025211254_BFSOUTCOME290425SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "29042025210621",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025210602_SEintimation_Investorpresentation_final.pdf",
+      "category": ""
+    },
+    {
+      "title": "Issue of Securities",
+      "type": "Other",
+      "date": "29042025204640",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025204621_BFSISSUEOFSECURITIES_sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Record Date",
+      "type": "Other",
+      "date": "29042025203801",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025203734_BFSOUTCOME290425SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Auditors",
+      "type": "Other",
+      "date": "29042025201816",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025201800_BFSOUTCOMESECRETARIALAUDITOR_sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "29042025201058",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025201035_BFS_grantofstockoptions_sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "29042025200027",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025200010_BFSOUTCOME290425SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "29042025195340",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025194827_BFSOUTCOME290425SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "29042025193803",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025193710_BFSOUTCOME290425SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "29042025193458",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29042025193417_BFSOUTCOME290425SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "22042025131240",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_22042025131134_BFSINVESTORCALLQ4FY25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "18042025184408",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_18042025184352_BFS_PB_Newspaper_ad_intimationSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "18042025081816",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_18042025081723_SEintimationdispatchPBSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "17042025162715",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17042025162650_BFSBAGICBALICUPSIMARCH25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "16042025111254",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16042025111234_BFSREGULATION74INTIMATIONSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "15042025181232",
+      "url": "https://nsearchives.nseindia.com/corporate/team_bbodade_15042025145945_BAJAJFINSV.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "31032025195735",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_31032025195708_BFS-Trading_Window_Closure.pdf",
+      "category": ""
+    },
+    {
+      "title": "Acquisition",
+      "type": "Other",
+      "date": "26032025220721",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_26032025220642_BFSConversionintimation.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "24032025190542",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_24032025190421_BFSFairDisclosureCodesd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "21032025132916",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_21032025132758_BFSSEintimation210325sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "18032025220556",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_18032025220524_BFSINVESTORCALL180325.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "17032025221724",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17032025221650_Intimation.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06032025155416",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_06032025155212_BFSBAGICBALICUPSIFEB25SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "21022025131108",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_21022025131009_BFSSEINTIMATION210225SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "06022025200255",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_06022025200009_SEintimationwithtranscriptsd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06022025190651",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_06022025190632_BFSBAGICBALICUPSIJAN25SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "05022025175627",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_05022025175548_BFSTransfcriptIntimationQ3FY25.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "31012025161240",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_31012025161209_BFSAudioRecording310125SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Integrated Filing- Financial",
+      "type": "Other",
+      "date": "30012025171346",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30012025171335_BFSSEintimationIntegratedFinancialssigned.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "30012025161625",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30012025161556_BFSSEintimationinvestorPPTQ3FY25.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "30012025131110",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30012025131026_BFSSEOUTCOMEOFBM30012025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "30012025130804",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30012025130610_BFSSECHANGEINSMP30012025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "30012025125910",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30012025125823_BFSSECHANGEINSMP30012025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "30012025125424",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSSEOUTCOMEOFBM30012025_30012025125424.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "30012025125208",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_30012025125150_BFSSEOUTCOMEOFBM30012025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "26012025132410",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_26012025132346_BFSSEintimationBFLGSTOrder.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23012025200043",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_23012025195950_BFSINVESTORCALLQ3FY2025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "08012025174041",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_08012025174026_BFSREG74Intimationsd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06012025181505",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_06012025181440_BFSSEINTIMATIONJANUARY2025.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "27122024183358",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27122024183307_BFSSEINTIMATIONTWQ3FY25.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "10122024231714",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10122024231714_BFSInvestordayoutcome2024new.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "10122024173536",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10122024173536_BFSSEINTIMATIONINVESTORPRESENTATIONDECEMBER2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "09122024161432",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09122024161432_BFSSEINTIMATIONDECEMBER2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "02122024181152",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_02122024181152_BFSINVESTORDAYINTIMATION2024SIGNEDUPLOADING.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08112024161840",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08112024161840_BFSSEINTIMATIONNOVEMBER2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07112024200838",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07112024200838_BFSSEINTIMATIONINVESTORMEET12NOV2024sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "30102024154204",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30102024154204_BFSTRANSCRIPTSEINTIMATIONQ2FY25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "29102024183206",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29102024183206_BFSH1FY25SEINTIMATIONsd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "25102024193137",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25102024193137_BFSLINKOFRECORDINGQ2FY25SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "24102024150715",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24102024150715_BFSSEintimationinvestorPPTQ2FY25.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "23102024133131",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSOUTCOMEOFBM23102024SIGNED_23102024133131.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "23102024132907",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23102024132908_BFSOUTCOMEOFBM23102024SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Rumour Verification - Regulation 30(11)",
+      "type": "Other",
+      "date": "22102024132150",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22102024132150_BFSSEintimation22102024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "18102024183601",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_18102024183601_BFSSCHEDULEOFANALYSTMEETQ2FY25SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "07102024192349",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07102024192349_BFSIntimation74Q2FY25signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07102024190142",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07102024190142_BFSSEINTIMATIONOCTOBER2024sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "30092024185111",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30092024185111_BFSTradingwindowclosure30Sep2024sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "27092024174655",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27092024174655_BFSSELetterVGLOC27092024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06092024191420",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06092024191420_BAGICBALICPROVISIONALNUMBERSAUG.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "29082024184010",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29082024184011_BFSLossofsharecertificateCV83v1signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07082024161438",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07082024161438_BAGICBALICSEINTIMATIONAUG24SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "31072024130056",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_31072024130056_BFSTranscriptinvestorcallQ1FY2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "25072024194737",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25072024194738_BFSAudiorecordinginvestorcallQ1FY2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "25072024194503",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25072024194503_BFS_Votingresults24July2024Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "25072024001533",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25072024001533_BFSInvestorpresentationQ1FY25.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "24072024225113",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24072024225113_BFSAGM2024Proceedings.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "24072024121233",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24072024121234_BFSOUTCOME24JULY24SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "24072024120834",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSOUTCOME24JULY24SIGNED_24072024120834.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "24072024120545",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24072024120546_BFSOUTCOME24JULY24SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "16072024172455",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16072024172455_BFSSCHEDULEOFANALYSTMEETJULY24SD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "12072024130246",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12072024130246_BFS745Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08072024175757",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08072024175757_SEIntimationBAGICandBALICJuly2024v1signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "30062024141510",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30062024141510_BFSSEIntimationNewspaperPublicationJuly24.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "27062024194615",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27062024194615_BFSSELetterBRSRFY2024uploading.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "27062024193400",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27062024193400_BFSSELetterNoticeof17THAGMuploading.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07062024231619",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07062024231619_SEIntimationTDSCommunication2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07062024200551",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07062024200551_BFSSEIntimationBAGICBALICJune2024signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Allotment of Securities",
+      "type": "Other",
+      "date": "27052024180916",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27052024180916_BFSAllotmentofsecuritiesApril2024signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06052024190912",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06052024190912_SEIntimationBAGICBALIC6May2024signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "03052024183037",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03052024183037_BFSTranscriptofinvestorcall26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "30042024200653",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30042024200653_BFSSELETETRLOCARUNARANJENDRA.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "26042024211129",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024211129_BFSESOP26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "26042024195404",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024195404_BFSoutcomeofinvestorcall26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "26042024165656",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024165656_BFSOutcomeofBM26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Record Date",
+      "type": "Other",
+      "date": "26042024164701",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024164701_BFSOutcomeofBM26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "26042024141949",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024141949_BFSInvestorsPresentation26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend Updates",
+      "type": "Other",
+      "date": "26042024141712",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024141712_BFSOutcomeofBM26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "26042024141543",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024141543_BFSOutcomeofBM26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Issue of Securities",
+      "type": "Other",
+      "date": "26042024141421",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024141422_BFSIssueofSecurities26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Director(s)",
+      "type": "Other",
+      "date": "26042024141211",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024141211_BFSMBSLETTER.pdf",
+      "category": ""
+    },
+    {
+      "title": "Date of payment of dividend",
+      "type": "Other",
+      "date": "26042024140743",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024140743_BFSOutcomeofBM26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "26042024140628",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024140628_BFSOutcomeofBM26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "26042024140324",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSOutcomeofBM26April2024_26042024140324.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "26042024140051",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26042024140051_BFSOutcomeofBM26April2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23042024160731",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23042024160731_BFSSEINTIMATIONSCHOFINVESTORCALL26APRIL2024SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "12042024124811",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12042024124811_BAJAJFINSV.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "11042024163344",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11042024163344_BFSSEINTIMATIONPROVISIONALNUMBERSSIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "08042024193315",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08042024193315_74_5_lettersigned.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "02042024202606",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_02042024202606_SEINTIMATIONLOSSOFSHARESSIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Acquisition",
+      "type": "Other",
+      "date": "29032024185122",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29032024185122_IntimationLetterSigned.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "27032024174742",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27032024174742_BFSPOSTALBALLOTRESULTSTXINTIMATIONSIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "21032024172129",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21032024172129_BFSUKRoadshowinvestorspresentation25March2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Management",
+      "type": "Other",
+      "date": "21032024135808",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21032024135808_BFSSEIntimationFreeda21March2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "20032024180942",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20032024180942_BFSSEIntimationUKRoadshow25Mar24.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06032024184720",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06032024184720_BALICBAGICSEintimationFebruary2024sd.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "23022024123942",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23022024123942_BFSAdvtIntimation23022024SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "22022024191656",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22022024191656_BFSpostalballotintimationsigned.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "16022024161544",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16022024161544_BFSINVESTORMEET21FEB2024SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07022024194459",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07022024194459_SEIntimationBAGICBALICUPSIFeb24Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07022024102514",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07022024102514_BFSINVESTORCALLQ3FY24TRANSCRIPTSIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "31012024192334",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_31012024192334_BFSConferencecallrecordingletter31012024SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "30012024180026",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30012024180026_BFSInvestorsPresentation30Jan2024signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Press Release",
+      "type": "Other",
+      "date": "30012024143751",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30012024143751_BFSProjectCatapultFinal.pdf",
+      "category": ""
+    },
+    {
+      "title": "Acquisition",
+      "type": "Other",
+      "date": "30012024142603",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30012024142603_BFSProjectCatapultFinal.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "30012024125753",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSSELetteroutcomeofBM30January2024_30012024125753.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "30012024125511",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30012024125511_BFSSELetteroutcomeofBM30January2024.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23012024202521",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23012024202521_BFSQ3INVESTORCALL.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "09012024192520",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09012024192520_BFSlatestFinal745.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08012024164018",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08012024164018_SEIntimationBAGICBALICUPSIJan2024signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "09122023160326",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09122023160326_BFSVotingResultsPB7DEC2023SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07122023121151",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07122023121151_BALICBAGICSEintimationDecember2023vsigned.pdf",
+      "category": ""
+    },
+    {
+      "title": "Demise",
+      "type": "Other",
+      "date": "28112023202218",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28112023202218_BFSSEintimationforDJBRFinalv1.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23112023184631",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23112023184631_BFSinstitutionalinvestormeettokyo.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "20112023193324",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20112023193324_BFSSEINTIMATIONREG39PRADIPJHAVERISIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "20112023184531",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20112023184531_BFSinstitutionalinvestormeetintimationfinalSD.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "09112023202730",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09112023202730_BFSHALFYEARLYH1FY24SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "08112023165634",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08112023165634_BFSNEWSPAPERADVT8112023SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08112023161309",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08112023161309_BALICBAGICSEintimationNovember2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "07112023202425",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07112023202425_BFSPOSTALBALLOT27october2023SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "06112023173414",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06112023173414_BFSINVESTORCALLTRANSCRIPTQ2FY24SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "30102023190524",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30102023190524_BFSINVESTORSCALLRECORDINGQ2FY24.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "27102023191256",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27102023191256_BFSInvestorpresentaion27Oct23SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "27102023132413",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27102023132413_BFSSEIntimationReappointmentofARFinal.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Director(s)",
+      "type": "Other",
+      "date": "27102023131842",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27102023131842_BFSSEIntimationReappointmentofARFinal.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "27102023131128",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSSEletterOutcomeofBM271023Signed_27102023131128.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "27102023130932",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27102023130932_BFSSEletterOutcomeofBM271023Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23102023162716",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23102023162716_BFSINVESTORCALLQ2FY24SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07102023164634",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07102023164634_BALICBAGICSEintimationOctober2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "07102023115402",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07102023115402_BFS74_5_v130092023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "03102023181107",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03102023181107_SEintimationBAGICShowCauseNotice.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Management",
+      "type": "Other",
+      "date": "28092023191839",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28092023191839_SEintimationAppointmentofSMTSept2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12092023162949",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12092023162949_BFSUSRoadshowSEintimationsept2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12092023162828",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12092023162829_BFSUSRoadshowSEintimationsept2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12092023162700",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12092023162700_BFSUSRoadshowSEintimationsept2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12092023162527",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12092023162527_BFSUSRoadshowSEintimationsept2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12092023162325",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12092023162325_BFSUSRoadshowSEintimationsept2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07092023163510",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07092023163510_BALICBAGICSEintimationDraftSept2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "14082023170010",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_14082023170010_BFSConferencecall180823Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "07082023170014",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07082023170014_BALICSEintimationAugust2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "05082023104402",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05082023104402_BAGICSEintimationDraftAugust2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "03082023201903",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03082023201903_BFSINVESTORSCALLTRANSCRIPTQ1FY24.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "31072023193212",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_31072023193212_BFSScrutinizersReportAGM2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Allotment of Securities",
+      "type": "Other",
+      "date": "31072023173455",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_31072023173455_BFSSEAllotmentESOP310723.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "28072023154650",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28072023154650_BFSINVESTORSCALLRECORDINGQ1FY24.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "27072023183548",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27072023183548_BFSSEProceedingsofAGM27JULY2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "27072023135950",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27072023135950_BFSInvestorPresentaion27july23signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Issue of Securities",
+      "type": "Other",
+      "date": "27072023114717",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27072023114717_BFSIssueofsecuritiessigned270723.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "27072023114238",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSSELETTEROUTCOME270723SIGNED_27072023114238.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "27072023114033",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27072023114033_BFSSELETTEROUTCOME270723SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "21072023163652",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072023163652_BFSSEINVESTORSCALLQ1FY24.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08072023153144",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08072023153144_BAGICSEintimationDraftjuly2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "07072023194543",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07072023194543_BFS74coverletter_30June2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06072023185427",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06072023185427_BALICSEintimationDraftjuly2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "04072023171021",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_04072023171021_BFSSEletterAGMNotice.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "04072023165253",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_04072023165253_BFSSEletterBRSRFinal.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "27062023145845",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27062023145845_BFSSEletterInvestorscall27June2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "14062023175359",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_14062023175359_BFSTDSCOMMUNICATION14062023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "09062023170228",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09062023170228_BFSNewspaperpublicationPreAGM09june2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06062023201251",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06062023201251_SEINTIMATIONBAGICandBALICJune2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Press Release",
+      "type": "Other",
+      "date": "06062023113054",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06062023113055_BFSPRESSRELEASEAMCSIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Annual Secretarial Compliance Report",
+      "type": "Other",
+      "date": "16052023195014",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16052023195014_BFSACSRFY2316MAY2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "06052023200135",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06052023200135_BFSINVESTORCALLTRANSCRIPT060523SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06052023154111",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06052023154111_IntimationBALICApril23SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "05052023161031",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05052023161031_IntimationBAGICApril23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "28042023175626",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042023175626_BFSINVESTORCALLRECODING28042023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transactions",
+      "type": "Other",
+      "date": "27042023201437",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023201437_BFSSELetterRPTH2FY23.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "27042023190656",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023190656_BFSSELetterESOPGrant27APRIL2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "27042023152304",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023152304_BFSINVESTORSPRESENTATIONQ4FY23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "27042023134450",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023134450_BFSoutcomeofBMAGMRECORDDATE.pdf",
+      "category": ""
+    },
+    {
+      "title": "Record Date",
+      "type": "Other",
+      "date": "27042023134249",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023134249_BFSoutcomeofBMAGMRECORDDATE.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend Updates",
+      "type": "Other",
+      "date": "27042023133405",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023133405_BFSoutcomeofBM27April2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "27042023132949",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023132949_BFSoutcomeofBM27April2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "27042023132746",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023132746_BFSoutcomeofBM27April2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "27042023132615",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27042023132616_BFSoutcomeofBM27April2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "27042023132401",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSoutcomeofBM27April2023_27042023132401.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "24042023170632",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24042023170632_BFSINVESTORSCALLQ4FY23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "11042023224301",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11042023224301_BAJAJFINSV.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "10042023095546",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10042023095546_BFSBALICApr23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "07042023104824",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07042023104824_BFSRegulation74_5_March2023Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "05042023183900",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05042023183901_BFSBAGICApril23Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06032023214938",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06032023214938_SEUPSIBALICMarch23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "04032023192850",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_04032023192850_SEIntimationBAGICMarch23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "01032023182404",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_01032023182404_BFSSEMFLICENCEUPDATEv1SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "17022023181849",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_17022023181849_BFSINVESTORCALL20FEB2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07022023200438",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07022023200438_BFSTRANSCRIPT070223.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06022023185022",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06022023185022_BAGICSEINTIMATIONFEB23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06022023173217",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06022023173217_BALICSEINTIMATIONFEB23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "03022023182103",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03022023182103_BALICINFORMATION03022023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "31012023202304",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_31012023202304_BFSINVESTORCALLRECODING310123.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "30012023140047",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30012023140047_BFSVentures30JAN2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "30012023134513",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30012023134513_BFSSELetterInvestorsPresentation.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "30012023125817",
+      "url": "https://nsearchives.nseindia.com/corporate/OUTCOMEOFBM30JAN2023_30012023125817.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "30012023125457",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30012023125457_OUTCOMEOFBM30JAN2023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "25012023161413",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25012023161413_BFSINVESTORSCALLQ3FY23SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06012023194800",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06012023194800_SEBALICINTIMATIONJAN23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "06012023193708",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06012023193708_BFSReg74Dec2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "05012023170152",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05012023170152_SEINTIMATIONBAGICJAN23.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "07122022110609",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07122022110609_UPSIBAGICBALICDEC2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Schedule of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "16112022114618",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16112022114618_BFSINVESTORCALL16NOV2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "07112022155724",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07112022155724_BALICUSPINOV2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "07112022100830",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07112022100830_BAGICUPSI711222.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transaction",
+      "type": "Other",
+      "date": "03112022180545",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03112022180545_BFSRPD30SEP2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Transcript of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "01112022153521",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_01112022153521_BFSTRANSCRIPT25102022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Recording of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "25102022170142",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25102022170142_BFSINVESTORCALLRECODING25102022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Communication to shareholders as per Reg 30",
+      "type": "Other",
+      "date": "22102022203700",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22102022203700_BFSSEINTIMATIONHALFYEARLY221022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "21102022184436",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21102022184436_BFSINVESTORPRESENTATIONQ2FY22.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "21102022131836",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21102022131836_BFSOUTCOMEFINANCIALSQ2FY23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Schedule of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "18102022112803",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_18102022112803_BFSINVESTORSCALLQ2FY23.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "11102022125457",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11102022125457_BSESEREG74SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "07102022165527",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07102022165527_BAGICBALICUPSIOCT2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "16092022112924",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16092022112924_BFSSEintimationAllotmentofShares16092022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Schedule of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "14092022161042",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_14092022161042_BFSROADSHOWINTIMATION14092022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "06092022155827",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06092022155827_BALICUSPISept22.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "05092022185821",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05092022185821_BFSUPSIBAGICSept22.pdf",
+      "category": ""
+    },
+    {
+      "title": "Amendment to AOA/MOA",
+      "type": "Other",
+      "date": "03092022180403",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03092022180403_BFSALTERNATIONOFMOA2SEPT2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Postal Ballot",
+      "type": "Other",
+      "date": "03092022174036",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03092022174036_BSENSEINTIMATIONPOSTALBALLOT03092022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Record Date",
+      "type": "Other",
+      "date": "29082022152033",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29082022152033_BFSRECORDDATEINTIMATION29AUG2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "06082022173815",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06082022173815_BFSSEINTIMATIONINSURANCEAUG2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Transcript of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "05082022185339",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05082022185339_BFSINVESTORCALLTRANSCRIPT29072022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Postal Ballot",
+      "type": "Other",
+      "date": "03082022194115",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03082022194115_BFSPBNOTICE03AUG2022_Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Annual General Meeting",
+      "type": "Other",
+      "date": "01082022192645",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_01082022192645_BFSSELetterAGMResultsFY22_Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Recording of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "29072022185030",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29072022185030_BFSINVESTORCALLRECODING29072022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Reply to Clarification Sought",
+      "type": "Other",
+      "date": "29072022145151",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29072022145151_BFSSELetterClarificationletter29July2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Annual General Meeting",
+      "type": "Other",
+      "date": "29072022132721",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29072022132721_BFSSELetter15AGMProceeding28July2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "28072022192212",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28072022192212_BFSINVESTORSPRESENTATIONQ1FY23.pdf",
+      "category": ""
+    },
+    {
+      "title": "Clarification",
+      "type": "Other",
+      "date": "28072022163351",
+      "url": "https://www.nseindia.com-",
+      "category": ""
+    },
+    {
+      "title": "Bonus",
+      "type": "Other",
+      "date": "28072022120515",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28072022120515_BFSBONUSSPLIT28JULY2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Split of shares",
+      "type": "Other",
+      "date": "28072022120339",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28072022120339_BFSBONUSSPLIT28JULY2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "28072022120106",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28072022120102_BFSOUTCOMEOFBM28JULY2022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Schedule of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "25072022143248",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25072022143248_BFSINVESTORSCALLQ1FY23SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "22072022143517",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22072022143517_BFSSELetterAllotmentofESOPFinal.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "11072022195021",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11072022195021_BFSREG75530JUNE2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "08072022182551",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08072022182551_BFSINSURANCESUBS08JULY2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Annual General Meeting",
+      "type": "Other",
+      "date": "05072022194857",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05072022194857_BFS_AGMNOTICE_FY2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Communication to shareholders as per Reg 30",
+      "type": "Other",
+      "date": "30062022150912",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30062022150912_BFSSELETTERTDSCOMMUNICATION30JUNE2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "29062022121636",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29062022121636_BFSVENTURESACQUISITION.pdf",
+      "category": ""
+    },
+    {
+      "title": "Newspaper Advertisements",
+      "type": "Other",
+      "date": "28062022152724",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28062022152724_BFSSELetterNewspprPreAGM28062022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Postal Ballot",
+      "type": "Other",
+      "date": "24062022164140",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24062022164140_BSENSEINTIMATIONPOSTALBALLOT24062022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of share certificate",
+      "type": "Other",
+      "date": "16062022193731",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16062022193731_BSENSEINTIMATIONLOSSODSH16062022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of share certificate",
+      "type": "Other",
+      "date": "10062022192551",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10062022192551_BSENSEINTIMATIONLOSSODSH10062022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "06062022194949",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06062022194949_BFSSEINTIMATIONINSURANCESUBSCOJUNE2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of share certificate",
+      "type": "Other",
+      "date": "25052022161815",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25052022161813_BSENSEINTIMATIONLOSSODSH25052022_Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Postal Ballot",
+      "type": "Other",
+      "date": "23052022201633",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23052022201629_BFSPBNOTICE28APRIL2022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transaction",
+      "type": "Other",
+      "date": "13052022164644",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13052022164642_BFSRPDH2FY22SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Transcript of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "09052022204330",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09052022204325_BFSINVESTORCALLTRANSCRIPT02052022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "06052022195845",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06052022195845_BFSSELETTERBALIC_MAY22_SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "06052022195432",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06052022195424_BFSSEREVIOSEDBAGICMAY22Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "05052022160904",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05052022160856_BFSBAGICINRIMATION05MAY2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Recording of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "02052022164101",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_02052022164055_BFSINVESTORCALLRECODING2052022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "29042022133254",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29042022133253_BFSRESIGNATIONGP.pdf",
+      "category": ""
+    },
+    {
+      "title": "Resignation",
+      "type": "Other",
+      "date": "29042022125240",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29042022125237_BFSCHANGEINDIRECTOS28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Re-appointment",
+      "type": "Other",
+      "date": "29042022125025",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29042022125024_BFSCHANGEINDIRECTOS28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "29042022124832",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29042022124828_BFSCHANGEINDIRECTOS28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "29042022124639",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29042022124635_BFSCHANGEINDIRECTOS28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "29042022103745",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29042022103744_BFSESOPGRANT28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "28042022183159",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042022183158_BFSINVESTORPRESENTATION28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "28042022180500",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042022180500_AGMDATE28042022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Record Date",
+      "type": "Other",
+      "date": "28042022175223",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042022175216_RECOREDDATE28042022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "28042022135152",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042022135149_Issueofequity28042022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "28042022134417",
+      "url": "https://nsearchives.nseindia.com/corporate/OUTCOMEBSENSE28APRIL2022_28042022134417.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "28042022134027",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042022134020_OUTCOMEBSENSE28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "28042022134025",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042022134020_OUTCOMEBSENSE28APRIL2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Schedule of Analysts/Institutional Investor Meet/Con. Call",
+      "type": "Concall",
+      "date": "25042022204457",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_25042022204452_BFSBSENSEINVESTORCALLINTIMATIONQ4FY22Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "15042022193638",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_15042022193634_BFSSEREH74SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "13042022131227",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13042022131224_NSEBSEINTIMATIONBALIC13042022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "04042022122005",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_04042022122003_BFSBSENSEREG30LETTERBAGIC04042022.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "16032022172542",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16032022172537_BFS_REAPPOINTMENTOFMD_16032022_SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "15032022194955",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_15032022194955_BSENSEINTIMATIONRTADETAILS15032022_SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of share certificate",
+      "type": "Other",
+      "date": "11032022195731",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11032022195729_BSENSEINTIMATIONLOSSODSH11032022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "General updates",
+      "type": "Other",
+      "date": "04032022201805",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_04032022201737_NSEBSELETTERBAGICBALIC04032022_SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "15022022111535",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_15022022111535_BFSBSENSEINVESTORCALLINTIMATION15022022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "10022022184211",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10022022184211_BFSBSENSEINVESTORCALLINTIMATION10022022Signed.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "05022022144615",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05022022144615_NSEBSELETTERBALICSIGNED05022022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "03022022211633",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03022022211633_NSEBSELETTERBAGIC03022022SIGNED.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "20012022140651",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBSENSEBMOUTCOME20012022_20012022140651.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "20012022134549",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20012022134549_BFSNSEBSELETTERINVESTORPRESENTATION20012022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "20012022132332",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20012022132332_BFSBSENSEBMOUTCOME20012022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "17012022135024",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_17012022135024_BFSSELETTERINVESTORSCALL21012022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "08012022183747",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08012022183747_BFSBSENSE745Q308JAN2022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06012022121548",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06012022121548_NSEBSEBAGICBALICLETTER06012021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "24112021204202",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24112021204202_BFSBSENSEMOHITSUJITHISSUEOFDUPLICATE24112021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "20112021161819",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20112021161819_BFSSELETTERVOTINGRESULTS20112021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "15112021134248",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_15112021134248_BFSINVESTORSMEETINGINTIMATIONSIGNED15112021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Auditors",
+      "type": "Other",
+      "date": "13112021220910",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13112021220910_BFSSELETETRRESIGNATIONOFAUDITOR13102021_.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "11112021191257",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11112021191257_NSEBSELETTERISSUEOFDUPLICATE11112021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "03112021161405",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03112021161405_BFSNSEBSEHalfyearlycomSept2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "02112021163323",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_02112021163323_BFSNSEBSEDUPLICATEISSUEINTIMATION02112021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "28102021124305",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28102021124305_BFSBSENSEINVESTORMEETREG3028102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "28102021124045",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBSENSEOUTCOMEOFBM28102021_28102021124045.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "28102021122608",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28102021122608_BFSBSENSEOUTCOMEOFBM28102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23102021134403",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23102021134403_NSEBSELETTERINVESTORSCALL23102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "19102021193146",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_19102021193146_BFSBSENSEREG3047PBADV19102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "19102021192246",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_19102021192246_BFSBSENSEAMCWOS19102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "18102021195850",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_18102021195850_NSEBSELETTERPOSTALBALLOT2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "13102021203608",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13102021203608_NSEBSELOSTOFSHCERT13102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "13102021194757",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13102021194757_BFSBSENSEREG74_5_Q213102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "12102021170839",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12102021170839_BFSBSENSETRUSTEECO12102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "07102021193506",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07102021193506_BFSBSENSELOSSINTIMATION07102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "06102021192414",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06102021192414_NSEBSELETTERISSUEOFDUPLICATE_06102021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "28092021124239",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28092021124238_BSENSELETTERWOS28092021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "17092021192427",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_17092021192427_BFSNSEBSELOSTINTIMATION17092021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Company Secretary/Compliance Officer",
+      "type": "Other",
+      "date": "17092021183744",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_17092021183744_BFSBSENSEKMP17092021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Acquisition",
+      "type": "Other",
+      "date": "17092021183432",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_17092021183432_BFSNSEBSELETTERBFSD17092021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Change in Auditors",
+      "type": "Other",
+      "date": "17092021182637",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_17092021182636_BFSNSEBSEAUDITORS17092021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "13092021102600",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13092021102600_BSENSEINVESTORINTIMATIONREG30_13092021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "24082021104035",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24082021104035_BFSBSENSEINTIMATIONMUTUALFUND24082021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "11082021161646",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11082021161646_BFSNSEBSELETTER11082021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "09082021180350",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09082021180350_BFSBSENSEREG39ANANDAVALLILOSSOFSHARECERTIFICATE.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "03082021154847",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03082021154847_BSENSESELETTERINVESTORSMEET3082021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "22072021180421",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22072021180421_BFSBSENSESCRUTINIZERREPORTVOTINGRESULT21JULY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "22072021130957",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22072021130957_BFSBSENSEOUTCOMEOFAGM21JULY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "21072021160156",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072021160156_BFSBSENSEINVESTORPPTREG3021JULY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "21072021150615",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072021150615_BFSBSENSEESOPGRANT21JULY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Acquisition",
+      "type": "Other",
+      "date": "21072021140310",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072021140310_BFSBSENSEINVESTMENTBFSDREG3021JULY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "21072021123011",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBSENSEUNAUDITEDFINANCIALRESULTS21JULY2021_21072021123011.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "21072021122349",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072021122348_BFSBSENSEOUTCOMEOFBOARDMEETING21JULY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12072021114004",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12072021114004_BSENSEANALYISTCALLINTIMATION12072021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "12072021113118",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12072021113118_BFSBSEREG745Q112072021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "30062021113739",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30062021113739_NSEBSENEWSPAPERADVT30062021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "29062021145812",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29062021145812_SELETTERAGMNOTICE21JULY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "26062021144649",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_26062021144649_NSEBSEREG30AND47NEWSPAPERADVT.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "16062021185702",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16062021185702_BSENSETDSCOMMUNICATION16062021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "16062021100339",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16062021100339_BSENSELETTERIEPFREMINDER_16062021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Code of Conduct under SEBI(PIT) Reg., 2015",
+      "type": "Other",
+      "date": "11062021104536",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11062021104536_LettertoBSENSEViolationAnilPM.pdf",
+      "category": ""
+    },
+    {
+      "title": "Code of Conduct under SEBI(PIT) Reg., 2015",
+      "type": "Other",
+      "date": "09062021173259",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09062021173258_SCLettertoBSENSEViolation090621.pdf",
+      "category": ""
+    },
+    {
+      "title": "Code of Conduct under SEBI(PIT) Reg., 2015",
+      "type": "Other",
+      "date": "09062021173145",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09062021173145_GSLettertoBSENSEViolation090621.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07062021130002",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07062021130002_BFSAnalystUTIMF070621.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "03062021143858",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_03062021143858_BFSSEAnalystMeetNomura04062021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transactions",
+      "type": "Other",
+      "date": "21052021182503",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21052021182503_BFSREG23ConsolidatedRPTD2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "10052021152421",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10052021152421_SEISSUEOFSHARECERTIFICATEBEHROZE10MAY2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "28042021140645",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042021140645_BFSESOPGRANT28APRIL2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "28042021135353",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042021135353_BFSIPQ4FY21ExchangeUpload.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Results Updates",
+      "type": "Results",
+      "date": "28042021133859",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042021133859_BFSREVISEDOUTCOMEBM28APRIL2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "28042021132844",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042021132844_BFSREVISEDOUTCOMEBM28APRIL2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Book Closure",
+      "type": "Other",
+      "date": "28042021131206",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042021131206_BFSINTIMATIONOFBOOKCLOSURE28AAPRIL2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "28042021123504",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042021123503_BFSDIVIDEND28APRIL2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "28042021122840",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSOUTCOMEOFBM28APRIL2021_28042021122840.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "28042021121813",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_28042021121813_BFSOUTCOMEOFBM28APRIL2021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "22042021170850",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22042021170850_finsurv.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "22042021095321",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22042021095321_BAJAFINS.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "19042021164936",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_19042021164936_BFSSEANALYSTMEET29042021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "09042021145325",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09042021145325_BFSREG39BEHROZENAVZERVAKHARIA09042021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "07042021154954",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07042021154954_BFSREG7407042021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Code of Conduct under SEBI(PIT) Reg., 2015",
+      "type": "Other",
+      "date": "30032021171220",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30032021171220_LettertoBSENSEViolationAjaySathe.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "10032021121746",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10032021121746_BFSNSEAnalystNipponMF.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "18022021144901",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_18022021144901_BFSREG39FIRODIA18022021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "09022021181607",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09022021181607_BFSREG39DISPATCHNILESHCHOPDA09022021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "08022021201415",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_08022021201415_BFSANALYSTMEET08022021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "22012021145226",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22012021145226_BFSREG39SUBHASHCHOPDA22012021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "20012021175844",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20012021175844_BFSINVESTORPPTQ320012021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "20012021174449",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSQ3URFR20012021_20012021174449.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "20012021173707",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_20012021173707_BFSQ3URFR20012021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "11012021100322",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11012021100322_BFSANALYSTMEETINTIMATIONQ3RESULTS11012021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "06012021180752",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_06012021180752_BFSREG7406012021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "15122020171537",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_15122020171537_BFSSEINTIMATIONREG39BHARUCHA15122020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23112020132823",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_23112020132823_BFSANALYSTCALLINTIMATION23112020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "12112020123944",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12112020123944_BFSANALYSTMEET12112020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transactions",
+      "type": "Other",
+      "date": "11112020201839",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11112020201839_BFSRPTDisclosureH1FY2111Nov2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "11112020092842",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11112020092842_BFSSEINTIMATION11112020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "05112020171542",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05112020171542_BFSHALFYEARLYLETTER05112020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "21102020181209",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21102020181209_BFSINVESTORPPTQ221102020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "21102020174430",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBMOUTCOMEUFR21102020_21102020174430.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "21102020174143",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21102020174143_BFSBMOUTCOMEUFR21102020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "19102020102530",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_19102020102530_BFSREG39DISPATCHVIPINJAIN19102020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "14102020114343",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_14102020114343_BFSQ2CONCALL22OCT2020.PDF",
+      "category": ""
+    },
+    {
+      "title": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+      "type": "Other",
+      "date": "12102020093558",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12102020093558_BFSREG7412102020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Reply to Clarification Sought",
+      "type": "Other",
+      "date": "05102020171224",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_05102020171224_NSEQUERYREPLY02102020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Clarification",
+      "type": "Other",
+      "date": "30092020122701",
+      "url": "https://www.nseindia.com-",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "24092020100718",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24092020100718_BFSANALYSTMEET24092020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "22092020102814",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22092020102814_BFSREG30BFHLUPDATES22092020.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "16092020124011",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16092020124011_BFSFIFTHGRANTSEINTIMATION16092020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Allotment of Securities",
+      "type": "Other",
+      "date": "16092020121635",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16092020121635_BFSRIGHTSISSUEREG3016092020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "11092020150435",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_11092020150435_BFSREG39VIPINJAIN11092020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "04092020192109",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_04092020192109_BFSANALYSTMEETOUTCOME04092020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "19082020163603",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_19082020163603_BFSANALYSTOUTCOME19082020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "14082020172605",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_14082020172605_BFSREG3014082020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07082020113901",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07082020113901_BFSSELETTERINVESTORMEET7AUG2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "22072020123200",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_22072020123242_BFSREG44ANDSCRUTINIZERREPORT22072020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "21072020215900",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072020215907_BFSEAGM21JULY2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "21072020175600",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072020175652_BFSINVESTORPPTQ121072020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "21072020164023",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSUFR21072020_21072020164023.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "21072020163200",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21072020163216_BFSUFR21072020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "10072020145000",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_10072020145015_Bajafin.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "09072020122500",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_09072020122524_BFSCONCALLINTIMATIONQ109072020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "01072020101900",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_01072020101933_BFSSEINTIMATIONAGMNOTICE01072020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "30062020104300",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30062020104342_BFSAGMNOTICENWESPAPER30062020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "24062020091700",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24062020091738_BFSSEINTIMATIONPRIORINTIMATIONOFAGMNEWSPAPERADVT24062020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "15062020170700",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_15062020170730_BFSSEINTIMATIONIEPFNEWSPAPERNOTICE15062020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "02062020081100",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_02062020081132_BFS_SEBI_Takeover_Disclosure_31_4__28th_May_2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disclosure under SEBI Takeover Regulations",
+      "type": "Other",
+      "date": "01062020100900",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_01062020100923_BAJAJFINSV.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transactions",
+      "type": "Other",
+      "date": "01062020081900",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_01062020081922_BFSRPTIntimationReg23march2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "21052020170300",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21052020170344_BFSINVESTORPPTQ4RESULTS21MAY2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "21052020135600",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21052020135645_BFSESOPGRANT21MAY2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "21052020133137",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBMOUTCOME21052020_21052020133137.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "21052020132800",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21052020132810_BFSBMOUTCOME21052020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07052020140000",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07052020140022_BFSCONCALLINTIMATION07052020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "30032020114100",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_30032020114141_BFSTWCINTIMATION30032020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "18032020172100",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_18032020172150_BFSREG30SRBAPPT18032020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Amendment to AOA/MOA",
+      "type": "Other",
+      "date": "17032020112800",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_17032020112824_BFSNEWAOASEINTIMATION17032020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "16032020164600",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_16032020164610_BFSSCRUTINISERREPORT16032020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Demise",
+      "type": "Other",
+      "date": "24022020111400",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24022020111454_BFSDemiseofShriNanooPamnani24Feb2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Record Date",
+      "type": "Other",
+      "date": "24022020085200",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_24022020085248_BFSBSENSEBMOUTCOMEANDRECORDDATEINTIMATION21022020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "21022020121900",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_21022020121915_BFSBSENSEBMOUTCOMEANDRECORDDATEINTIMATION21022020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "14022020094000",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_14022020094036_BFSNEWSPAPERPBN4FEB2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "13022020164600",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13022020164649_BFSPOSTALBALLOTNOTICEINTIMATION3FEB2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "29012020164900",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29012020164902_BFSINVESTORPPTQ329JAN2020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "29012020162839",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSUFRQ329012020_29012020162839.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "29012020162400",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_29012020162438_BFSBMOUTCOME29012020.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "17012020142600",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17012020141822_BFSConcallintimationQ317012020_066.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "09122019125700",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_09122019125259_BFSSEINTIMATIONNAMECHANGEOFKARVY9DEC2019_165.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "20112019181500",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_20112019181340_BFSREG39LOSSOFSHARESPRAKASH18NOV2019_257.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transactions",
+      "type": "Other",
+      "date": "20112019160100",
+      "url": "https://nsearchives.nseindia.com/corporate/listcontract1_20112019151520_BFSREG23RPTDISCLOSURE20112019_160.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07112019144200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07112019144003_BFSINVESTORMEETINTIMATION07112019_153.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "25102019152100",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_25102019145914_BFSHALFYEARLYCOMMUNICATIONFY20OCT252019_182.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "22102019164200",
+      "url": "https://nsearchives.nseindia.com/corporate/listcontract1_22102019161459_BFSQ2RESULTS22OCT2019_outcome_268.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "22102019163000",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_22102019162915_BFSINVESTORPPTQ2RESULTS22OCT2019_256.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "22102019160217",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSQ2RESULTS22OCT2019_22102019160217.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "22102019160000",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_22102019160047_BFSQ2RESULTS22OCT2019_227.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "15102019163300",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_15102019163059_SEIntimationBFSCallQ2FY20_206.pdf",
+      "category": ""
+    },
+    {
+      "title": "Allotment of Securities",
+      "type": "Other",
+      "date": "17092019134800",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17092019134754_BFSRIGHTSISSUEINTIMATION170919_077.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "16082019163900",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16082019163826_BFSCONCALLINTIMATION16082019_233.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "26072019111900",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_26072019111511_BFSAGMPROCEEDINGS25072019_042.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "25072019162300",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_25072019162313_INVESTORPPT25JULY2019FINAL_194.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "25072019161500",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBMOUTCOME25072019_25072019161500.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "25072019160200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_25072019155821_BFSBMOUTCOME25072019_183.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "19072019142200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_19072019141534_SEINTIMATIONJUNE2019CONCALL_129.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "11072019103400",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_11072019102018_BFSLOCALTRANSPORTINTIMATION11072019_021.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "03072019114100",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_03072019113842_BFSAGMNOTICENEWSPAPER03072019_040.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "21062019175100",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_21062019174006_BFSSELetterIntimationwithinvestorPPTJun2019_337.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "20062019093200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_20062019092127_SEINTIMATIONIEPFNEWSPAPERADVT19062019BFS_022.pdf",
+      "category": ""
+    },
+    {
+      "title": "Related Party Transactions",
+      "type": "Other",
+      "date": "12062019152700",
+      "url": "https://nsearchives.nseindia.com/corporate/listcontract1_1262019151027_BFSREG23RPTDISCLOSURE12062019_161.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "20052019185200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_20052019185128_BFSCONCALLINTIMATION20052019_572.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "16052019195100",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16052019194730_BFSNRCGrant16May2019_473.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "16052019194900",
+      "url": "https://nsearchives.nseindia.com/corporate/listcontract3_16052019193931_BAJAJFINSV_outcome_AGMBOOK_468.pdf",
+      "category": ""
+    },
+    {
+      "title": "AGM/Book Closure",
+      "type": "Other",
+      "date": "16052019194900",
+      "url": "https://nsearchives.nseindia.com/corporate/listcontract3_16052019194059_BAJAJFINSV_outcome_AGMBOOK_469.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "16052019194200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16052019194022_BFSINVESTORPPTQ4160519_463.pdf",
+      "category": ""
+    },
+    {
+      "title": "Date of payment of dividend",
+      "type": "Other",
+      "date": "16052019193500",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16052019192906_BFSDIVIDENDINTIMATIONFY19_459.pdf",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "16052019192100",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16052019191246_Bfsresults16519_452.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "16052019190323",
+      "url": "https://nsearchives.nseindia.com/corporate/Bfsresults16519_16052019190323.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07052019142100",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_07052019140555_BFSSELetterIntimationofConcall7052019_068.pdf",
+      "category": ""
+    },
+    {
+      "title": "Disc. under Reg.30 of SEBI (SAST) Reg.2011",
+      "type": "Other",
+      "date": "25042019142600",
+      "url": "https://nsearchives.nseindia.com/corporate/listcontract4_25042019105853_BajajFinserv_500.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "03042019170700",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_03042019165336_SELETTER030419_645.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "29032019152900",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29032019152212_BFSQ3INVESTORPPT29032019_142.pdf",
+      "category": ""
+    },
+    {
+      "title": "Reappointment",
+      "type": "Other",
+      "date": "13032019135200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_13032019134419_BFSCHANGEINDIRECTORS12032019_068.pdf",
+      "category": ""
+    },
+    {
+      "title": "Reappointment",
+      "type": "Other",
+      "date": "13032019135200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_13032019134402_BFSCHANGEINDIRECTORS12032019_067.pdf",
+      "category": ""
+    },
+    {
+      "title": "Reappointment",
+      "type": "Other",
+      "date": "13032019135200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_13032019134329_BFSCHANGEINDIRECTORS12032019_066.pdf",
+      "category": ""
+    },
+    {
+      "title": "Resignation",
+      "type": "Other",
+      "date": "13032019132700",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_13032019132030_BFSRESIGNATIONRAHULBAJAJ12032019_057.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "12032019174800",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_12032019174518_BFSFPC12032019_195.pdf",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "29012019171300",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29012019171226_BFSINTIMATIONOFGRANT29JAN2019_293.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "29012019170000",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29012019165917_BFSINVESTORPPTQ3FY19_282.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "29012019164956",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSUFRQ3FY2019_29012019164956.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "29012019163900",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29012019163815_BFSBMOUTCOME29JAN2019_262.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "21012019180400",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_21012019175921_BFSSEINTIMATIONCONCALLQ321012019_266.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "29112018124600",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_29112018124556_BFSBSENSEKARVYLETTER29112018_058.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "15112018151900",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_15112018145818_BFSSELETTERREG3015NOV2018_155.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06112018143700",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_06112018143639_BFSH1COMMUNICATIONFY2019_258.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "23102018185900",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_23102018184559_BFSIntimationforapptofDirectorsBM23oct2018_301.pdf",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "23102018185900",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_23102018184524_BFSIntimationforapptofDirectorsBM23oct2018_300.pdf",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "23102018180200",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_23102018175935_BFSInvestorPPTQ2FY201819forupload_255.pdf",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "23102018163938",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSQ2resultsBM23Oct2018_23102018163938.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "23102018163000",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_23102018162834_BFSoutcomeofBM23Oct2018_173.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "16102018102600",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_16102018102309_BFSCONCALLQ2FY201819_410.pdf",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "21092018162500",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_21092018162056_BFSINVESTORPPT21Sep2018_796.pdf",
+      "category": ""
+    },
+    {
+      "title": "Allotment of Securities",
+      "type": "Other",
+      "date": "17092018132600",
+      "url": "https://nsearchives.nseindia.com/corporate/walimbelk_17092018132255_FinalSEletterRightsissue17Sep2018_037.pdf",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "20072018183800",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSEVOTINGRESULTSREG442018_20072018183807_301.zip",
+      "category": ""
+    },
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "19072018194400",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSNRCOUTCOMEESOPGRANT_19072018194443_670.zip",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "19072018192900",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAGMPROCEEDINGS19JULY2018_19072018192915_659.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "19072018164100",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSINVESTORPPTQ1RESULTS19JULY2018_19072018164100_546.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "19072018162825",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSQ1RESULTS19JULY2018_19072018162825.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "19072018161500",
+      "url": "https://nsearchives.nseindia.com/corporate/BMOUTCOME19JULY2018_19072018161519_527.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "13072018094900",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBSENSECONCALLINTIMATIONJUNE2018_13072018094906_027.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "06072018095200",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSINTIMATIONOFTRANSPORTARRANGEMENTS19072018_06072018095255_034.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "03072018162800",
+      "url": "https://nsearchives.nseindia.com/corporate/BSENSEBFSESOPTRUSTDEED3JULY2018_03072018162844_191.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "27062018133900",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAGMNEWESPAPERINTIMATION2018_27062018133955_771.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "26062018161100",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSINVESTORPPTINTIMATIONJUNE2018_26062018161103_550.zip",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "22062018162600",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAR2018UPLOADED_22062018162645_851.zip",
+      "category": ""
+    },
+    {
+      "title": "Option to submit Standalone/Consolidated Financial Results",
+      "type": "Results",
+      "date": "20062018151800",
+      "url": "https://nsearchives.nseindia.com/corporate/BSENSEReg33submissionoffinancials_20062018151847_312.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "20062018105100",
+      "url": "https://nsearchives.nseindia.com/corporate/BSENSEIEPFNewspaperPublicationBFS_20062018105106_254.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "07062018154200",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSSEIntimationinvestormeetJune2018_07062018154226_634.zip",
+      "category": ""
+    },
+    {
+      "title": "Book Closure",
+      "type": "Other",
+      "date": "18052018082300",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_01_18052018082311.zip",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "17052018182300",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_outcome_dividend_BC_17052018182332.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "17052018182200",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_outcome_dividend_BC_17052018182201.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "17052018182100",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSINVESTORPPTQ4_17052018182155_521.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "17052018175800",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSESOP2018_17052018175800_498.zip",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "17052018174300",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAFRQ4_17052018174345_486.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "17052018173700",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAFRQ4_17052018173742_474.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "17052018173046",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAFRQ4_17052018173046.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "03052018160400",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSCONCALL18MAY2018UFR_03052018160442_091.zip",
+      "category": ""
+    },
+    {
+      "title": "Disc. under Reg.30 of SEBI (SAST) Reg.2011",
+      "type": "Other",
+      "date": "11042018131700",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSL_11042018131746.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "23032018154700",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSINVESTORMEET2018_23032018154726_770.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "01022018170000",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSPPTQ3_01022018170020_675.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "01022018164109",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSUFRQ3_01022018164109.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "01022018163800",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSUFRQ3_01022018163831_640.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "18012018142600",
+      "url": "https://nsearchives.nseindia.com/corporate/NSEBSEPPTMEETSCH31DEC2017_18012018142625_105.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "22122017104400",
+      "url": "https://nsearchives.nseindia.com/corporate/IEPF_22122017104410_011.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "02112017100500",
+      "url": "https://nsearchives.nseindia.com/corporate/BSENSEletterhalfyear30sept17_02112017100509_311.zip",
+      "category": ""
+    },
+    {
+      "title": "Allotment of Securities",
+      "type": "Other",
+      "date": "16102017163800",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSRightsissueallotment_16102017163847_646.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "16102017162800",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSINVESTORPPTQ2_16102017162819_631.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "16102017160953",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSUFR30SEPT2017_16102017160953.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "26092017093800",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBSENSE2QFY18ResultsConferenceCall_26092017093838_025.zip",
+      "category": ""
+    },
+    {
+      "title": "Appointment",
+      "type": "Other",
+      "date": "13092017132300",
+      "url": "https://nsearchives.nseindia.com/corporate/APPOINTMENTOFINDEPENDENTDIRECTOR_13092017132300_502.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "21082017150500",
+      "url": "https://nsearchives.nseindia.com/corporate/BSENSEsjexclusion_21082017150502_588.zip",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "21072017165600",
+      "url": "https://nsearchives.nseindia.com/corporate/FinalReg44EvotingScrutinizerreport2017bfs_21072017165625_721.zip",
+      "category": ""
+    },
+    {
+      "title": "Monitoring Agency Report",
+      "type": "Other",
+      "date": "21072017152000",
+      "url": "https://nsearchives.nseindia.com/corporate/SEBI(LODR)REGULATION32(6)_21072017152029_651.zip",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "19072017185900",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAGM2017_19072017185924_418.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "19072017183400",
+      "url": "https://nsearchives.nseindia.com/corporate/INVESTORSPRESENTATIONBFS30JUNE2017_19072017183453_400.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "19072017162336",
+      "url": "https://nsearchives.nseindia.com/corporate/UFR30JUNE2017BFS_19072017162336.zip",
+      "category": ""
+    },
+    {
+      "title": "Demise",
+      "type": "Other",
+      "date": "10072017164600",
+      "url": "https://nsearchives.nseindia.com/corporate/intimationunderreg30_10072017164618_325.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "03072017200100",
+      "url": "https://nsearchives.nseindia.com/corporate/Reg30analystconcall21july2017bfs_03072017200151_642.zip",
+      "category": ""
+    },
+    {
+      "title": "Shareholders meeting",
+      "type": "Other",
+      "date": "28062017102300",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAGMBSENSE2017Intimationreg30_28062017102321_305.zip",
+      "category": ""
+    },
+    {
+      "title": "AGM/Book Closure",
+      "type": "Other",
+      "date": "13062017170800",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_13062017170819.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "13062017164800",
+      "url": "https://nsearchives.nseindia.com/corporate/Regulation44BFS_13062017164838_716.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "12062017181700",
+      "url": "https://nsearchives.nseindia.com/corporate/SEBI(LODR)Reg33(3)(b)_12062017181752_451.zip",
+      "category": ""
+    },
+    {
+      "title": "Auditor's report",
+      "type": "Other",
+      "date": "23052017174300",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSFY201617standaloneAuditreport_23052017174344_782.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "17052017191400",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSInvestorPresentationQ4FY201617_17052017191429_634.zip",
+      "category": ""
+    },
+    {
+      "title": "Change in Auditors",
+      "type": "Other",
+      "date": "17052017184500",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSDisclosureunder30_17052017184551_609.zip",
+      "category": ""
+    },
+    {
+      "title": "Dividend",
+      "type": "Other",
+      "date": "17052017184100",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSdeclarationdiv_17052017184130_605.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "17052017182618",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAUDITEDFINCIALRESULTS31MAR17_17052017182618.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "26042017112900",
+      "url": "https://nsearchives.nseindia.com/corporate/SENOTICEREG30(2)_26042017112920_501.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "19042017183400",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSQ4ANALYSTCALL19MAY2017_19042017183441_635.zip",
+      "category": ""
+    },
+    {
+      "title": "Disc. under Reg.30 of SEBI (SAST) Reg.2011",
+      "type": "Other",
+      "date": "11042017195500",
+      "url": "https://nsearchives.nseindia.com/corporate/bajajfinserv_11042017195530.zip",
+      "category": ""
+    },
+    {
+      "title": "Monitoring Agency Report",
+      "type": "Other",
+      "date": "20022017102200",
+      "url": "https://nsearchives.nseindia.com/corporate/REG32DT31032016AND30092016_20022017102239_006.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "30012017155800",
+      "url": "https://nsearchives.nseindia.com/corporate/PPTletterSEsQ3FY201617_30012017155819_341.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "30012017153457",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSUFR31122016_30012017153457.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "09012017171900",
+      "url": "https://nsearchives.nseindia.com/corporate/LettertoNSE_09012017171945_397.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "12122016124000",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_12122016124020.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "11112016143000",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSL_E_HYR_091116_11112016143001_812.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "27102016162600",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSPPT30SEPT2016Q2_27102016162606_735.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "27102016160933",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSQ2UFR30092016_27102016160933.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "type": "Concall",
+      "date": "30092016100700",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSCONCALLINTIMATIONTONSEQ2FY201617_30092016100722_870.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "12092016120800",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSREG30_12092016120816_248.zip",
+      "category": ""
+    },
+    {
+      "title": "Regulation 44(3) of SEBI (LODR), Reg., 2015",
+      "type": "Other",
+      "date": "27072016201200",
+      "url": "https://nsearchives.nseindia.com/corporate/Reg44andsection108EvotingdetailstoBSEandNSE_27072016201240_330.zip",
+      "category": ""
+    },
+    {
+      "title": "Annual General Meeting Updates",
+      "type": "Other",
+      "date": "27072016172500",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAGM_27072016172543_177.zip",
+      "category": ""
+    },
+    {
+      "title": "Limited Review Report",
+      "type": "Results",
+      "date": "27072016101700",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_27072016101732.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "26072016195700",
+      "url": "https://nsearchives.nseindia.com/corporate/LettertoSEtoPPTBajajFinservInvestorPresentationQ1FY201617_26072016195739_660.zip",
+      "category": ""
+    },
+    {
+      "title": "Investor Presentation",
+      "type": "Investor Presentation",
+      "date": "26072016193300",
+      "url": "https://nsearchives.nseindia.com/corporate/LettertoSEtoPPTBajajFinservInvestorPresentationQ1FY201617_26072016193345_646.zip",
+      "category": ""
+    },
+    {
+      "title": "Press Release",
+      "type": "Other",
+      "date": "26072016153300",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_pressrelease_26072016153307.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "26072016152922",
+      "url": "https://nsearchives.nseindia.com/corporate/BSENSEBFS30062016_26072016152922.zip",
+      "category": ""
+    },
+    {
+      "title": "Analysts Meet",
+      "type": "Concall",
+      "date": "07072016084500",
+      "url": "https://nsearchives.nseindia.com/corporate/LettertoSEsfordetailsofconcallQ1201617BFS_07072016084521_202.zip",
+      "category": ""
+    },
+    {
+      "title": "Annual General Meeting Updates",
+      "type": "Other",
+      "date": "05072016180200",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSAGMNOTICE2016_05072016180249_021.zip",
+      "category": ""
+    },
+    {
+      "title": "News Verification",
+      "type": "Other",
+      "date": "27062016142400",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_6309_reply_27062016142450.zip",
+      "category": ""
+    },
+    {
+      "title": "News Verification",
+      "type": "Other",
+      "date": "27062016120700",
+      "url": "https://www.nseindia.com-",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "22062016151600",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSBSENSEREG30_22062016151638_343.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "17062016182900",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSINTIMATIONCUTOFFDATEBSENSE2016_17062016182953_276.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "25052016105300",
+      "url": "https://nsearchives.nseindia.com/corporate/INVESTORPRESENTATION31MARCH2016BFS_25052016105327_105.zip",
+      "category": ""
+    },
+    {
+      "title": "Financial Result Updates",
+      "type": "Other",
+      "date": "24052016164918",
+      "url": "https://nsearchives.nseindia.com/corporate/BFSResult31032016_24052016164918.zip",
+      "category": ""
+    },
+    {
+      "title": "Press Release",
+      "type": "Other",
+      "date": "24052016163900",
+      "url": "https://nsearchives.nseindia.com/corporate/Bajaj_01_24052016163904.zip",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "24052016163700",
+      "url": "https://nsearchives.nseindia.com/corporate/Bajaj_01_24052016163707.zip",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "17052016184400",
+      "url": "https://nsearchives.nseindia.com/corporate/NSEandBSEletterReg30Analystmeet31March2016_17052016184404_772.zip",
+      "category": ""
+    },
+    {
+      "title": "Disc. under Reg.30 of SEBI (SAST) Reg.2011",
+      "type": "Other",
+      "date": "18042016120000",
+      "url": "https://nsearchives.nseindia.com/corporate/146_18042016120001.zip",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "07042016181600",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJAJFINSV_07042016181654.zip",
+      "category": ""
+    }
+  ],
+  "segments": {},
+  "sentiment": {
+    "sentiment": "Neutral",
+    "summary": "Automated analysis detected 0 positive and 0 cautionary signals in the transcript.",
+    "mode": "rule-based"
+  },
+  "metadata": {
+    "data_sources": [
+      {
+        "type": "NSE_API",
+        "label": "Dec 2024"
+      },
+      {
+        "type": "YFINANCE",
+        "label": "Dec 2025"
+      }
+    ],
+    "last_updated": "2026-03-18T09:07:53.839343+00:00",
+    "parser_version": "v2.0",
+    "validation_passed": false
+  }
+}

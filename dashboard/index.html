@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Nifty50 AI Analyzer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10B981",
+                        "primary-hover": "#059669",
+                        "background-light": "#F8FAFC",
+                        "slate-panel": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .glow-button {
+            box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+            transform: translateY(-1px);
+        }
+        .bg-grid-pattern {
+            background-color: #F8FAFC;
+            background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .bg-gradient-soft {
+            background: 
+                radial-gradient(circle at 0% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(79, 70, 229, 0.05) 0%, transparent 50%);
+        }
+        .brand-text-shadow {
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light text-slate-900 antialiased overflow-hidden">
+<div class="flex min-h-screen w-full">
+<!-- Left Side: Branding & Visualization -->
+<div class="hidden lg:flex lg:w-1/2 relative flex-col justify-between p-12 overflow-hidden border-r border-slate-200 bg-slate-50/50">
+<!-- Background Decoration -->
+<div class="absolute inset-0 z-0 bg-gradient-soft"></div>
+<div class="absolute inset-0 z-0 hover:grayscale-0 transition-all duration-1000 opacity-30 blur-[2px]" data-alt="Abstract financial candlestick charts and stock market data visualization" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVjml25xiQAnAYvYgReEqEARTSRA8IqUWCQqU71NJR50W5jduZWvGrr-Imz-Lg-pg22cMATQen_JubimW-fU_1ZDrF13Yhskw7_jWPSyfLl5YL1FwYnC3Wm-puscNxXuQzT9V8oylW94Ak3SADE4bMnCrbFtTteLjP_lRIDuxavRXE8hejjJssCQqWUgwCzOwnTHy3KRjPf1QMzJpERxHGQyHqsFwdNCyQWT06Sq8ck_r3fhdpFuk45AXe52VxFGfysv1O6-hwPLie'); background-size: cover; background-position: center;"></div>
+<!-- Content -->
+<div class="relative z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-slate-900">Nifty50 AI</h2>
+</div>
+</div>
+<div class="relative z-10 max-w-lg">
+<h1 class="text-5xl font-black leading-tight mb-6 text-slate-900 brand-text-shadow">
+                Your AI <br/>
+<span class="text-primary">Financial Analyst</span>
+</h1>
+<p class="text-lg text-slate-600 font-medium leading-relaxed">
+                Harness the power of neural networks to decode Nifty 50 market trends. Get real-time insights, predictive modeling, and institutional-grade stock analysis.
+            </p>
+<div class="mt-12 flex gap-10">
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-slate-900">50+</span>
+<span class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Nifty Stocks</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-slate-900">99.9%</span>
+<span class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Uptime</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-slate-900">AI</span>
+<span class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Powered</span>
+</div>
+</div>
+</div>
+<div class="relative z-10">
+<p class="text-sm text-slate-400 font-medium">© 2024 Nifty50 AI Analyzer. Secure Cloud Infrastructure.</p>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-grid-pattern relative">
+<div class="w-full max-w-md glass-panel p-8 sm:p-10 rounded-2xl relative z-10 shadow-xl">
+<div class="text-center mb-10 lg:text-left">
+<div class="lg:hidden flex justify-center mb-6">
+<div class="size-12 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">monitoring</span>
+</div>
+</div>
+<h2 class="text-3xl font-bold tracking-tight text-slate-900">Welcome Back</h2>
+<p class="text-slate-500 mt-2">Access your automated market dashboard</p>
+</div>
+<form class="space-y-5" onsubmit="event.preventDefault(); window.location.href='/home.html';">
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">mail</span>
+<input class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-slate-900 placeholder:text-slate-400" placeholder="name@company.com" type="email" value="admin@nifty50.ai" required/>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-sm font-semibold text-slate-700">Password</label>
+<a class="text-xs font-bold text-primary hover:text-primary-hover transition-colors" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">lock</span>
+<input class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 pl-12 pr-12 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-slate-900 placeholder:text-slate-400" placeholder="••••••••" type="password" value="password" required/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 py-2">
+<input class="rounded border-slate-300 text-primary focus:ring-primary bg-white h-4 w-4" id="remember" type="checkbox"/>
+<label class="text-sm text-slate-500 cursor-pointer select-none" for="remember">Stay logged in for 30 days</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-xl glow-button flex items-center justify-center gap-2 transition-all" type="submit">
+<span>Login to Dashboard</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</form>
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase">
+<span class="bg-white px-4 text-slate-400 font-bold tracking-wider">Or continue with</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<button class="flex items-center justify-center gap-3 w-full bg-white border border-slate-200 py-3 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 1.12-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold text-slate-700">Sign in with Google</span>
+</button>
+</div>
+<p class="text-center mt-8 text-sm text-slate-500 font-medium">
+                Don't have an account? 
+                <a class="text-primary font-bold hover:underline" href="#">Start free trial</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>
