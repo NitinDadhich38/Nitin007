@@ -13,8 +13,7 @@
   "market_data": {
     "price": null,
     "market_cap": 0.0,
-    "pe": 0.0,
-    "dividend_yield": 0.0
+    "pe": 0.0
   },
   "profit_loss": {
     "quarterly": {},

@@ -10,7 +10,7 @@ Architecture:
   - File-based caching with 24h TTL (no Redis required)
   - /api/chat is a Phase B stub (returns 503 until LLM is wired)
 
-Install: pip install fastapi uvicorn[standard]
+Install: pip install fastapi uvicorn[standard] yfinance
 """
 
 import json
@@ -24,6 +24,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
+import yfinance as yf
 
 logger = logging.getLogger("NiftyAPI")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -95,6 +96,38 @@ def list_companies():
     with open(companies_path) as f:
         return json.load(f)
 
+
+@app.get("/api/live/{symbol}")
+def get_live_market(symbol: str):
+    """Bridge for real-time market metrics from NSE."""
+    cache_key = f"live_{symbol.upper()}"
+    cached = _read_cache(cache_key)
+    # We use a 1-minute TTL for live market data cache
+    if cached:
+        age_seconds = (datetime.now(timezone.utc) - datetime.fromtimestamp(_cache_path(cache_key).stat().st_mtime, tz=timezone.utc)).total_seconds()
+        if age_seconds < 60:
+            return cached
+
+    try:
+        t = yf.Ticker(f"{symbol.upper()}.NS")
+        info = t.info
+        metrics = {
+            "price": info.get("currentPrice", info.get("regularMarketPrice")),
+            "market_cap": info.get("marketCap", 0) / 1e7,
+            "pe": info.get("trailingPE", 0.0),
+            "dividend_yield": info.get("dividendYield", 0.0) * 100,
+            "day_high": info.get("dayHigh"),
+            "day_low": info.get("dayLow"),
+            "volume": info.get("volume"),
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        _write_cache(cache_key, metrics)
+        return metrics
+    except Exception as e:
+        logger.error(f"Live fetch fail for {symbol}: {e}")
+        # Fallback to local stored market data
+        co = _load_company(symbol)
+        return co.get("market_data", {})
 
 @app.get("/api/financials/{symbol}")
 def get_financials(

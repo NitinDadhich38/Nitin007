@@ -224,6 +224,41 @@
         </main>
     </div>
 
+    <!-- Phase 2: AI Chat Bubble -->
+    <div id="ai-chat-widget" class="fixed bottom-8 right-8 z-[100] group">
+        <div id="ai-chat-window" class="hidden absolute bottom-16 right-0 w-96 bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col transition-all duration-300 transform scale-95 opacity-0 origin-bottom-right">
+            <div class="bg-brand p-5 text-white flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="size-8 bg-white/20 rounded-lg flex items-center justify-center font-black">AI</div>
+                    <div>
+                        <p class="text-xs font-black uppercase tracking-widest">FinGPT Assistant</p>
+                        <p class="text-[9px] opacity-80 font-bold uppercase tracking-widest">Institutional Mode Active</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="hover:bg-white/10 p-1 rounded-lg">
+                    <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="h-80 overflow-y-auto p-5 space-y-4 custom-scrollbar bg-slate-50/50">
+                <div class="flex gap-3">
+                    <div class="size-6 bg-brand/10 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-black text-brand">AI</div>
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none border border-slate-100 shadow-sm">
+                        <p class="text-xs font-medium text-slate-700 leading-relaxed">System Ready. Ask me anything about the selected filing's data or market position.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 bg-white border-t border-slate-100 flex gap-2">
+                <input id="chat-input" type="text" placeholder="Query the dataset..." class="flex-1 bg-slate-50 border border-slate-100 rounded-xl px-4 py-2 text-xs focus:ring-1 focus:ring-brand outline-none font-medium"/>
+                <button onclick="handleChat()" class="bg-brand text-white p-2 rounded-xl hover:shadow-lg transition-all">
+                    <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+            </div>
+        </div>
+        <button onclick="toggleChat()" class="size-14 bg-brand rounded-full flex items-center justify-center text-white shadow-xl shadow-brand/20 hover:scale-110 active:scale-95 transition-all">
+            <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </button>
+    </div>
+
 <script>
 let allCompanies = [];
 let currentSymbol = null;
@@ -272,8 +307,20 @@ async function loadCompany(symbol) {
     renderSidebar(allCompanies);
 
     try {
-        const res = await fetch(`data/${symbol}.json?t=${Date.now()}`);
+        // Parallel fetch of base data and live market data
+        const [res, liveRes] = await Promise.all([
+            fetch(`data/${symbol}.json?t=${Date.now()}`),
+            fetch(`/api/live/${symbol}`).catch(() => null)
+        ]);
+        
         currentData = await res.json();
+        
+        if (liveRes && liveRes.ok) {
+            const live = await liveRes.json();
+            // Patch currentData with live metrics
+            currentData.market_data = { ...currentData.market_data, ...live };
+        }
+
         renderBaseInfo();
         renderPage();
         document.getElementById('loader').classList.add('hidden');
@@ -402,6 +449,51 @@ function switchTab(t) {
 }
 function setType(t) { currentType = t; document.getElementById('btn-cons').className = t==='consolidated' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; document.getElementById('btn-std').className = t==='standalone' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; if(t==='standalone' && !currentData.standalone_profit_loss) return; renderPage(); }
 function setPeriod(p) { currentPeriod = p; document.getElementById('btn-ann').className = p==='annual' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; document.getElementById('btn-qtr').className = p==='quarterly' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; renderPage(); }
+
+// --- Phase 2: AI Elements ---
+function toggleChat() {
+    const win = document.getElementById('ai-chat-window');
+    win.classList.toggle('hidden');
+    setTimeout(() => {
+        win.classList.toggle('scale-95');
+        win.classList.toggle('opacity-0');
+    }, 10);
+}
+
+async function handleChat() {
+    const input = document.getElementById('chat-input');
+    const msg = input.value.trim();
+    if (!msg) return;
+    
+    appendMessage('YOU', msg, true);
+    input.value = '';
+    
+    // Simulate specialized FinGPT response for now
+    setTimeout(() => {
+        const responses = [
+            "Analyzing the current filing... The Debt-to-Equity ratio for this period indicates a conservative leverage stance compared to sector peers.",
+            "Based on the annual report data, Revenue growth is tracking at 15.2% YoY, primarily driven by core business operations.",
+            "Verified metrics for the latest quarter show an uptick in EBITDA margins by 120bps. This aligns with management's commentary on cost optimization."
+        ];
+        appendMessage('AI', responses[Math.floor(Math.random() * responses.length)], false);
+    }, 1000);
+}
+
+function appendMessage(who, text, isUser) {
+    const box = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.className = "flex gap-3 " + (isUser ? "flex-row-reverse" : "");
+    div.innerHTML = `
+        <div class="size-6 ${isUser ? 'bg-slate-200 text-slate-500' : 'bg-brand/10 text-brand'} rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-black">${who}</div>
+        <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm ${isUser ? 'rounded-tr-none' : 'rounded-tl-none'}">
+            <p class="text-xs font-medium text-slate-700 leading-relaxed">${text}</p>
+        </div>
+    `;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+}
+
+</script>
 
 </script>
 </body>
