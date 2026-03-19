@@ -11,8 +11,8 @@
     "has_standalone": false
   },
   "market_data": {
-    "price": 305.1,
-    "market_cap": 382266.79,
+    "price": 304,
+    "market_cap": 380888.57,
     "pe": 0.0
   },
   "profit_loss": {
@@ -441,7 +441,8 @@
       "free_cash_flow_margin": 20.56,
       "cfo_to_net_profit": 0.51,
       "revenue_growth_pct": 10.78,
-      "profit_growth_pct": 69.84
+      "profit_growth_pct": 69.84,
+      "roce": 30.62
     },
     "FY2024": {
       "net_profit_margin": 30.36,
@@ -452,7 +453,8 @@
       "free_cash_flow_margin": 20.2,
       "cfo_to_net_profit": 0.84,
       "revenue_growth_pct": -4.06,
-      "profit_growth_pct": 6.6
+      "profit_growth_pct": 6.6,
+      "roce": 28.79
     },
     "FY2023": {
       "net_profit_margin": 27.32,
@@ -463,7 +465,8 @@
       "free_cash_flow_margin": 22.97,
       "cfo_to_net_profit": 0.98,
       "revenue_growth_pct": 16.92,
-      "profit_growth_pct": 25.91
+      "profit_growth_pct": 25.91,
+      "roce": 30.23
     },
     "FY2022": {
       "net_profit_margin": 25.37,
@@ -472,7 +475,8 @@
       "debt_to_equity": 0.0,
       "debt_to_assets": 0.0,
       "free_cash_flow_margin": 22.69,
-      "cfo_to_net_profit": 1.03
+      "cfo_to_net_profit": 1.03,
+      "roce": 26.9
     }
   },
   "ratios": {
@@ -1025,6 +1029,13 @@
     }
   ],
   "documents": [
+    {
+      "title": "ESOP/ESOS/ESPS",
+      "type": "Other",
+      "date": "18032026152100",
+      "url": "https://nsearchives.nseindia.com/corporate/ITC_18032026152045_SE.pdf",
+      "category": ""
+    },
     {
       "title": "Copy of Newspaper Publication",
       "type": "Other",
@@ -9212,8 +9223,9 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-18T09:07:53.725596+00:00",
+    "last_updated": "2026-03-18T12:50:25.174709+00:00",
     "parser_version": "v2.0",
-    "validation_passed": false
+    "validation_passed": false,
+    "post_processed": "2026-03-18T18:48:38.282816"
   }
 }

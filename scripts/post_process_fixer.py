@@ -18,9 +18,8 @@ from datetime import datetime
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s  %(message)s")
 log = logging.getLogger("PostFixer")
-
-DATA_DIR = "dashboard/data"
-BACKUP_DIR = "dashboard/backups"
+DATA_DIR = "data"
+BACKUP_DIR = "data/backups"
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -248,7 +247,7 @@ def recompute_derived(sym, pl_ann, bs_ann, cf_ann, dm):
 # ── Main Loop ──────────────────────────────────────────────────────────────────
 
 def run():
-    files = sorted(glob.glob(os.path.join(DATA_DIR, "*.json")))
+    files = sorted(glob.glob(os.path.join(DATA_DIR, "**", "company_financials.json"), recursive=True))
     files = [f for f in files if not f.endswith("companies.json")]
 
     total_fixes = 0
@@ -291,7 +290,7 @@ def run():
         data["profit_loss"]["annual"] = pl_ann
         data["balance_sheet"]["annual"] = bs_ann
         data["cash_flow"]["annual"] = cf_ann
-        data["metadata"]["post_processed"] = datetime.now().isoformat()
+        data.setdefault("metadata", {})["post_processed"] = datetime.now().isoformat()
 
         with open(filepath, "w") as f:
             json.dump(data, f, indent=2)

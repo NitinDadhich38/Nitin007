@@ -24,6 +24,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
+import yfinance as yf
 
 logger = logging.getLogger("NiftyAPI")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -32,8 +33,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 ROOT          = Path(__file__).parent
 DASHBOARD_DIR = ROOT.parent / "dashboard"
 DATA_DIR      = DASHBOARD_DIR / "data"
-CACHE_DIR     = ROOT.parent / "cache"
-CACHE_DIR.mkdir(exist_ok=True)
+CACHE_DIR     = Path("/tmp/cache")
+CACHE_DIR.mkdir(exist_ok=True, parents=True)
 CACHE_TTL_HOURS = 24
 
 # ─── App ──────────────────────────────────────────────────────────────────────
@@ -94,6 +95,39 @@ def list_companies():
         raise HTTPException(status_code=503, detail="Companies index not found. Run generate_dashboard_data.py first.")
     with open(companies_path) as f:
         return json.load(f)
+
+
+@app.get("/api/live/{symbol}")
+def get_live_market(symbol: str):
+    """Bridge for real-time market metrics from NSE."""
+    cache_key = f"live_{symbol.upper()}"
+    cached = _read_cache(cache_key)
+    # We use a 1-minute TTL for live market data cache
+    if cached:
+        age_seconds = (datetime.now(timezone.utc) - datetime.fromtimestamp(_cache_path(cache_key).stat().st_mtime, tz=timezone.utc)).total_seconds()
+        if age_seconds < 60:
+            return cached
+
+    try:
+        t = yf.Ticker(f"{symbol.upper()}.NS")
+        info = t.info
+        metrics = {
+            "price": info.get("currentPrice", info.get("regularMarketPrice")),
+            "market_cap": info.get("marketCap", 0) / 1e7,
+            "pe": info.get("trailingPE", 0.0),
+            "dividend_yield": info.get("dividendYield", 0.0) * 100,
+            "day_high": info.get("dayHigh"),
+            "day_low": info.get("dayLow"),
+            "volume": info.get("volume"),
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        _write_cache(cache_key, metrics)
+        return metrics
+    except Exception as e:
+        logger.error(f"Live fetch fail for {symbol}: {e}")
+        # Fallback to local stored market data
+        co = _load_company(symbol)
+        return co.get("market_data", {})
 
 
 @app.get("/api/financials/{symbol}")

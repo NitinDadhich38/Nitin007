@@ -427,7 +427,8 @@
       "free_cash_flow_margin": 47.62,
       "cfo_to_net_profit": 1.78,
       "revenue_growth_pct": 19.36,
-      "profit_growth_pct": 8.17
+      "profit_growth_pct": 8.17,
+      "roce": 5.57
     },
     "FY2024": {
       "net_profit_margin": 31.34,
@@ -439,7 +440,8 @@
       "free_cash_flow_margin": 48.74,
       "cfo_to_net_profit": 1.64,
       "revenue_growth_pct": 64.84,
-      "profit_growth_pct": 25.68
+      "profit_growth_pct": 25.68,
+      "roce": 5.08
     },
     "FY2023": {
       "net_profit_margin": 41.1,
@@ -450,7 +452,8 @@
       "free_cash_flow_margin": 35.97,
       "cfo_to_net_profit": 0.96,
       "revenue_growth_pct": 18.24,
-      "profit_growth_pct": 28.35
+      "profit_growth_pct": 28.35,
+      "roce": 5.58
     },
     "FY2022": {
       "net_profit_margin": 37.86,
@@ -459,7 +462,8 @@
       "debt_to_equity": 0.84,
       "debt_to_assets": 0.1,
       "free_cash_flow_margin": 54.41,
-      "cfo_to_net_profit": 1.51
+      "cfo_to_net_profit": 1.51,
+      "roce": 5.23
     }
   },
   "ratios": {
@@ -13139,6 +13143,7 @@
     ],
     "last_updated": "2026-03-18T09:07:53.278139+00:00",
     "parser_version": "v2.0",
-    "validation_passed": false
+    "validation_passed": false,
+    "post_processed": "2026-03-18T18:48:37.435168"
   }
 }

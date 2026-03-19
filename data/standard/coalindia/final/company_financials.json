@@ -11,8 +11,8 @@
     "has_standalone": false
   },
   "market_data": {
-    "price": 453.1,
-    "market_cap": 279233.22,
+    "price": 457.2,
+    "market_cap": 281759.94,
     "pe": 0.0
   },
   "profit_loss": {
@@ -441,7 +441,8 @@
       "free_cash_flow_margin": 12.8,
       "cfo_to_net_profit": 0.83,
       "revenue_growth_pct": -2.21,
-      "profit_growth_pct": -5.47
+      "profit_growth_pct": -5.47,
+      "roce": 18.3
     },
     "FY2024": {
       "net_profit_margin": 29.43,
@@ -452,7 +453,8 @@
       "free_cash_flow_margin": 1.01,
       "cfo_to_net_profit": 0.48,
       "revenue_growth_pct": -0.28,
-      "profit_growth_pct": 17.75
+      "profit_growth_pct": 17.75,
+      "roce": 20.85
     },
     "FY2023": {
       "net_profit_margin": 24.93,
@@ -463,7 +465,8 @@
       "free_cash_flow_margin": 16.02,
       "cfo_to_net_profit": 1.13,
       "revenue_growth_pct": 26.72,
-      "profit_growth_pct": 82.99
+      "profit_growth_pct": 82.99,
+      "roce": 19.7
     },
     "FY2022": {
       "net_profit_margin": 17.26,
@@ -472,7 +475,8 @@
       "debt_to_equity": 0.08,
       "debt_to_assets": 0.02,
       "free_cash_flow_margin": 28.92,
-      "cfo_to_net_profit": 2.37
+      "cfo_to_net_profit": 2.37,
+      "roce": 12.49
     }
   },
   "ratios": {
@@ -8533,8 +8537,9 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-18T09:08:05.948539+00:00",
+    "last_updated": "2026-03-18T12:50:31.930829+00:00",
     "parser_version": "v2.0",
-    "validation_passed": false
+    "validation_passed": false,
+    "post_processed": "2026-03-18T18:48:38.211212"
   }
 }

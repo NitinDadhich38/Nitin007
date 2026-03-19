@@ -18,13 +18,16 @@ import logging
 import os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, List
+import sqlite3
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 import yfinance as yf
+import pandas as pd
+import io
 
 logger = logging.getLogger("NiftyAPI")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -50,6 +53,13 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+DB_PATH = ROOT / "financials.db"
+
+def get_db_connection():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
 
 
 # ─── Cache helpers ────────────────────────────────────────────────────────────
@@ -128,6 +138,87 @@ def get_live_market(symbol: str):
         # Fallback to local stored market data
         co = _load_company(symbol)
         return co.get("market_data", {})
+
+@app.get("/api/sector/{sector}")
+def get_sector_peers(sector: str):
+    """Returns key metrics for all companies in a sector."""
+    companies_path = DASHBOARD_DIR / "companies.json"
+    if not companies_path.exists():
+        raise HTTPException(status_code=503, detail="Companies index not found")
+        
+    with open(companies_path) as f:
+        all_cos = json.load(f)
+        
+    peers = [c for c in all_cos if c.get("sector", "").lower() == sector.lower()]
+    
+    results = []
+    for p in peers:
+        symbol = p["symbol"]
+        try:
+            co_data = _load_company(symbol)
+            md = co_data.get("market_data", {})
+            dm = co_data.get("derived_metrics", {})
+            # Get latest annual revenue and profit
+            latest_yr = sorted(co_data.get("profit_loss", {}).get("annual", {}).keys(), reverse=True)[0] if co_data.get("profit_loss", {}).get("annual") else None
+            pl = co_data.get("profit_loss", {}).get("annual", {}).get(latest_yr, {}) if latest_yr else {}
+            
+            results.append({
+                "symbol": symbol,
+                "name": p["name"],
+                "price": md.get("price"),
+                "market_cap": md.get("market_cap"),
+                "pe": md.get("pe"),
+                "revenue": pl.get("revenue"),
+                "net_profit": pl.get("net_profit"),
+                "sector": sector
+            })
+        except Exception as e:
+            logger.error(f"Error loading peer {symbol}: {e}")
+            continue
+            
+    return results
+
+@app.get("/api/screener")
+def run_screener(
+    min_market_cap: float = Query(None),
+    max_pe: float = Query(None),
+    min_roe: float = Query(None),
+    min_div_yield: float = Query(None),
+    sector: str = Query(None)
+):
+    """Simple screener using key metrics."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    query = """
+    SELECT c.*, am.roe, am.revenue, am.net_profit
+    FROM companies c
+    LEFT JOIN annual_metrics am ON c.symbol = am.symbol AND am.year = (SELECT MAX(year) FROM annual_metrics WHERE symbol = c.symbol)
+    WHERE 1=1
+    """
+    params: List[Any] = []
+    
+    if min_market_cap:
+        query += " AND c.market_cap >= ?"
+        params.append(min_market_cap)
+    if max_pe:
+        query += " AND c.pe <= ?"
+        params.append(max_pe)
+    if min_roe:
+        query += " AND am.roe >= ?"
+        params.append(min_roe)
+    if min_div_yield:
+        query += " AND c.dividend_yield >= ?"
+        params.append(min_div_yield)
+    if sector:
+        query += " AND c.sector = ?"
+        params.append(sector)
+        
+    cursor.execute(query, params)
+    rows = cursor.fetchall()
+    conn.close()
+    
+    return [dict(r) for r in rows]
 
 @app.get("/api/financials/{symbol}")
 def get_financials(
@@ -244,6 +335,102 @@ def get_insights(symbol: str):
         "anomalies": data.get("anomalies", []),
         "note":      "Rule-based only. LLM insights available in Phase B.",
     }
+
+@app.get("/api/metrics/all/{symbol}")
+def get_all_metrics(symbol: str):
+    """Returns all available latest metrics for a company from the DB."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Get latest annual metrics
+    cursor.execute("""
+    SELECT * FROM annual_metrics 
+    WHERE symbol = ? 
+    ORDER BY year DESC LIMIT 1
+    """, (symbol.upper(),))
+    row = cursor.fetchone()
+    
+    # Get company info
+    cursor.execute("SELECT * FROM companies WHERE symbol = ?", (symbol.upper(),))
+    co_row = cursor.fetchone()
+    
+    conn.close()
+    
+    if not co_row:
+        raise HTTPException(status_code=404, detail="Company not found")
+        
+    res = dict(co_row)
+    if row:
+        row_dict = dict(row)
+        for k, v in row_dict.items():
+            if v is not None:
+                res[k] = v
+                
+    # Try to patch with live market data from cache
+    live_cache = _read_cache(f"live_{symbol.upper()}")
+    if live_cache:
+        for k, v in live_cache.items():
+            if v:
+                res[k] = v
+                
+    return res
+
+@app.get("/api/charts/{symbol}")
+def get_historical_charts(symbol: str):
+    try:
+        ticker_symbol = symbol + ".NS"
+        ticker = yf.Ticker(ticker_symbol)
+        hist = ticker.history(period="1y")
+        
+        if hist.empty:
+            return {"error": "No historical data found"}
+            
+        data = []
+        for index, row in hist.iterrows():
+            data.append({
+                "date": index.strftime('%Y-%m-%d'),
+                "price": round(row['Close'], 2),
+                "volume": int(row['Volume'])
+            })
+        return data
+    except Exception as e:
+        return {"error": str(e)}
+
+@app.get("/api/export/{symbol}")
+def export_excel(symbol: str):
+    """Exports financial statements to an Excel file."""
+    try:
+        data = _load_company(symbol)
+        output = io.BytesIO()
+        
+        with pd.ExcelWriter(output, engine='openpyxl') as writer:
+            # Profit & Loss
+            pl_data = data.get("profit_loss", {}).get("annual", {})
+            if pl_data:
+                df_pl = pd.DataFrame(pl_data).T
+                df_pl.to_excel(writer, sheet_name='Profit & Loss')
+            
+            # Balance Sheet
+            bs_data = data.get("balance_sheet", {}).get("annual", {})
+            if bs_data:
+                df_bs = pd.DataFrame(bs_data).T
+                df_bs.to_excel(writer, sheet_name='Balance Sheet')
+                
+            # Cash Flow
+            cf_data = data.get("cash_flow", {}).get("annual", {})
+            if cf_data:
+                df_cf = pd.DataFrame(cf_data).T
+                df_cf.to_excel(writer, sheet_name='Cash Flow')
+        
+        output.seek(0)
+        return FileResponse(
+            output,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            filename=f"{symbol.upper()}_Financials.xlsx"
+        )
+    except Exception as e:
+        logger.error(f"Export fail: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.post("/api/chat")
