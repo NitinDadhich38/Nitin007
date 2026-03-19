@@ -8,22 +8,15 @@ from typing import Any, Dict, List, Optional
 
 from .analytics.growth_engine import GrowthEngine
 from .analytics.ratio_engine import RatioEngine
-from .analytics.graph_engine import GraphEngine
-from .analytics.insight_engine import InsightEngine
-from .analytics.anomaly_detector import AnomalyDetector
 from .core.storage import write_json
-from .core.llm_service import LLMService
-from .core.historical_ingestor import HistoricalIngestor
 from .data_sources.bse_api_client import BSEAPIClient
 from .data_sources.ir_scraper import IRScraper
 from .data_sources.mca_xbrl_client import MCAXBRLClient
 from .data_sources.nse_api_client import NSEAPIClient
-from .data_sources.doc_linker import DocLinker
 from .data_sources.pdf_parser_wrapper import PDFParser
 from .parsers.table_parser import HTMLTableParser
 from .parsers.pdf_table_parser import PDFTableParser
 from .parsers.pdf_text_parser import PDFTextParser
-from .parsers.segment_extractor import SegmentExtractor
 from .parsers.xbrl_parser import MCAXBRLInstanceParser
 from .transformers.financial_mapper import CompanyFinancials
 from .transformers.schema_normalizer import SchemaNormalizer
@@ -45,23 +38,16 @@ class HierarchicalFinancialPipeline:
         self.mca_client = MCAXBRLClient(base_dir=mca_base_dir)
         self.mca_parser = MCAXBRLInstanceParser(target_unit="INR_CRORE", prefer_consolidated=True)
         self.nse_client = NSEAPIClient()
-        self.doc_linker = DocLinker(nse_client=self.nse_client)
         self.bse_client = BSEAPIClient()
         self.ir_scraper = IRScraper()
         self.pdf_parser = PDFParser()
-        self.segment_extractor = SegmentExtractor()
         self.pdf_table_parser = PDFTableParser(FIELD_SYNONYMS)
         self.pdf_text_parser = PDFTextParser(FIELD_SYNONYMS)
         self.html_table_parser = HTMLTableParser(FIELD_SYNONYMS)
         self.normalizer = SchemaNormalizer()
         self.ratio_engine = RatioEngine()
-        self.graph_engine = GraphEngine()
-        self.insight_engine = InsightEngine()
-        self.anomaly_detector = AnomalyDetector()
         self.growth_engine = GrowthEngine()
         self.validator = FinancialValidator()
-        self.llm_service = LLMService()
-        self.ingestor = HistoricalIngestor()
 
     def process_company(self, company: Company, *, pdf_files: Optional[List[str]] = None) -> CompanyFinancials:
         symbol = company.symbol.upper()
@@ -90,20 +76,6 @@ class HierarchicalFinancialPipeline:
             if last_price and issued_shares:
                 fin.company_info["market_cap"] = round((float(last_price) * float(issued_shares)) / 10_000_000, 2)
             logger.info(f"✅ Market data fetched: ₹{last_price}")
-
-        # Tier 0.5: Documents Linker
-        fin.documents = self.doc_linker.fetch_recent_documents(symbol)
-        if fin.documents:
-            logger.info(f"✅ Linked {len(fin.documents)} documents/announcements")
-            # 10-Year Cache: Download Annual Reports in background
-            self.ingestor.download_annual_reports(symbol, fin.documents)
-            
-            # Analyze latest concall if found
-            latest_concall = next((d for d in fin.documents if d["type"] == "Concall"), None)
-            if latest_concall and latest_concall.get("summary_needed", True):
-                # We skip actual content fetching for now to avoid massive PDF downloads in one go
-                fin.management_sentiment = self.llm_service.analyze_concall(latest_concall.get("title", ""))
-                logger.info(f"✅ Management Sentiment extracted: {fin.management_sentiment.get('sentiment')}")
 
         # Tier 1: MCA XBRL (local artifacts)
         if company.cin:
@@ -200,13 +172,27 @@ class HierarchicalFinancialPipeline:
             pl = fin.profit_loss["annual"].get(fy)
             bs = fin.balance_sheet["annual"].get(fy)
             cf = fin.cash_flow["annual"].get(fy)
+            
+            # ── Automatic EPS Calculation if missing ─────────────────────────
+            if pl and pl.net_profit and pl.eps is None:
+                # Use current shares as fallback, or BS shares if available
+                shares = (bs.shares_outstanding if bs else None) or fin.company_info.get("shares_outstanding")
+                if shares:
+                    pl.eps = round((pl.net_profit * 10_000_000.0) / shares, 2)
+            
             fin.ratios["annual"][fy] = self.ratio_engine.compute_all(pl, bs, cf)
+            
+        # Same for standalone if it exists
+        st_annual_years = sorted(list(fin.standalone_profit_loss["annual"].keys()), reverse=True)
+        for fy in st_annual_years:
+            pl = fin.standalone_profit_loss["annual"].get(fy)
+            if pl and pl.net_profit and pl.eps is None:
+                shares = fin.company_info.get("shares_outstanding")
+                if shares:
+                    pl.eps = round((pl.net_profit * 10_000_000.0) / shares, 2)
 
         fin.growth["annual"]["revenue_yoy_pct"] = self.growth_engine.compute_yoy(fin.profit_loss["annual"], "revenue_from_operations")
         fin.growth["annual"]["net_profit_yoy_pct"] = self.growth_engine.compute_yoy(fin.profit_loss["annual"], "net_profit")
-
-        # ── Self-Healing Loop: Account Identities ──
-        self.normalizer.enforce_accounting_identities(fin)
 
         # Validation
         anomalies = self.validator.validate(asdict(fin))
@@ -236,76 +222,36 @@ class HierarchicalFinancialPipeline:
             "parser_version": "v2.0",
             "validation_passed": len(anomalies) == 0,
         }
-        # --- RE-COMPUTE RICH ANALYTICS FOR DASHBOARD ---
-        pl_ann = fin.profit_loss.get("annual", {})
-        pl_q   = fin.profit_loss.get("quarterly", {})
-        bs_ann = fin.balance_sheet.get("annual", {})
-        cf_ann = fin.cash_flow.get("annual", {})
-        
-        # Build sparkline / graph data for Chart.js
-        graph_data = self.graph_engine.compute(pl_q, pl_ann, bs_ann, cf_ann)
-        
-        # Build rule-based insights
-        insights = self.insight_engine.generate(fin.ratios.get("annual", {}), {"profit_loss": fin.profit_loss})
-        
-        # Build anomaly flags
-        anomalies = self.anomaly_detector.detect(pl_ann, bs_ann, cf_ann)
 
-        # Merge growth into ratios for simpler frontend mapping
-        annual_ratios = fin.ratios.get("annual", {})
-        growth_data = fin.growth.get("annual", {})
-        
-        # Merge Revenue Growth
-        rev_growth = growth_data.get("revenue_yoy_pct", {})
-        for year, val in rev_growth.items():
-            if year in annual_ratios:
-                annual_ratios[year]['revenue_growth_pct'] = val
+        # Flatten ratios: {"annual": {"FY2025": {...}}} → {"FY2025": {...}}
+        flat_ratios: Dict[str, Any] = {}
+        for fy, ratio_dict in fin.ratios.get("annual", {}).items():
+            flat_ratios[fy] = ratio_dict
 
-        # Merge Profit Growth
-        prof_growth = growth_data.get("net_profit_yoy_pct", {})
-        for year, val in prof_growth.items():
-            if year in annual_ratios:
-                annual_ratios[year]['profit_growth_pct'] = val
-
-        # Build final export document (target schema for frontend)
+        # Build final export document (target schema)
         export_doc = {
-            "company": {
-                "ticker": symbol,
-                "name": company.name,
-                "symbol": symbol,
-                "exchange": "NSE/BSE",
-                "sector": company.sector,
-                "industry": company.industry,
-                "currency": "INR",
-                "unit": "₹ Crores",
-                "has_standalone": bool(fin.standalone_profit_loss.get("annual")),
-            },
-            "market_data": {
-                "price": fin.company_info.get("price", 0.0),
-                "market_cap": fin.company_info.get("market_cap", 0.0),
-                "pe": fin.ratios.get("annual", {}).get(next(iter(fin.ratios.get("annual", {}) or {"":{}})), {}).get("Price to Earnings", 0.0) # Approx
-            },
+            "company_info": fin.company_info,
             "profit_loss": {
-                "quarterly": pl_q,
-                "annual": pl_ann,
+                "quarterly": fin.profit_loss.get("quarterly", {}),
+                "yearly": fin.profit_loss.get("annual", {}),
             },
             "standalone_profit_loss": {
                 "quarterly": fin.standalone_profit_loss.get("quarterly", {}),
-                "annual": fin.standalone_profit_loss.get("annual", {}),
+                "yearly": fin.standalone_profit_loss.get("annual", {}),
             },
-            "balance_sheet": fin.balance_sheet,
-            "cash_flow": fin.cash_flow,
-            "standalone_balance_sheet": fin.standalone_balance_sheet,
-            "standalone_cash_flow": fin.standalone_cash_flow,
-            "derived_metrics": fin.ratios.get("annual", {}),
-            "ratios": fin.ratios,
-            "growth": fin.growth,
-            "graph_data": graph_data,
-            "insights": insights,
-            "anomalies": anomalies,
-            "documents": fin.documents,
-            "segments": fin.segment_data.get("annual", {}),
-            "sentiment": fin.management_sentiment,
+            "standalone_balance_sheet": {
+                "yearly": fin.standalone_balance_sheet.get("annual", {}),
+            },
+            "standalone_cash_flow": {
+                "yearly": fin.standalone_cash_flow.get("annual", {}),
+            },
+            "balance_sheet": {
+                "yearly": fin.balance_sheet.get("annual", {}),
+            },
+            "cash_flow": {
+                "yearly": fin.cash_flow.get("annual", {}),
+            },
+            "ratios": flat_ratios,
             "metadata": clean_metadata,
         }
 
@@ -315,12 +261,6 @@ class HierarchicalFinancialPipeline:
         out_path = f"data/{sector_slug}/{symbol.lower()}/final/company_financials.json"
         write_json(out_path, export_doc)
         logger.info(f"Saved: {out_path}")
-
-        # Sync to dashboard
-        dash_path = f"dashboard/data/{symbol.upper()}.json"
-        write_json(dash_path, export_doc)
-        logger.info(f"✅ Dashboard updated: {dash_path}")
-
         return fin
 
     def _merge_mca_parsed(self, fin: CompanyFinancials, parsed: Dict[str, Any], *, source_meta: Dict[str, Any]) -> None:
@@ -369,14 +309,6 @@ class HierarchicalFinancialPipeline:
                         source_name="PDF",
                         source_meta={"pdf": pdf_path, "page": page_no},
                     )
-
-                # Segment Extraction from PDF
-                if self.segment_extractor.is_segment_table(table):
-                    fys = self.pdf_table_parser.detect_years(table)
-                    current_fy = fys[0] if fys else "Current"
-                    segment_map = self.segment_extractor.extract_segments(table, current_fy)
-                    if segment_map:
-                        self.normalizer.merge_segments(fin, segment_map, current_fy, period_type="annual", source_name="PDF")
 
         # Text fallback: only if annual PL still missing after table scan.
         if not fin.profit_loss["annual"]:
@@ -438,6 +370,7 @@ class HierarchicalFinancialPipeline:
                 "total_debt": ["Total Debt"],
                 "long_term_borrowings": ["Long Term Debt"],
                 "short_term_borrowings": ["Current Debt"],
+                "shares_outstanding": ["Ordinary Shares Number", "Share Issued"],
                 "cash_and_equivalents": ["Cash And Cash Equivalents", "Cash Cash Equivalents And Short Term Investments"],
                 "inventory": ["Inventory", "Inventories"],
                 "receivables": ["Receivables", "Accounts Receivable"],

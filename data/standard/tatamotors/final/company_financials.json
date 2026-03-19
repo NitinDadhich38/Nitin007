@@ -1,65 +1,34 @@
 {
-  "company": {
+  "company_info": {
     "ticker": "TATAMOTORS",
-    "name": "Tata Motors Limited",
-    "symbol": "TATAMOTORS",
+    "company_name": "Tata Motors Limited",
     "exchange": "NSE/BSE",
     "sector": "Automobile and Auto Components",
     "industry": "Automobiles",
     "currency": "INR",
     "unit": "\u20b9 Crores",
-    "has_standalone": false
-  },
-  "market_data": {
     "price": null,
-    "market_cap": 0.0,
-    "pe": 0.0
+    "shares_outstanding": null,
+    "has_standalone": true
   },
   "profit_loss": {
     "quarterly": {},
-    "annual": {}
+    "yearly": {}
   },
   "standalone_profit_loss": {
     "quarterly": {},
-    "annual": {}
+    "yearly": {}
   },
   "balance_sheet": {
-    "annual": {},
-    "quarterly": {}
+    "yearly": {}
   },
   "cash_flow": {
-    "annual": {},
-    "quarterly": {}
+    "yearly": {}
   },
-  "standalone_balance_sheet": {
-    "annual": {},
-    "quarterly": {}
-  },
-  "standalone_cash_flow": {
-    "annual": {},
-    "quarterly": {}
-  },
-  "derived_metrics": {},
-  "ratios": {
-    "annual": {},
-    "quarterly": {}
-  },
-  "growth": {
-    "annual": {
-      "revenue_yoy_pct": {},
-      "net_profit_yoy_pct": {}
-    },
-    "quarterly": {}
-  },
-  "graph_data": {},
-  "insights": [],
-  "anomalies": [],
-  "documents": [],
-  "segments": {},
-  "sentiment": {},
+  "ratios": {},
   "metadata": {
     "data_sources": [],
-    "last_updated": "2026-03-18T12:49:28.065475+00:00",
+    "last_updated": "2026-03-17T10:45:49.633708+00:00",
     "parser_version": "v2.0",
     "validation_passed": true
   }

@@ -3,300 +3,294 @@
     "symbol": "ADANIENT",
     "name": "Adani Enterprises Limited",
     "sector": "Services",
-    "path": "data/ADANIENT.json"
+    "path": "data/adanient/final/company_financials.json"
   },
   {
     "symbol": "ADANIPORTS",
     "name": "Adani Ports and Special Economic Zone Limited",
     "sector": "Services",
-    "path": "data/ADANIPORTS.json"
+    "path": "data/adaniports/final/company_financials.json"
   },
   {
     "symbol": "APOLLOHOSP",
     "name": "Apollo Hospitals Enterprise Limited",
     "sector": "Healthcare",
-    "path": "data/APOLLOHOSP.json"
+    "path": "data/apollohosp/final/company_financials.json"
   },
   {
     "symbol": "ASIANPAINT",
     "name": "Asian Paints Limited",
     "sector": "Consumer Durables",
-    "path": "data/ASIANPAINT.json"
+    "path": "data/asianpaint/final/company_financials.json"
   },
   {
     "symbol": "AXISBANK",
     "name": "Axis Bank Limited",
     "sector": "Financial Services",
-    "path": "data/AXISBANK.json"
+    "path": "data/bank/axisbank/final/company_financials.json"
   },
   {
     "symbol": "BAJAJ-AUTO",
     "name": "Bajaj Auto Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/BAJAJ-AUTO.json"
+    "path": "data/bajaj-auto/final/company_financials.json"
   },
   {
     "symbol": "BAJAJFINSV",
     "name": "Bajaj Finserv Limited",
     "sector": "Financial Services",
-    "path": "data/BAJAJFINSV.json"
+    "path": "data/nbfc/bajajfinsv/final/company_financials.json"
   },
   {
     "symbol": "BAJFINANCE",
     "name": "Bajaj Finance Limited",
     "sector": "Financial Services",
-    "path": "data/BAJFINANCE.json"
+    "path": "data/nbfc/bajfinance/final/company_financials.json"
   },
   {
     "symbol": "BHARTIARTL",
     "name": "Bharti Airtel Limited",
     "sector": "Telecommunication",
-    "path": "data/BHARTIARTL.json"
+    "path": "data/bhartiartl/final/company_financials.json"
   },
   {
     "symbol": "BPCL",
     "name": "Bharat Petroleum Corporation Limited",
     "sector": "Energy",
-    "path": "data/BPCL.json"
+    "path": "data/bpcl/final/company_financials.json"
   },
   {
     "symbol": "BRITANNIA",
     "name": "Britannia Industries Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/BRITANNIA.json"
+    "path": "data/britannia/final/company_financials.json"
   },
   {
     "symbol": "CIPLA",
     "name": "Cipla Limited",
     "sector": "Healthcare",
-    "path": "data/CIPLA.json"
+    "path": "data/cipla/final/company_financials.json"
   },
   {
     "symbol": "COALINDIA",
     "name": "Coal India Limited",
     "sector": "Metals & Mining",
-    "path": "data/COALINDIA.json"
+    "path": "data/coalindia/final/company_financials.json"
   },
   {
     "symbol": "DIVISLAB",
     "name": "Divi's Laboratories Limited",
     "sector": "Healthcare",
-    "path": "data/DIVISLAB.json"
+    "path": "data/divislab/final/company_financials.json"
   },
   {
     "symbol": "DRREDDY",
     "name": "Dr. Reddy's Laboratories Limited",
     "sector": "Healthcare",
-    "path": "data/DRREDDY.json"
+    "path": "data/drreddy/final/company_financials.json"
   },
   {
     "symbol": "EICHERMOT",
     "name": "Eicher Motors Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/EICHERMOT.json"
+    "path": "data/eichermot/final/company_financials.json"
   },
   {
     "symbol": "GRASIM",
     "name": "Grasim Industries Limited",
     "sector": "Construction Materials",
-    "path": "data/GRASIM.json"
+    "path": "data/grasim/final/company_financials.json"
   },
   {
     "symbol": "HCLTECH",
     "name": "HCL Technologies Limited",
     "sector": "IT",
-    "path": "data/HCLTECH.json"
+    "path": "data/hcltech/final/company_financials.json"
   },
   {
     "symbol": "HDFCBANK",
     "name": "HDFC Bank Limited",
     "sector": "Financial Services",
-    "path": "data/HDFCBANK.json"
+    "path": "data/bank/hdfcbank/final/company_financials.json"
   },
   {
     "symbol": "HDFCLIFE",
     "name": "HDFC Life Insurance Company Limited",
     "sector": "Financial Services",
-    "path": "data/HDFCLIFE.json"
+    "path": "data/insurance/hdfclife/final/company_financials.json"
   },
   {
     "symbol": "HEROMOTOCO",
     "name": "Hero MotoCorp Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/HEROMOTOCO.json"
+    "path": "data/heromotoco/final/company_financials.json"
   },
   {
     "symbol": "HINDALCO",
     "name": "Hindalco Industries Limited",
     "sector": "Metals & Mining",
-    "path": "data/HINDALCO.json"
+    "path": "data/hindalco/final/company_financials.json"
   },
   {
     "symbol": "HINDUNILVR",
     "name": "Hindustan Unilever Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/HINDUNILVR.json"
+    "path": "data/hindunilvr/final/company_financials.json"
   },
   {
     "symbol": "ICICIBANK",
     "name": "ICICI Bank Limited",
     "sector": "Financial Services",
-    "path": "data/ICICIBANK.json"
+    "path": "data/bank/icicibank/final/company_financials.json"
   },
   {
     "symbol": "INDUSINDBK",
     "name": "IndusInd Bank Limited",
     "sector": "Financial Services",
-    "path": "data/INDUSINDBK.json"
+    "path": "data/bank/indusindbk/final/company_financials.json"
   },
   {
     "symbol": "INFY",
     "name": "Infosys Limited",
     "sector": "IT",
-    "path": "data/INFY.json"
+    "path": "data/infy/final/company_financials.json"
   },
   {
     "symbol": "ITC",
     "name": "ITC Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/ITC.json"
+    "path": "data/itc/final/company_financials.json"
   },
   {
     "symbol": "JSWSTEEL",
     "name": "JSW Steel Limited",
     "sector": "Metals & Mining",
-    "path": "data/JSWSTEEL.json"
+    "path": "data/jswsteel/final/company_financials.json"
   },
   {
     "symbol": "KOTAKBANK",
     "name": "Kotak Mahindra Bank Limited",
     "sector": "Financial Services",
-    "path": "data/KOTAKBANK.json"
+    "path": "data/bank/kotakbank/final/company_financials.json"
   },
   {
     "symbol": "LT",
     "name": "Larsen & Toubro Limited",
     "sector": "Construction",
-    "path": "data/LT.json"
+    "path": "data/lt/final/company_financials.json"
   },
   {
     "symbol": "M&M",
     "name": "Mahindra & Mahindra Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/M&M.json"
+    "path": "data/m&m/final/company_financials.json"
   },
   {
     "symbol": "MARUTI",
     "name": "Maruti Suzuki India Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/MARUTI.json"
+    "path": "data/maruti/final/company_financials.json"
   },
   {
     "symbol": "NESTLEIND",
     "name": "Nestle India Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/NESTLEIND.json"
+    "path": "data/nestleind/final/company_financials.json"
   },
   {
     "symbol": "NTPC",
     "name": "NTPC Limited",
     "sector": "Power",
-    "path": "data/NTPC.json"
+    "path": "data/utility/ntpc/final/company_financials.json"
   },
   {
     "symbol": "ONGC",
     "name": "Oil and Natural Gas Corporation Limited",
     "sector": "Energy",
-    "path": "data/ONGC.json"
+    "path": "data/ongc/final/company_financials.json"
   },
   {
     "symbol": "POWERGRID",
     "name": "Power Grid Corporation of India Limited",
     "sector": "Power",
-    "path": "data/POWERGRID.json"
+    "path": "data/utility/powergrid/final/company_financials.json"
   },
   {
     "symbol": "RELIANCE",
     "name": "Reliance Industries Limited",
-    "sector": "Energy",
-    "path": "data/RELIANCE.json"
+    "sector": "Diversified",
+    "path": "data/reliance/final/company_financials.json"
   },
   {
     "symbol": "SBILIFE",
     "name": "SBI Life Insurance Company Limited",
     "sector": "Financial Services",
-    "path": "data/SBILIFE.json"
+    "path": "data/insurance/sbilife/final/company_financials.json"
   },
   {
     "symbol": "SBIN",
     "name": "State Bank of India",
     "sector": "Financial Services",
-    "path": "data/SBIN.json"
+    "path": "data/bank/sbin/final/company_financials.json"
   },
   {
     "symbol": "SHREECEM",
     "name": "Shree Cement Limited",
     "sector": "Construction Materials",
-    "path": "data/SHREECEM.json"
+    "path": "data/shreecem/final/company_financials.json"
   },
   {
     "symbol": "SUNPHARMA",
     "name": "Sun Pharmaceutical Industries Limited",
     "sector": "Healthcare",
-    "path": "data/SUNPHARMA.json"
+    "path": "data/sunpharma/final/company_financials.json"
   },
   {
     "symbol": "TATACONSUM",
     "name": "Tata Consumer Products Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/TATACONSUM.json"
-  },
-  {
-    "symbol": "TATAMOTORS",
-    "name": "Tata Motors Limited",
-    "sector": "Automobile and Auto Components",
-    "path": "data/TATAMOTORS.json"
+    "path": "data/tataconsum/final/company_financials.json"
   },
   {
     "symbol": "TATASTEEL",
     "name": "Tata Steel Limited",
     "sector": "Metals & Mining",
-    "path": "data/TATASTEEL.json"
+    "path": "data/tatasteel/final/company_financials.json"
   },
   {
     "symbol": "TCS",
     "name": "Tata Consultancy Services Limited",
     "sector": "IT",
-    "path": "data/TCS.json"
+    "path": "data/tcs/final/company_financials.json"
   },
   {
     "symbol": "TECHM",
     "name": "Tech Mahindra Limited",
     "sector": "IT",
-    "path": "data/TECHM.json"
+    "path": "data/techm/final/company_financials.json"
   },
   {
     "symbol": "TITAN",
     "name": "Titan Company Limited",
     "sector": "Consumer Durables",
-    "path": "data/TITAN.json"
+    "path": "data/titan/final/company_financials.json"
   },
   {
     "symbol": "ULTRACEMCO",
     "name": "UltraTech Cement Limited",
     "sector": "Construction Materials",
-    "path": "data/ULTRACEMCO.json"
+    "path": "data/ultracemco/final/company_financials.json"
   },
   {
     "symbol": "UPL",
     "name": "UPL Limited",
     "sector": "Chemicals",
-    "path": "data/UPL.json"
+    "path": "data/upl/final/company_financials.json"
   },
   {
     "symbol": "WIPRO",
     "name": "Wipro Limited",
     "sector": "IT",
-    "path": "data/WIPRO.json"
+    "path": "data/wipro/final/company_financials.json"
   }
 ]

@@ -15,6 +15,7 @@ class ProfitLoss:
     tax: Optional[float] = None
     net_profit: Optional[float] = None
     eps: Optional[float] = None
+    diluted_eps: Optional[float] = None
     exceptional_items: Optional[float] = None
 
 @dataclass
@@ -71,9 +72,6 @@ class CompanyFinancials:
     growth: Dict[str, Dict[str, Dict[str, float]]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
     metadata: Dict[str, Any] = field(default_factory=dict)
     insights: List[str] = field(default_factory=list)
-    documents: List[Dict[str, Any]] = field(default_factory=list)
-    segment_data: Dict[str, Dict[str, Dict[str, float]]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
-    management_sentiment: Dict[str, Any] = field(default_factory=dict)
 
 def to_dict(obj):
     return asdict(obj)

@@ -13,7 +13,6 @@
     "shares_outstanding": null,
     "market_cap": null
   },
-  "documents": [],
   "financials": {
     "consolidated": {
       "quarterly": {
@@ -39,12 +38,10 @@
         "quarterly": {}
       },
       "balance_sheet": {
-        "annual": {},
-        "quarterly": {}
+        "annual": {}
       },
       "cash_flow": {
-        "annual": {},
-        "quarterly": {}
+        "annual": {}
       }
     },
     "standalone": {
@@ -52,14 +49,8 @@
         "annual": {},
         "quarterly": {}
       },
-      "balance_sheet": {
-        "annual": {},
-        "quarterly": {}
-      },
-      "cash_flow": {
-        "annual": {},
-        "quarterly": {}
-      }
+      "balance_sheet": {},
+      "cash_flow": {}
     },
     "derived_metrics": {},
     "market_data": {
@@ -92,28 +83,10 @@
   ],
   "metadata": {
     "data_sources": [],
-    "last_updated": "2026-03-18T13:20:29.263033+00:00",
+    "last_updated": "2026-03-19T11:57:56.059391+00:00",
     "unit": "\u20b9 Crores",
     "parser_version": "v4.0-PhaseB",
     "validation_passed": true,
     "rag_context": false
-  },
-  "profit_loss": {
-    "quarterly": {},
-    "annual": {}
-  },
-  "balance_sheet": {
-    "annual": {},
-    "quarterly": {}
-  },
-  "cash_flow": {
-    "annual": {},
-    "quarterly": {}
-  },
-  "standalone_profit_loss": {
-    "quarterly": {},
-    "annual": {}
-  },
-  "standalone_balance_sheet": {},
-  "standalone_cash_flow": {}
+  }
 }

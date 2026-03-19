@@ -9,11 +9,10 @@
     "has_standalone": true
   },
   "market_data": {
-    "price": 1360.9,
-    "shares_outstanding": null,
-    "market_cap": 369302.68
+    "price": 1320.8,
+    "shares_outstanding": 2713665096,
+    "market_cap": 358420.89
   },
-  "documents": [],
   "financials": {
     "consolidated": {
       "quarterly": {
@@ -96,7 +95,7 @@
             "profit_before_tax": 5509.0,
             "tax": 1427.0,
             "net_profit": 4076.0,
-            "eps": 0.0
+            "eps": 15.02
           },
           "Sep 2025": {},
           "Jun 2025": {
@@ -107,7 +106,7 @@
             "profit_before_tax": 5189.0,
             "tax": 1345.0,
             "net_profit": 3843.0,
-            "eps": 0.0
+            "eps": 14.16
           },
           "Mar 2025": {
             "revenue": 30246.0,
@@ -116,7 +115,8 @@
             "interest": 156.0,
             "profit_before_tax": 5735.0,
             "tax": 1426.0,
-            "net_profit": 4307.0
+            "net_profit": 4307.0,
+            "eps": 15.87
           }
         }
       },
@@ -130,7 +130,7 @@
             "profit_before_tax": 23261.0,
             "tax": 5862.0,
             "net_profit": 17390.0,
-            "eps": 0.0
+            "eps": 64.08
           },
           "FY2024": {
             "revenue": 109913.0,
@@ -140,7 +140,7 @@
             "profit_before_tax": 20967.0,
             "tax": 5257.0,
             "net_profit": 15702.0,
-            "eps": 0.0
+            "eps": 57.86
           },
           "FY2023": {
             "revenue": 101456.0,
@@ -150,7 +150,7 @@
             "profit_before_tax": 19488.0,
             "tax": 4643.0,
             "net_profit": 14851.0,
-            "eps": 0.0
+            "eps": 54.73
           },
           "FY2022": {
             "revenue": 85651.0,
@@ -160,7 +160,7 @@
             "profit_before_tax": 16951.0,
             "tax": 3428.0,
             "net_profit": 13499.0,
-            "eps": 0.0
+            "eps": 49.74
           }
         },
         "balance_sheet": {
@@ -488,30 +488,34 @@
           "value": 13.01
         },
         {
+          "period": "Mar 2025",
+          "value": 15.87
+        },
+        {
           "period": "Jun 2025",
-          "value": 0.0
+          "value": 14.16
         },
         {
           "period": "Dec 2025",
-          "value": 0.0
+          "value": 15.02
         }
       ],
       "annual": [
         {
           "period": "FY2022",
-          "value": 0.0
+          "value": 49.74
         },
         {
           "period": "FY2023",
-          "value": 0.0
+          "value": 54.73
         },
         {
           "period": "FY2024",
-          "value": 0.0
+          "value": 57.86
         },
         {
           "period": "FY2025",
-          "value": 0.0
+          "value": 64.08
         }
       ]
     },
@@ -982,7 +986,8 @@
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
             "tax": "VERIFIED",
-            "net_profit": "VERIFIED"
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
           }
         }
       },
@@ -1032,8 +1037,7 @@
             "receivables": "VERIFIED",
             "inventory": "VERIFIED"
           }
-        },
-        "quarterly": {}
+        }
       },
       "cash_flow": {
         "annual": {
@@ -1065,8 +1069,7 @@
             "capex": "VERIFIED",
             "free_cash_flow": "VERIFIED"
           }
-        },
-        "quarterly": {}
+        }
       }
     },
     "standalone": {
@@ -1145,14 +1148,8 @@
           }
         }
       },
-      "balance_sheet": {
-        "annual": {},
-        "quarterly": {}
-      },
-      "cash_flow": {
-        "annual": {},
-        "quarterly": {}
-      }
+      "balance_sheet": {},
+      "cash_flow": {}
     },
     "derived_metrics": {
       "FY2025": {
@@ -1200,7 +1197,7 @@
     },
     "market_data": {
       "price": "VERIFIED",
-      "shares_outstanding": "NOT_AVAILABLE",
+      "shares_outstanding": "VERIFIED",
       "market_cap": "DERIVED"
     }
   },
@@ -1229,315 +1226,10 @@
         "label": "Dec 2024"
       }
     ],
-    "last_updated": "2026-03-18T13:20:26.973799+00:00",
+    "last_updated": "2026-03-19T11:57:56.008315+00:00",
     "unit": "\u20b9 Crores",
     "parser_version": "v4.0-PhaseB",
     "validation_passed": false,
     "rag_context": false
-  },
-  "profit_loss": {
-    "quarterly": {
-      "Dec 2024": {
-        "revenue": 13274.0,
-        "total_income": 13618.0,
-        "other_income": 344.0,
-        "ebitda": 5331.0,
-        "ebit": 4718.0,
-        "interest": 38.0,
-        "depreciation": 613.0,
-        "profit_before_tax": 4680.0,
-        "tax": 1154.0,
-        "net_profit": 3526.0,
-        "eps": 13.01,
-        "exceptional_items": 0.0
-      },
-      "Sep 2024": {
-        "revenue": 12615.0,
-        "total_income": 12899.0,
-        "other_income": 284.0,
-        "ebitda": 4905.0,
-        "ebit": 4346.0,
-        "interest": 30.0,
-        "depreciation": 559.0,
-        "profit_before_tax": 4316.0,
-        "tax": 1100.0,
-        "net_profit": 3216.0,
-        "eps": 11.87,
-        "exceptional_items": 0.0
-      },
-      "Jun 2024": {
-        "revenue": 11784.0,
-        "total_income": 12105.0,
-        "other_income": 321.0,
-        "ebitda": 4019.0,
-        "ebit": 3448.0,
-        "interest": 47.0,
-        "depreciation": 571.0,
-        "profit_before_tax": 3401.0,
-        "tax": 922.0,
-        "net_profit": 2479.0,
-        "eps": 9.14,
-        "exceptional_items": 0.0
-      },
-      "Mar 2024": {
-        "revenue": 12077.0,
-        "total_income": 12378.0,
-        "other_income": 301.0,
-        "ebitda": 4344.0,
-        "ebit": 3740.0,
-        "interest": 34.0,
-        "depreciation": 604.0,
-        "profit_before_tax": 3706.0,
-        "tax": 943.0,
-        "net_profit": 2763.0,
-        "eps": 10.2,
-        "exceptional_items": 0.0
-      },
-      "Dec 2023": {
-        "revenue": 12531.0,
-        "total_income": 12792.0,
-        "other_income": 261.0,
-        "ebitda": 5098.0,
-        "ebit": 4420.0,
-        "interest": 29.0,
-        "depreciation": 678.0,
-        "profit_before_tax": 4391.0,
-        "tax": 1042.0,
-        "net_profit": 3349.0,
-        "eps": 12.37,
-        "exceptional_items": 0.0
-      },
-      "Dec 2025": {
-        "revenue": 33872.0,
-        "total_income": 33872.0,
-        "ebit": 5714.0,
-        "interest": 205.0,
-        "profit_before_tax": 5509.0,
-        "tax": 1427.0,
-        "net_profit": 4076.0,
-        "eps": 0.0
-      },
-      "Sep 2025": {},
-      "Jun 2025": {
-        "revenue": 30349.0,
-        "total_income": 30349.0,
-        "ebit": 5398.0,
-        "interest": 209.0,
-        "profit_before_tax": 5189.0,
-        "tax": 1345.0,
-        "net_profit": 3843.0,
-        "eps": 0.0
-      },
-      "Mar 2025": {
-        "revenue": 30246.0,
-        "total_income": 30246.0,
-        "ebit": 5891.0,
-        "interest": 156.0,
-        "profit_before_tax": 5735.0,
-        "tax": 1426.0,
-        "net_profit": 4307.0
-      }
-    },
-    "annual": {
-      "FY2025": {
-        "revenue": 117055.0,
-        "total_income": 117055.0,
-        "ebit": 23905.0,
-        "interest": 644.0,
-        "profit_before_tax": 23261.0,
-        "tax": 5862.0,
-        "net_profit": 17390.0,
-        "eps": 0.0
-      },
-      "FY2024": {
-        "revenue": 109913.0,
-        "total_income": 109913.0,
-        "ebit": 21520.0,
-        "interest": 553.0,
-        "profit_before_tax": 20967.0,
-        "tax": 5257.0,
-        "net_profit": 15702.0,
-        "eps": 0.0
-      },
-      "FY2023": {
-        "revenue": 101456.0,
-        "total_income": 101456.0,
-        "ebit": 19841.0,
-        "interest": 353.0,
-        "profit_before_tax": 19488.0,
-        "tax": 4643.0,
-        "net_profit": 14851.0,
-        "eps": 0.0
-      },
-      "FY2022": {
-        "revenue": 85651.0,
-        "total_income": 85651.0,
-        "ebit": 17270.0,
-        "interest": 319.0,
-        "profit_before_tax": 16951.0,
-        "tax": 3428.0,
-        "net_profit": 13499.0,
-        "eps": 0.0
-      }
-    }
-  },
-  "balance_sheet": {
-    "annual": {
-      "FY2025": {
-        "total_equity": 69655.0,
-        "long_term_debt": 70.0,
-        "short_term_debt": 2224.0,
-        "total_debt": 2294.0,
-        "total_assets": 105544.0,
-        "total_liabilities": 35871.0,
-        "cash": 8226.0,
-        "receivables": 19523.0,
-        "inventory": 133.0
-      },
-      "FY2024": {
-        "total_equity": 68263.0,
-        "long_term_debt": 2223.0,
-        "short_term_debt": 104.0,
-        "total_debt": 2327.0,
-        "total_assets": 99777.0,
-        "total_liabilities": 31506.0,
-        "cash": 9441.0,
-        "receivables": 19483.0,
-        "inventory": 185.0
-      },
-      "FY2023": {
-        "total_equity": 65405.0,
-        "long_term_debt": 2111.0,
-        "short_term_debt": 140.0,
-        "total_debt": 2251.0,
-        "total_assets": 93411.0,
-        "total_liabilities": 28013.0,
-        "cash": 9057.0,
-        "receivables": 19572.0,
-        "inventory": 228.0
-      },
-      "FY2022": {
-        "total_equity": 61914.0,
-        "long_term_debt": 3923.0,
-        "short_term_debt": 62.0,
-        "total_debt": 3985.0,
-        "total_assets": 89033.0,
-        "total_liabilities": 27027.0,
-        "cash": 10502.0,
-        "receivables": 15476.0,
-        "inventory": 161.0
-      }
-    },
-    "quarterly": {}
-  },
-  "cash_flow": {
-    "annual": {
-      "FY2025": {
-        "operating_cf": 22261.0,
-        "investing_cf": -4914.0,
-        "financing_cf": -18561.0,
-        "capex": -1108.0,
-        "free_cash_flow": 21153.0
-      },
-      "FY2024": {
-        "operating_cf": 22448.0,
-        "investing_cf": -6723.0,
-        "financing_cf": -15464.0,
-        "capex": -1048.0,
-        "free_cash_flow": 21400.0
-      },
-      "FY2023": {
-        "operating_cf": 18009.0,
-        "investing_cf": -3931.0,
-        "financing_cf": -15881.0,
-        "capex": -1661.0,
-        "free_cash_flow": 16348.0
-      },
-      "FY2022": {
-        "operating_cf": 16900.0,
-        "investing_cf": 1477.0,
-        "financing_cf": -14508.0,
-        "capex": -1645.0,
-        "free_cash_flow": 15255.0
-      }
-    },
-    "quarterly": {}
-  },
-  "standalone_profit_loss": {
-    "quarterly": {
-      "Dec 2024": {
-        "revenue": 13274.0,
-        "total_income": 13618.0,
-        "other_income": 344.0,
-        "ebitda": 5331.0,
-        "ebit": 4718.0,
-        "interest": 38.0,
-        "depreciation": 613.0,
-        "profit_before_tax": 4680.0,
-        "tax": 1154.0,
-        "net_profit": 3526.0,
-        "eps": 13.01,
-        "exceptional_items": 0.0
-      },
-      "Sep 2024": {
-        "revenue": 12615.0,
-        "total_income": 12899.0,
-        "other_income": 284.0,
-        "ebitda": 4905.0,
-        "ebit": 4346.0,
-        "interest": 30.0,
-        "depreciation": 559.0,
-        "profit_before_tax": 4316.0,
-        "tax": 1100.0,
-        "net_profit": 3216.0,
-        "eps": 11.87,
-        "exceptional_items": 0.0
-      },
-      "Jun 2024": {
-        "revenue": 11784.0,
-        "total_income": 12105.0,
-        "other_income": 321.0,
-        "ebitda": 4019.0,
-        "ebit": 3448.0,
-        "interest": 47.0,
-        "depreciation": 571.0,
-        "profit_before_tax": 3401.0,
-        "tax": 922.0,
-        "net_profit": 2479.0,
-        "eps": 9.14,
-        "exceptional_items": 0.0
-      },
-      "Mar 2024": {
-        "revenue": 12077.0,
-        "total_income": 12378.0,
-        "other_income": 301.0,
-        "ebitda": 4344.0,
-        "ebit": 3740.0,
-        "interest": 34.0,
-        "depreciation": 604.0,
-        "profit_before_tax": 3706.0,
-        "tax": 943.0,
-        "net_profit": 2763.0,
-        "eps": 10.2,
-        "exceptional_items": 0.0
-      },
-      "Dec 2023": {
-        "revenue": 12531.0,
-        "total_income": 12792.0,
-        "other_income": 261.0,
-        "ebitda": 5098.0,
-        "ebit": 4420.0,
-        "interest": 29.0,
-        "depreciation": 678.0,
-        "profit_before_tax": 4391.0,
-        "tax": 1042.0,
-        "net_profit": 3349.0,
-        "eps": 12.37,
-        "exceptional_items": 0.0
-      }
-    },
-    "annual": {}
-  },
-  "standalone_balance_sheet": {},
-  "standalone_cash_flow": {}
+  }
 }

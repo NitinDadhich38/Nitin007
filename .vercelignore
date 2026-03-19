@@ -1,0 +1,14 @@
+# Ignore large raw data folder at root, but ALLOW dashboard/data
+/data/
+cache/
+logs/
+storage/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+extraction.log
+pipeline_v3/
+scripts/
+tests/
