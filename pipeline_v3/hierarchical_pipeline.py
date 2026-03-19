@@ -205,6 +205,9 @@ class HierarchicalFinancialPipeline:
         fin.growth["annual"]["revenue_yoy_pct"] = self.growth_engine.compute_yoy(fin.profit_loss["annual"], "revenue_from_operations")
         fin.growth["annual"]["net_profit_yoy_pct"] = self.growth_engine.compute_yoy(fin.profit_loss["annual"], "net_profit")
 
+        # ── Self-Healing Loop: Account Identities ──
+        self.normalizer.enforce_accounting_identities(fin)
+
         # Validation
         anomalies = self.validator.validate(asdict(fin))
         if anomalies:

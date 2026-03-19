@@ -11,8 +11,8 @@
     "has_standalone": false
   },
   "market_data": {
-    "price": 1852.1,
-    "market_cap": 1056086.93,
+    "price": 1855,
+    "market_cap": 1057740.54,
     "pe": 0.0
   },
   "profit_loss": {
@@ -442,7 +442,8 @@
       "free_cash_flow_margin": 33.91,
       "cfo_to_net_profit": 2.93,
       "revenue_growth_pct": 15.34,
-      "profit_growth_pct": 349.39
+      "profit_growth_pct": 349.39,
+      "roce": 10.89
     },
     "FY2024": {
       "net_profit_margin": 4.98,
@@ -454,7 +455,8 @@
       "free_cash_flow_margin": 25.9,
       "cfo_to_net_profit": 10.57,
       "revenue_growth_pct": 7.79,
-      "profit_growth_pct": -10.53
+      "profit_growth_pct": -10.53,
+      "roce": 6.44
     },
     "FY2023": {
       "net_profit_margin": 6.0,
@@ -466,7 +468,8 @@
       "free_cash_flow_margin": 27.87,
       "cfo_to_net_profit": 7.83,
       "revenue_growth_pct": 19.39,
-      "profit_growth_pct": 96.15
+      "profit_growth_pct": 96.15,
+      "roce": 6.91
     },
     "FY2022": {
       "net_profit_margin": 3.65,
@@ -476,7 +479,8 @@
       "debt_to_equity": 2.0,
       "debt_to_assets": 0.37,
       "free_cash_flow_margin": 23.7,
-      "cfo_to_net_profit": 12.93
+      "cfo_to_net_profit": 12.93,
+      "roce": 7.08
     }
   },
   "ratios": {
@@ -3298,14 +3302,14 @@
       "title": "Updates",
       "type": "Other",
       "date": "28102024162129",
-      "url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_28102024162129_PR1.pdf",
+      "url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_28102024162129_QR1.pdf",
       "category": ""
     },
     {
       "title": "Updates",
       "type": "Other",
       "date": "28102024162129",
-      "url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_28102024162129_QR1.pdf",
+      "url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_28102024162129_PR1.pdf",
       "category": ""
     },
     {
@@ -14113,8 +14117,9 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-18T09:07:52.781238+00:00",
+    "last_updated": "2026-03-18T12:49:42.070392+00:00",
     "parser_version": "v2.0",
-    "validation_passed": false
+    "validation_passed": false,
+    "post_processed": "2026-03-18T18:48:38.186113"
   }
 }

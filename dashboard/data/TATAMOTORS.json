@@ -1,25 +1,104 @@
 {
   "company": {
-    "ticker": "TATAMOTORS",
     "name": "Tata Motors Limited",
     "symbol": "TATAMOTORS",
-    "exchange": "NSE/BSE",
     "sector": "Automobile and Auto Components",
     "industry": "Automobiles",
-    "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "description": null,
+    "history": null,
     "has_standalone": false
   },
   "market_data": {
     "price": null,
-    "market_cap": 0.0,
-    "pe": 0.0
+    "shares_outstanding": null,
+    "market_cap": null
+  },
+  "documents": [],
+  "financials": {
+    "consolidated": {
+      "quarterly": {
+        "profit_loss": {}
+      },
+      "annual": {
+        "profit_loss": {},
+        "balance_sheet": {},
+        "cash_flow": {}
+      }
+    },
+    "standalone": null
+  },
+  "graph_data": {},
+  "derived_metrics": {},
+  "anomalies": [],
+  "insights": [],
+  "llm_interpretation": null,
+  "confidence": {
+    "consolidated": {
+      "profit_loss": {
+        "annual": {},
+        "quarterly": {}
+      },
+      "balance_sheet": {
+        "annual": {},
+        "quarterly": {}
+      },
+      "cash_flow": {
+        "annual": {},
+        "quarterly": {}
+      }
+    },
+    "standalone": {
+      "profit_loss": {
+        "annual": {},
+        "quarterly": {}
+      },
+      "balance_sheet": {
+        "annual": {},
+        "quarterly": {}
+      },
+      "cash_flow": {
+        "annual": {},
+        "quarterly": {}
+      }
+    },
+    "derived_metrics": {},
+    "market_data": {
+      "price": "NOT_AVAILABLE",
+      "shares_outstanding": "NOT_AVAILABLE",
+      "market_cap": "NOT_AVAILABLE"
+    }
+  },
+  "peers": [
+    {
+      "symbol": "BAJAJ-AUTO",
+      "name": "Bajaj Auto Limited"
+    },
+    {
+      "symbol": "EICHERMOT",
+      "name": "Eicher Motors Limited"
+    },
+    {
+      "symbol": "HEROMOTOCO",
+      "name": "Hero MotoCorp Limited"
+    },
+    {
+      "symbol": "M&M",
+      "name": "Mahindra & Mahindra Limited"
+    },
+    {
+      "symbol": "MARUTI",
+      "name": "Maruti Suzuki India Limited"
+    }
+  ],
+  "metadata": {
+    "data_sources": [],
+    "last_updated": "2026-03-18T13:20:29.263033+00:00",
+    "unit": "\u20b9 Crores",
+    "parser_version": "v4.0-PhaseB",
+    "validation_passed": true,
+    "rag_context": false
   },
   "profit_loss": {
-    "quarterly": {},
-    "annual": {}
-  },
-  "standalone_profit_loss": {
     "quarterly": {},
     "annual": {}
   },
@@ -31,36 +110,10 @@
     "annual": {},
     "quarterly": {}
   },
-  "standalone_balance_sheet": {
-    "annual": {},
-    "quarterly": {}
+  "standalone_profit_loss": {
+    "quarterly": {},
+    "annual": {}
   },
-  "standalone_cash_flow": {
-    "annual": {},
-    "quarterly": {}
-  },
-  "derived_metrics": {},
-  "ratios": {
-    "annual": {},
-    "quarterly": {}
-  },
-  "growth": {
-    "annual": {
-      "revenue_yoy_pct": {},
-      "net_profit_yoy_pct": {}
-    },
-    "quarterly": {}
-  },
-  "graph_data": {},
-  "insights": [],
-  "anomalies": [],
-  "documents": [],
-  "segments": {},
-  "sentiment": {},
-  "metadata": {
-    "data_sources": [],
-    "last_updated": "2026-03-18T09:08:04.480141+00:00",
-    "parser_version": "v2.0",
-    "validation_passed": true
-  }
+  "standalone_balance_sheet": {},
+  "standalone_cash_flow": {}
 }

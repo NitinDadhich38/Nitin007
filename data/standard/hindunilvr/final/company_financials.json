@@ -11,8 +11,8 @@
     "has_standalone": false
   },
   "market_data": {
-    "price": 2138,
-    "market_cap": 502342.61,
+    "price": 2134.5,
+    "market_cap": 501520.25,
     "pe": 0.0
   },
   "profit_loss": {
@@ -442,7 +442,8 @@
       "free_cash_flow_margin": 17.04,
       "cfo_to_net_profit": 1.12,
       "revenue_growth_pct": 2.17,
-      "profit_growth_pct": 3.62
+      "profit_growth_pct": 3.62,
+      "roce": 18.54
     },
     "FY2024": {
       "net_profit_margin": 16.86,
@@ -454,7 +455,8 @@
       "free_cash_flow_margin": 22.95,
       "cfo_to_net_profit": 1.51,
       "revenue_growth_pct": 2.38,
-      "profit_growth_pct": 1.55
+      "profit_growth_pct": 1.55,
+      "roce": 18.17
     },
     "FY2023": {
       "net_profit_margin": 16.99,
@@ -466,7 +468,8 @@
       "free_cash_flow_margin": 14.78,
       "cfo_to_net_profit": 0.99,
       "revenue_growth_pct": 15.52,
-      "profit_growth_pct": 13.98
+      "profit_growth_pct": 13.98,
+      "roce": 18.41
     },
     "FY2022": {
       "net_profit_margin": 17.22,
@@ -476,7 +479,8 @@
       "debt_to_equity": 0.0,
       "debt_to_assets": 0.0,
       "free_cash_flow_margin": 15.17,
-      "cfo_to_net_profit": 1.02
+      "cfo_to_net_profit": 1.02,
+      "roce": 16.99
     }
   },
   "ratios": {
@@ -4030,6 +4034,13 @@
       "category": ""
     },
     {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "08082023130037",
+      "url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_08082023130037_SEIntimationNewspaperAd08082023signed.pdf",
+      "category": ""
+    },
+    {
       "title": "Loss of Share Certificates",
       "type": "Other",
       "date": "07082023184843",
@@ -4201,13 +4212,6 @@
       "title": "Resignation",
       "type": "Other",
       "date": "26062023232349",
-      "url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_26062023232349_SEIntimationResignationbyDirectors.pdf",
-      "category": ""
-    },
-    {
-      "title": "Resignation",
-      "type": "Other",
-      "date": "26062023232349",
       "url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_26062023232351_SEIntimationResignationbyDirectors.pdf",
       "category": ""
     },
@@ -4216,6 +4220,13 @@
       "type": "Other",
       "date": "26062023232349",
       "url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_26062023232350_SEIntimationResignationbyDirectors.pdf",
+      "category": ""
+    },
+    {
+      "title": "Resignation",
+      "type": "Other",
+      "date": "26062023232349",
+      "url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_26062023232349_SEIntimationResignationbyDirectors.pdf",
       "category": ""
     },
     {
@@ -9661,8 +9672,9 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-18T09:07:53.448866+00:00",
+    "last_updated": "2026-03-18T13:04:49.468135+00:00",
     "parser_version": "v2.0",
-    "validation_passed": false
+    "validation_passed": false,
+    "post_processed": "2026-03-18T18:48:38.266839"
   }
 }

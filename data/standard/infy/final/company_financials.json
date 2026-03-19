@@ -11,8 +11,8 @@
     "has_standalone": false
   },
   "market_data": {
-    "price": 1274.1,
-    "market_cap": 516697.38,
+    "price": 1266.7,
+    "market_cap": 513696.39,
     "pe": 0.0
   },
   "profit_loss": {
@@ -155,62 +155,62 @@
     },
     "annual": {
       "FY2025": {
-        "revenue_from_operations": 1927.7,
-        "other_income": 7.4,
-        "total_income": 1935.1,
+        "revenue_from_operations": 160962.95,
+        "other_income": 617.9,
+        "total_income": 161580.85,
         "operating_expenses": null,
         "ebitda": null,
-        "ebit": 449.6,
-        "interest": 4.9,
+        "ebit": 37541.6,
+        "interest": 409.15,
         "depreciation": null,
-        "profit_before_tax": 444.7,
-        "tax": 128.5,
-        "net_profit": 315.8,
+        "profit_before_tax": 37132.45,
+        "tax": 10729.75,
+        "net_profit": 26369.3,
         "eps": 0.0,
         "exceptional_items": null
       },
       "FY2024": {
-        "revenue_from_operations": 1856.2,
-        "other_income": 6.6,
-        "total_income": 1862.8,
+        "revenue_from_operations": 154992.7,
+        "other_income": 551.1,
+        "total_income": 155543.8,
         "operating_expenses": null,
         "ebitda": null,
-        "ebit": 440.2,
-        "interest": 5.6,
+        "ebit": 36756.7,
+        "interest": 467.6,
         "depreciation": null,
-        "profit_before_tax": 434.6,
-        "tax": 117.7,
-        "net_profit": 316.7,
+        "profit_before_tax": 36289.1,
+        "tax": 9827.95,
+        "net_profit": 26444.45,
         "eps": 0.0,
         "exceptional_items": null
       },
       "FY2023": {
-        "revenue_from_operations": 1821.2,
-        "other_income": 10.9,
-        "total_income": 1832.1,
+        "revenue_from_operations": 152070.2,
+        "other_income": 910.15,
+        "total_income": 152980.35,
         "operating_expenses": null,
         "ebitda": null,
-        "ebit": 416.0,
-        "interest": 3.5,
+        "ebit": 34736.0,
+        "interest": 292.25,
         "depreciation": null,
-        "profit_before_tax": 412.5,
-        "tax": 114.2,
-        "net_profit": 298.1,
+        "profit_before_tax": 34443.75,
+        "tax": 9535.7,
+        "net_profit": 24891.35,
         "eps": 0.0,
         "exceptional_items": null
       },
       "FY2022": {
-        "revenue_from_operations": 1631.1,
-        "other_income": 8.7,
-        "total_income": 1639.8,
+        "revenue_from_operations": 136196.85,
+        "other_income": 726.45,
+        "total_income": 136923.3,
         "operating_expenses": null,
         "ebitda": null,
-        "ebit": 406.3,
-        "interest": 2.7,
+        "ebit": 33926.05,
+        "interest": 225.45,
         "depreciation": null,
-        "profit_before_tax": 403.6,
-        "tax": 106.8,
-        "net_profit": 296.3,
+        "profit_before_tax": 33700.6,
+        "tax": 8917.8,
+        "net_profit": 24741.05,
         "eps": 0.0,
         "exceptional_items": null
       }
@@ -301,13 +301,13 @@
       "FY2025": {
         "equity_share_capital": null,
         "reserves": null,
-        "total_equity": 1120.5,
-        "total_debt": 96.2,
+        "total_equity": 93561.75,
+        "total_debt": 8032.7,
         "long_term_borrowings": null,
         "short_term_borrowings": null,
-        "total_liabilities": 616.4,
-        "total_assets": 1741.9,
-        "cash_and_equivalents": 286.1,
+        "total_liabilities": 51469.4,
+        "total_assets": 145448.65,
+        "cash_and_equivalents": 23889.35,
         "investments": null,
         "receivables": 595.6,
         "inventory": null,
@@ -325,13 +325,13 @@
       "FY2024": {
         "equity_share_capital": null,
         "reserves": null,
-        "total_equity": 1055.9,
-        "total_debt": 100.2,
+        "total_equity": 88167.65,
+        "total_debt": 8366.7,
         "long_term_borrowings": null,
         "short_term_borrowings": null,
-        "total_liabilities": 591.8,
-        "total_assets": 1652.3,
-        "cash_and_equivalents": 177.3,
+        "total_liabilities": 49415.3,
+        "total_assets": 137967.05,
+        "cash_and_equivalents": 14804.55,
         "investments": null,
         "receivables": 652.1,
         "inventory": null,
@@ -349,13 +349,13 @@
       "FY2023": {
         "equity_share_capital": null,
         "reserves": null,
-        "total_equity": 917.2,
-        "total_debt": 101.0,
+        "total_equity": 76586.2,
+        "total_debt": 8433.5,
         "long_term_borrowings": null,
         "short_term_borrowings": null,
-        "total_liabilities": 608.8,
-        "total_assets": 1531.2,
-        "cash_and_equivalents": 148.1,
+        "total_liabilities": 50834.8,
+        "total_assets": 127855.2,
+        "cash_and_equivalents": 12366.35,
         "investments": null,
         "receivables": 544.8,
         "inventory": null,
@@ -373,13 +373,13 @@
       "FY2022": {
         "equity_share_capital": null,
         "reserves": null,
-        "total_equity": 994.1,
-        "total_debt": 72.2,
+        "total_equity": 83007.35,
+        "total_debt": 6028.7,
         "long_term_borrowings": null,
         "short_term_borrowings": null,
-        "total_liabilities": 556.1,
-        "total_assets": 1555.5,
-        "cash_and_equivalents": 230.5,
+        "total_liabilities": 46434.35,
+        "total_assets": 129884.25,
+        "cash_and_equivalents": 19246.75,
         "investments": null,
         "receivables": 486.5,
         "inventory": null,
@@ -400,40 +400,40 @@
   "cash_flow": {
     "annual": {
       "FY2025": {
-        "cash_from_operations": 435.1,
-        "capital_expenditure": -26.3,
-        "cash_from_investing": -36.1,
-        "cash_from_financing": -287.5,
+        "cash_from_operations": 36330.85,
+        "capital_expenditure": -2196.05,
+        "cash_from_investing": -3014.35,
+        "cash_from_financing": -24006.25,
         "dividends_paid": null,
         "net_cash_flow": null,
-        "free_cash_flow": 408.8
+        "free_cash_flow": 34134.8
       },
       "FY2024": {
-        "cash_from_operations": 314.8,
-        "capital_expenditure": -26.6,
-        "cash_from_investing": -70.8,
-        "cash_from_financing": -211.6,
+        "cash_from_operations": 26285.8,
+        "capital_expenditure": -2221.1,
+        "cash_from_investing": -5911.8,
+        "cash_from_financing": -17668.6,
         "dividends_paid": null,
         "net_cash_flow": null,
-        "free_cash_flow": 288.2
+        "free_cash_flow": 24064.7
       },
       "FY2023": {
-        "cash_from_operations": 285.3,
-        "capital_expenditure": -31.9,
-        "cash_from_investing": -21.8,
-        "cash_from_financing": -328.8,
+        "cash_from_operations": 23822.55,
+        "capital_expenditure": -2663.65,
+        "cash_from_investing": -1820.3,
+        "cash_from_financing": -27454.8,
         "dividends_paid": null,
         "net_cash_flow": null,
-        "free_cash_flow": 253.4
+        "free_cash_flow": 21158.9
       },
       "FY2022": {
-        "cash_from_operations": 334.5,
-        "capital_expenditure": -29.0,
-        "cash_from_investing": -100.5,
-        "cash_from_financing": -332.5,
+        "cash_from_operations": 27930.75,
+        "capital_expenditure": -2421.5,
+        "cash_from_investing": -8391.75,
+        "cash_from_financing": -27763.75,
         "dividends_paid": null,
         "net_cash_flow": null,
-        "free_cash_flow": 305.5
+        "free_cash_flow": 25509.25
       }
     },
     "quarterly": {}
@@ -456,7 +456,8 @@
       "free_cash_flow_margin": 21.21,
       "cfo_to_net_profit": 1.38,
       "revenue_growth_pct": 3.85,
-      "profit_growth_pct": -0.28
+      "profit_growth_pct": -0.28,
+      "roce": 25.81
     },
     "FY2024": {
       "net_profit_margin": 17.06,
@@ -467,7 +468,8 @@
       "free_cash_flow_margin": 15.53,
       "cfo_to_net_profit": 0.99,
       "revenue_growth_pct": 1.92,
-      "profit_growth_pct": 6.24
+      "profit_growth_pct": 6.24,
+      "roce": 26.64
     },
     "FY2023": {
       "net_profit_margin": 16.37,
@@ -478,7 +480,8 @@
       "free_cash_flow_margin": 13.91,
       "cfo_to_net_profit": 0.96,
       "revenue_growth_pct": 11.65,
-      "profit_growth_pct": 0.61
+      "profit_growth_pct": 0.61,
+      "roce": 27.17
     },
     "FY2022": {
       "net_profit_margin": 18.17,
@@ -487,7 +490,8 @@
       "debt_to_equity": 0.07,
       "debt_to_assets": 0.05,
       "free_cash_flow_margin": 18.73,
-      "cfo_to_net_profit": 1.13
+      "cfo_to_net_profit": 1.13,
+      "roce": 26.12
     }
   },
   "ratios": {
@@ -1039,6 +1043,13 @@
   ],
   "anomalies": [],
   "documents": [
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "18032026153605",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_18032026153551_SEfiling_Reg30disclosure_18032026.pdf",
+      "category": ""
+    },
     {
       "title": "Copy of Newspaper Publication",
       "type": "Other",
@@ -5737,6 +5748,13 @@
       "category": ""
     },
     {
+      "title": "Copy of Newspaper Publication",
+      "type": "Other",
+      "date": "12082023171927",
+      "url": "https://nsearchives.nseindia.com/corporate/INFY_12082023171927_SEfiling_advinnewspaper.pdf",
+      "category": ""
+    },
+    {
       "title": "Allotment of Securities",
       "type": "Other",
       "date": "10082023213424",
@@ -5755,6 +5773,13 @@
       "type": "Other",
       "date": "09082023144633",
       "url": "https://nsearchives.nseindia.com/corporate/INFY_09082023144633_Infy_Disclosure09082023.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "08082023123817",
+      "url": "https://nsearchives.nseindia.com/corporate/INFY_08082023123817_Pressrelease08082023.pdf",
       "category": ""
     },
     {
@@ -14658,8 +14683,9 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-18T09:07:52.963463+00:00",
+    "last_updated": "2026-03-18T12:49:19.189189+00:00",
     "parser_version": "v2.0",
-    "validation_passed": true
+    "validation_passed": true,
+    "post_processed": "2026-03-18T18:48:38.273991"
   }
 }

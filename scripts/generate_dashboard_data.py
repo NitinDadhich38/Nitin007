@@ -269,15 +269,16 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     graph_engine    = GraphEngine()
 
     # ── Extract raw buckets ───────────────────────────────────────────────────
-    ci          = raw_data.get("company_info", {})
-    raw_pl      = raw_data.get("profit_loss", {})
-    raw_bs      = raw_data.get("balance_sheet", {})
-    raw_cf      = raw_data.get("cash_flow", {})
-    raw_st_pl   = raw_data.get("standalone_profit_loss", {})
-    raw_st_bs   = raw_data.get("standalone_balance_sheet", {})
-    raw_st_cf   = raw_data.get("standalone_cash_flow", {})
-    raw_meta    = raw_data.get("metadata", {})
-    provenance  = raw_meta.get("provenance", {})
+    ci          = raw_data.get("company") or raw_data.get("company_info") or {}
+    raw_pl      = raw_data.get("profit_loss") or {}
+    raw_bs      = raw_data.get("balance_sheet") or {}
+    raw_cf      = raw_data.get("cash_flow") or {}
+    raw_st_pl   = raw_data.get("standalone_profit_loss") or {}
+    raw_st_bs   = raw_data.get("standalone_balance_sheet") or {}
+    raw_st_cf   = raw_data.get("standalone_cash_flow") or {}
+    raw_meta    = raw_data.get("metadata") or {}
+    provenance  = raw_meta.get("provenance") or {}
+    docs        = raw_meta.get("documents") or []
 
     symbol = (ci.get("symbol") or ci.get("ticker") or "UNKNOWN").upper()
     name   = ci.get("name") or ci.get("company_name") or symbol
@@ -375,10 +376,10 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     }
 
     # ── Market Data ───────────────────────────────────────────────────────────
-    # Use real-time data if provided during extraction
-    price = ci.get("price")
-    mcap = ci.get("market_cap")
-    shares = ci.get("shares_outstanding")
+    rmd   = raw_data.get("market_data", {})
+    price = rmd.get("price") or ci.get("price")
+    mcap  = rmd.get("market_cap") or ci.get("market_cap")
+    shares = rmd.get("shares_outstanding") or ci.get("shares_outstanding")
 
     if shares is None and bs_ann:
         ly = sorted(bs_ann.keys(), reverse=True)[0]
@@ -432,6 +433,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             "has_standalone": has_standalone,
         },
         "market_data":     market_data,
+        "documents":       docs,
         "financials": {
             "consolidated":  consolidated,
             "standalone":    standalone,
@@ -451,6 +453,13 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             "validation_passed": raw_meta.get("validation_passed", False),
             "rag_context":       bool(ir_context),
         },
+        # ── Legacy Keys for Backward Compatibility ──────────
+        "profit_loss":   con_pl,
+        "balance_sheet": con_bs,
+        "cash_flow":     con_cf,
+        "standalone_profit_loss":  st_pl,
+        "standalone_balance_sheet": st_bs.get("annual", {}),
+        "standalone_cash_flow":    st_cf.get("annual", {}),
     }
 
 
@@ -471,7 +480,7 @@ def generate_dashboard():
             score  = _score(data)
             boost  = 15 if any(x in str(path) for x in
                                ("standard","bank","insurance","utility","nbfc")) else 0
-            ci     = data.get("company_info", {})
+            ci     = data.get("company") or data.get("company_info") or {}
             symbol = (ci.get("symbol") or ci.get("ticker") or "").upper()
             if not symbol:
                 symbol = path.parent.parent.name.upper()

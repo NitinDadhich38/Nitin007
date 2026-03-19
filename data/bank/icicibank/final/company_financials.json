@@ -11,8 +11,8 @@
     "has_standalone": false
   },
   "market_data": {
-    "price": 1292.4,
-    "market_cap": 925180.85,
+    "price": 1292,
+    "market_cap": 924894.5,
     "pe": 0.0
   },
   "profit_loss": {
@@ -456,7 +456,8 @@
       "free_cash_flow_margin": 57.66,
       "cfo_to_net_profit": 2.41,
       "revenue_growth_pct": 26.99,
-      "profit_growth_pct": 15.3
+      "profit_growth_pct": 15.3,
+      "roce": 6.13
     },
     "FY2024": {
       "net_profit_margin": 27.45,
@@ -467,7 +468,8 @@
       "free_cash_flow_margin": 95.28,
       "cfo_to_net_profit": 3.55,
       "revenue_growth_pct": 18.9,
-      "profit_growth_pct": 30.03
+      "profit_growth_pct": 30.03,
+      "roce": 5.74
     },
     "FY2023": {
       "net_profit_margin": 25.1,
@@ -478,7 +480,8 @@
       "free_cash_flow_margin": -4.6,
       "cfo_to_net_profit": -0.11,
       "revenue_growth_pct": 16.51,
-      "profit_growth_pct": 35.55
+      "profit_growth_pct": 35.55,
+      "roce": 4.39
     },
     "FY2022": {
       "net_profit_margin": 21.58,
@@ -487,7 +490,8 @@
       "debt_to_equity": 0.87,
       "debt_to_assets": 0.09,
       "free_cash_flow_margin": 48.34,
-      "cfo_to_net_profit": 2.31
+      "cfo_to_net_profit": 2.31,
+      "roce": 3.86
     }
   },
   "ratios": {
@@ -1022,6 +1026,20 @@
   ],
   "anomalies": [],
   "documents": [
+    {
+      "title": "General Updates",
+      "type": "Other",
+      "date": "18032026175741",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_18032026175659_NSEBSE_18032026.pdf",
+      "category": ""
+    },
+    {
+      "title": "Trading Window",
+      "type": "Other",
+      "date": "18032026163506",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_18032026163355_NSEBSE_18032026.pdf",
+      "category": ""
+    },
     {
       "title": "ESOP/ESOS/ESPS",
       "type": "Other",
@@ -7820,6 +7838,20 @@
       "category": ""
     },
     {
+      "title": "Related Party Transactions",
+      "type": "Other",
+      "date": "21102023163213",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_21102023163213_NSEBSE_RPT.pdf",
+      "category": ""
+    },
+    {
+      "title": "Outcome of Board Meeting",
+      "type": "Other",
+      "date": "21102023155127",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_21102023155127_NSEBSEFR_OCT.pdf",
+      "category": ""
+    },
+    {
       "title": "Financial Result Updates",
       "type": "Other",
       "date": "21102023153647",
@@ -8583,6 +8615,20 @@
       "category": ""
     },
     {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "12082023195138",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_12082023195138_Letter.pdf",
+      "category": ""
+    },
+    {
+      "title": "Updates",
+      "type": "Other",
+      "date": "11082023173733",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_11082023173733_NSEBSE.pdf",
+      "category": ""
+    },
+    {
       "title": "Updates",
       "type": "Other",
       "date": "11082023151647",
@@ -8622,6 +8668,13 @@
       "type": "Other",
       "date": "09082023115755",
       "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_09082023115755_Letter.pdf",
+      "category": ""
+    },
+    {
+      "title": "Loss of Share Certificates",
+      "type": "Other",
+      "date": "08082023123451",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_08082023123451_Letter.pdf",
       "category": ""
     },
     {
@@ -10441,14 +10494,14 @@
       "title": "Loss of Share Certificates",
       "type": "Other",
       "date": "30012023103156",
-      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_30012023103155_ICICI_SE_Intimation_28_01_23.pdf",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_30012023103155_ICICI_SE_Intimation_30_01_23.pdf",
       "category": ""
     },
     {
       "title": "Loss of Share Certificates",
       "type": "Other",
       "date": "30012023103156",
-      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_30012023103155_ICICI_SE_Intimation_30_01_23.pdf",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_30012023103155_ICICI_SE_Intimation_28_01_23.pdf",
       "category": ""
     },
     {
@@ -15726,14 +15779,14 @@
       "title": "Loss of Share Certificates",
       "type": "Other",
       "date": "26032021173039",
-      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_26032021173039_NSE_25032021_Equity.pdf",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_26032021173039_NSE_24032021_Equity.pdf",
       "category": ""
     },
     {
       "title": "Loss of Share Certificates",
       "type": "Other",
       "date": "26032021173039",
-      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_26032021173039_NSE_24032021_Equity.pdf",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK_26032021173039_NSE_25032021_Equity.pdf",
       "category": ""
     },
     {
@@ -23629,21 +23682,14 @@
       "title": "Record Date",
       "type": "Other",
       "date": "15092017175500",
-      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK02_15092017174228.zip",
-      "category": ""
-    },
-    {
-      "title": "Record Date",
-      "type": "Other",
-      "date": "15092017175500",
       "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK02_15092017174311.zip",
       "category": ""
     },
     {
       "title": "Record Date",
       "type": "Other",
-      "date": "15092017175400",
-      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK02_15092017174149.zip",
+      "date": "15092017175500",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK02_15092017174228.zip",
       "category": ""
     },
     {
@@ -23651,6 +23697,13 @@
       "type": "Other",
       "date": "15092017175400",
       "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK02_15092017174106.zip",
+      "category": ""
+    },
+    {
+      "title": "Record Date",
+      "type": "Other",
+      "date": "15092017175400",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICIBANK02_15092017174149.zip",
       "category": ""
     },
     {
@@ -25666,8 +25719,9 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-18T09:07:53.754772+00:00",
+    "last_updated": "2026-03-18T12:49:34.347470+00:00",
     "parser_version": "v2.0",
-    "validation_passed": false
+    "validation_passed": false,
+    "post_processed": "2026-03-18T18:48:37.445388"
   }
 }

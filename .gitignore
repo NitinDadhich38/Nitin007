@@ -26,8 +26,11 @@ venv.bak/
 # Project Specific
 logs/
 *.log
-storage/
-data/
+/storage/
+/data/
+!/dashboard/data/
+/cache/
+/reports/
 
 # OS
 .DS_Store

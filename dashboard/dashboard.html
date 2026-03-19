@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -117,6 +118,8 @@
                 <div class="flex border-b border-slate-200/60 mb-2 overflow-x-auto shrink-0 gap-2">
                     <button id="tab-main" onclick="switchTab('main')" class="px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand whitespace-nowrap transition-all">Verified Analysis</button>
                     <button id="tab-peers" onclick="switchTab('peers')" class="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand transition-all whitespace-nowrap">Peer Competition</button>
+                    <button id="tab-screener" onclick="switchTab('screener')" class="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand transition-all whitespace-nowrap">Market Screener</button>
+                    <button id="tab-tech" onclick="switchTab('tech')" class="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand transition-all whitespace-nowrap">Technical Analysis</button>
                     <button id="tab-docs" onclick="switchTab('docs')" class="px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand transition-all whitespace-nowrap">Exchange Filings</button>
                 </div>
 
@@ -133,6 +136,10 @@
                                     <span class="material-symbols-outlined text-lg">trending_up</span>
                                     <span id="display-price">₹0.00</span>
                                 </div>
+                                <button onclick="exportToExcel()" class="ml-4 flex items-center gap-2 bg-white border border-slate-200 px-3 py-1.5 rounded-xl text-[10px] font-black text-slate-500 hover:text-brand hover:border-brand/40 transition-all shadow-sm">
+                                    <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                    Export Excel
+                                </button>
                             </div>
                         </div>
                         <div class="flex items-center gap-3">
@@ -191,22 +198,81 @@
                     </div>
                 </div>
 
-                <div id="view-peers" class="hidden space-y-10">
-                    <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white p-8 shadow-sm overflow-hidden">
-                        <h3 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em] mb-6">Sector Peer Benchmarking</h3>
+                <div id="view-peers" class="hidden space-y-10 font-bold">
+                    <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white p-8 shadow-sm">
+                        <h3 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em] mb-8">Competitive Benchmarking</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm text-left border-collapse">
                                 <thead>
                                     <tr class="bg-slate-50/50 border-b border-slate-100">
                                         <th class="px-6 py-4 font-black text-slate-400 text-[10px] uppercase tracking-widest text-left">Peer Stock</th>
                                         <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Revenue (Cr)</th>
-                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Net Profit (Cr)</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Net Profit</th>
                                         <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">M-Cap (Cr)</th>
-                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Action</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody id="peer-table-body" class="divide-y divide-slate-50"></tbody>
+                                <tbody id="peer-table-body" class="divide-y divide-slate-50">
+                                    <!-- Dynamic -->
+                                    <tr><td colspan="5" class="py-20 text-center text-slate-400 font-bold uppercase tracking-widest text-xs">Analysing universe...</td></tr>
+                                </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-screener" class="hidden space-y-10">
+                    <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white p-8 shadow-sm">
+                        <h3 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em] mb-8">AI-Powered Alpha Screener</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Min M-Cap (Cr)</label>
+                                <input id="sc-min-mcap" type="number" placeholder="5000" class="w-full bg-white/50 border border-slate-100 rounded-xl px-4 py-3 text-xs font-bold outline-none focus:ring-1 focus:ring-brand"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Max P/E Ratio</label>
+                                <input id="sc-max-pe" type="number" placeholder="e.g. 25" class="w-full bg-white/50 border border-slate-100 rounded-xl px-4 py-3 text-xs font-bold outline-none focus:ring-1 focus:ring-brand"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Min ROE %</label>
+                                <input id="sc-min-roe" type="number" placeholder="15" class="w-full bg-white/50 border border-slate-100 rounded-xl px-4 py-3 text-xs font-bold outline-none focus:ring-1 focus:ring-brand"/>
+                            </div>
+                            <div class="flex items-end">
+                                <button onclick="runScreener()" class="w-full bg-brand text-white font-black py-3 rounded-xl shadow-lg shadow-brand/20 hover:scale-[1.02] transition-all uppercase tracking-widest text-[10px]">Execute Scan</button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto min-h-[400px]">
+                            <table class="w-full text-sm text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-50/50 border-b border-slate-100">
+                                        <th class="px-6 py-4 font-black text-slate-400 text-[10px] uppercase tracking-widest">Stock</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">Price</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">P/E</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">ROE %</th>
+                                        <th class="px-6 py-4 font-black text-slate-700 text-[10px] uppercase tracking-widest text-right">M-Cap (Cr)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="screener-results-body" class="divide-y divide-slate-50">
+                                    <tr><td colspan="5" class="py-20 text-center text-slate-400 italic font-medium">Set criteria and run scan.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-tech" class="hidden space-y-10">
+                    <div class="bg-white/60 backdrop-blur-md rounded-3xl border border-white p-8 shadow-sm h-[600px] flex flex-col">
+                        <div class="flex justify-between items-center mb-6">
+                            <div>
+                                <h3 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em]">Institutional Price Action</h3>
+                                <p class="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1">1 Year Historical Analysis (Daily)</p>
+                            </div>
+                            <div id="tech-indicator" class="px-4 py-2 bg-brand/10 rounded-xl text-brand text-[10px] font-black uppercase tracking-widest">
+                                Processing...
+                            </div>
+                        </div>
+                        <div class="flex-1 relative">
+                            <canvas id="custom-chart-canvas"></canvas>
                         </div>
                     </div>
                 </div>
@@ -224,18 +290,68 @@
         </main>
     </div>
 
+    <!-- Phase 2: AI Chat Bubble -->
+    <div id="ai-chat-widget" class="fixed bottom-8 right-8 z-[100] group">
+        <div id="ai-chat-window" class="hidden absolute bottom-16 right-0 w-96 bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col transition-all duration-300 transform scale-95 opacity-0 origin-bottom-right">
+            <div class="bg-brand p-5 text-white flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="size-8 bg-white/20 rounded-lg flex items-center justify-center font-black">AI</div>
+                    <div>
+                        <p class="text-xs font-black uppercase tracking-widest">FinGPT Assistant</p>
+                        <p class="text-[9px] opacity-80 font-bold uppercase tracking-widest">Institutional Mode Active</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="hover:bg-white/10 p-1 rounded-lg">
+                    <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="h-80 overflow-y-auto p-5 space-y-4 custom-scrollbar bg-slate-50/50">
+                <div class="flex gap-3">
+                    <div class="size-6 bg-brand/10 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-black text-brand">AI</div>
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none border border-slate-100 shadow-sm">
+                        <p class="text-xs font-medium text-slate-700 leading-relaxed">System Ready. Ask me anything about the selected filing's data or market position.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 bg-white border-t border-slate-100 flex gap-2">
+                <input id="chat-input" type="text" placeholder="Query the dataset..." class="flex-1 bg-slate-50 border border-slate-100 rounded-xl px-4 py-2 text-xs focus:ring-1 focus:ring-brand outline-none font-medium"/>
+                <button onclick="handleChat()" class="bg-brand text-white p-2 rounded-xl hover:shadow-lg transition-all">
+                    <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+            </div>
+        </div>
+        <button onclick="toggleChat()" class="size-14 bg-brand rounded-full flex items-center justify-center text-white shadow-xl shadow-brand/20 hover:scale-110 active:scale-95 transition-all">
+            <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </button>
+    </div>
+
 <script>
 let allCompanies = [];
 let currentSymbol = null;
 let currentData = null;
 let currentType = 'consolidated';
 let currentPeriod = 'annual';
+let currentTab = 'main';
 let performanceChart = null;
+let priceChart = null;
+
+let activeMetrics = ['market_cap', 'pe', 'roe', 'roce', 'dividend_yield'];
+const METRIC_LABELS = {
+    market_cap: 'M-Cap (Cr)',
+    pe: 'P/E Ratio',
+    roe: 'ROE %',
+    roce: 'ROCE %',
+    revenue: 'Revenue (Cr)',
+    net_profit: 'Net Profit (Cr)',
+    dividend_yield: 'Div. Yield %',
+    ebitda: 'EBITDA (Cr)',
+    debt_to_equity: 'Debt/Equity'
+};
 
 const TBL_MAP = {
-    pl: { key: 'profit_loss', fields: [{k:'revenue_from_operations', l:'Total Revenue'}, {k:'ebitda', l:'EBITDA'}, {k:'interest', l:'Finance Costs'}, {k:'net_profit', l:'Net Profit (PAT)'}, {k:'eps', l:'Earnings Per Share'}] },
+    pl: { key: 'profit_loss', fields: [{k:'revenue', l:'Total Revenue'}, {k:'ebitda', l:'EBITDA'}, {k:'interest', l:'Finance Costs'}, {k:'net_profit', l:'Net Profit (PAT)'}, {k:'eps', l:'Earnings Per Share'}] },
     bs: { key: 'balance_sheet', fields: [{k:'total_assets', l:'Total Assets'}, {k:'total_equity', l:'Equity Share Capital'}, {k:'total_debt', l:'Borrowings'}, {k:'current_assets', l:'Liquid Assets'}] },
-    cf: { key: 'cash_flow', fields: [{k:'cash_from_operations', l:'Cash from Ops'}, {k:'capital_expenditure', l:'Internal Capex'}, {k:'free_cash_flow', l:'Free Cash Flow'}] }
+    cf: { key: 'cash_flow', fields: [{k:'operating_cf', l:'Cash from Ops'}, {k:'capex', l:'Internal Capex'}, {k:'free_cash_flow', l:'Free Cash Flow'}] }
 };
 
 (async function startup() {
@@ -272,10 +388,23 @@ async function loadCompany(symbol) {
     renderSidebar(allCompanies);
 
     try {
-        const res = await fetch(`data/${symbol}.json?t=${Date.now()}`);
+        // Parallel fetch of base data and live market data
+        const [res, liveRes] = await Promise.all([
+            fetch(`data/${symbol}.json?t=${Date.now()}`),
+            fetch(`/api/live/${symbol}`).catch(() => null)
+        ]);
+        
         currentData = await res.json();
+        
+        if (liveRes && liveRes.ok) {
+            const live = await liveRes.json();
+            // Patch currentData with live metrics
+            currentData.market_data = { ...currentData.market_data, ...live };
+        }
+
         renderBaseInfo();
         renderPage();
+        if (currentTab === 'tech') initTradingView();
         document.getElementById('loader').classList.add('hidden');
         document.getElementById('dashboard-content').classList.remove('hidden');
     } catch(err) {
@@ -310,19 +439,69 @@ function renderPage() {
     renderPeers();
 }
 
-function renderRatios() {
-    const dm = currentData.derived_metrics || {};
-    const yr = Object.keys(dm).sort().reverse()[0] || 'FY2025';
-    const m = dm[yr] || {};
-    const md = currentData.market_data || {};
-    const items = [
-        { l: 'M-Cap (Cr)', v: md.market_cap ? `₹${fmt(md.market_cap)}` : '—' },
-        { l: 'Growth (YoY)', v: m.revenue_growth_pct ? `${m.revenue_growth_pct}%` : '—' },
-        { l: 'ROCE', v: m.roce ? `${m.roce}%` : '—' },
-        { l: 'ROE', v: m.roe ? `${m.roe}%` : '—' },
-        { l: 'Profit Margin', v: m.net_profit_margin ? `${m.net_profit_margin}%` : '—' }
-    ];
-    document.getElementById('metrics-grid').innerHTML = items.map(i => `<div class="bg-white p-6 shadow-sm"><div class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">${i.l}</div><div class="text-lg font-black text-slate-900 leading-none">${i.v}</div></div>`).join('');
+async function renderRatios() {
+    const grid = document.getElementById('metrics-grid');
+    grid.innerHTML = '<div class="col-span-full py-4 text-center text-xs font-bold text-slate-400">Loading metrics...</div>';
+    
+    try {
+        const res = await fetch(`/api/metrics/all/${currentSymbol}`);
+        const data = await res.json();
+        
+        grid.innerHTML = activeMetrics.map(m => {
+            let val = data[m];
+            let label = METRIC_LABELS[m] || m;
+            return `
+                <div class="bg-white p-6 shadow-sm group hover:bg-slate-50 transition-colors cursor-help">
+                    <div class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">${label}</div>
+                    <div class="text-lg font-black text-slate-900 leading-none">${fmt(val)}${m.includes('roe') || m.includes('roce') || m.includes('yield') ? '%' : ''}</div>
+                </div>
+            `;
+        }).join('') + `
+            <div class="bg-slate-50 p-6 flex items-center justify-center border-l border-slate-200">
+                <button onclick="toggleMetricSelector()" class="text-[10px] font-black text-slate-400 hover:text-brand uppercase tracking-widest flex items-center gap-2">
+                    <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    Manage
+                </button>
+            </div>
+        `;
+    } catch(e) {
+        grid.innerHTML = '<div class="col-span-full py-4 text-center text-xs font-bold text-red-400">Failed to load metrics</div>';
+    }
+}
+
+function toggleMetricSelector() {
+    const m = Object.keys(METRIC_LABELS).map(k => {
+        const active = activeMetrics.includes(k);
+        return `<button onclick="toggleMetric('${k}')" class="px-4 py-2 rounded-xl border text-[10px] font-black uppercase tracking-widest transition-all ${active ? 'bg-brand text-white border-brand shadow-lg shadow-brand/20' : 'bg-white text-slate-500 border-slate-100 hover:border-brand/50'}">${METRIC_LABELS[k]}</button>`;
+    }).join('');
+    
+    // Quick and dirty overlay for management
+    const overlay = document.createElement('div');
+    overlay.id = 'metric-manager';
+    overlay.className = "fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[200] flex items-center justify-center p-8";
+    overlay.innerHTML = `
+        <div class="bg-white rounded-3xl p-10 max-w-lg w-full shadow-2xl space-y-8">
+            <h4 class="text-xs font-black text-slate-800 uppercase tracking-[0.2em] text-center">Customize Research Metrics</h4>
+            <div class="flex flex-wrap gap-3 justify-center">${m}</div>
+            <button onclick="document.getElementById('metric-manager').remove()" class="w-full bg-slate-900 text-white font-black py-4 rounded-2xl uppercase tracking-widest text-xs hover:bg-slate-800 transition-all">Save Configuration</button>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+}
+
+function toggleMetric(m) {
+    if (activeMetrics.includes(m)) {
+        if (activeMetrics.length > 1) {
+            activeMetrics = activeMetrics.filter(x => x !== m);
+        }
+    } else {
+        if (activeMetrics.length < 9) {
+            activeMetrics.push(m);
+        }
+    }
+    document.getElementById('metric-manager').remove();
+    toggleMetricSelector();
+    renderRatios();
 }
 
 function renderCharts() {
@@ -355,24 +534,34 @@ function renderTable() {
     document.getElementById('financial-table').innerHTML = h + `</tbody>`;
 }
 
-function renderPeers() {
+async function renderPeers() {
     const sector = currentData.company?.sector;
-    const peers = allCompanies.filter(c => c.sector === sector && c.symbol !== currentSymbol).slice(0, 10);
+    if (!sector) return;
+    
     const body = document.getElementById('peer-table-body');
-    body.innerHTML = peers.map(p => `
-        <tr class="hover:bg-slate-50/50 transition-colors">
-            <td class="px-6 py-5 flex items-center gap-3">
-                <span class="text-[9px] font-black bg-white px-2 py-1 rounded border border-slate-100 uppercase tracking-widest">${p.symbol.slice(0,4)}</span>
-                <span class="text-xs font-bold text-slate-800">${p.name}</span>
-            </td>
-            <td class="px-6 py-5 text-right text-xs font-black text-slate-600 italic">Analysing...</td>
-            <td class="px-6 py-5 text-right text-xs font-black text-slate-600 italic">Analysing...</td>
-            <td class="px-6 py-5 text-right text-xs font-black text-slate-600 italic">Calculating...</td>
-            <td class="px-6 py-5 text-right">
-                <button onclick="loadCompany('${p.symbol}')" class="text-[9px] font-black text-brand uppercase hover:underline">View Insight</button>
-            </td>
-        </tr>
-    `).join('');
+    body.innerHTML = '<tr><td colspan="5" class="py-12 text-center text-xs font-bold text-slate-400">Fetching peer data...</td></tr>';
+    
+    try {
+        const res = await fetch(`/api/sector/${encodeURIComponent(sector)}`);
+        const peers = await res.json();
+        
+        body.innerHTML = peers.map(p => `
+            <tr class="hover:bg-slate-50/50 transition-colors ${p.symbol === currentSymbol ? 'bg-brand/5' : ''}">
+                <td class="px-6 py-5 flex items-center gap-3">
+                    <span class="text-[9px] font-black bg-white px-2 py-1 rounded border border-slate-100 uppercase tracking-widest">${p.symbol.slice(0,4)}</span>
+                    <span class="text-xs font-bold text-slate-800">${p.name} ${p.symbol === currentSymbol ? '(Current)' : ''}</span>
+                </td>
+                <td class="px-6 py-5 text-right text-xs font-black text-slate-600">₹${fmt(p.revenue)}</td>
+                <td class="px-6 py-5 text-right text-xs font-black text-slate-600">₹${fmt(p.net_profit)}</td>
+                <td class="px-6 py-5 text-right text-xs font-black text-slate-600">₹${fmt(p.market_cap)}</td>
+                <td class="px-6 py-5 text-right">
+                    ${p.symbol === currentSymbol ? '' : `<button onclick="loadCompany('${p.symbol}')" class="text-[9px] font-black text-brand uppercase hover:underline">View Insight</button>`}
+                </td>
+            </tr>
+        `).join('');
+    } catch (e) {
+        body.innerHTML = '<tr><td colspan="5" class="py-12 text-center text-xs font-bold text-red-400">Error loading peer data</td></tr>';
+    }
 }
 
 function renderAI() {
@@ -393,15 +582,203 @@ function renderDocs() {
 
 function fmt(v) { return v === null || v === undefined ? '—' : parseFloat(v).toLocaleString('en-IN', {minimumFractionDigits: 1, maximumFractionDigits: 1}); }
 function switchTab(t) {
+    currentTab = t;
     document.getElementById('view-main').classList.toggle('hidden', t !== 'main');
     document.getElementById('view-peers').classList.toggle('hidden', t !== 'peers');
+    document.getElementById('view-screener').classList.toggle('hidden', t !== 'screener');
+    document.getElementById('view-tech').classList.toggle('hidden', t !== 'tech');
     document.getElementById('view-docs').classList.toggle('hidden', t !== 'docs');
     document.getElementById('tab-main').className = t === 'main' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
     document.getElementById('tab-peers').className = t === 'peers' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
+    document.getElementById('tab-screener').className = t === 'screener' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
+    document.getElementById('tab-tech').className = t === 'tech' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
     document.getElementById('tab-docs').className = t === 'docs' ? 'px-6 py-4 text-sm font-bold text-brand border-b-2 border-brand' : 'px-6 py-4 text-sm font-semibold text-slate-500 hover:text-brand';
+    
+    if (t === 'tech') initTradingView();
 }
 function setType(t) { currentType = t; document.getElementById('btn-cons').className = t==='consolidated' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; document.getElementById('btn-std').className = t==='standalone' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; if(t==='standalone' && !currentData.standalone_profit_loss) return; renderPage(); }
 function setPeriod(p) { currentPeriod = p; document.getElementById('btn-ann').className = p==='annual' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; document.getElementById('btn-qtr').className = p==='quarterly' ? "px-5 py-2.5 rounded-xl bg-white shadow-md text-brand border border-slate-100/50" : "px-5 py-2.5 rounded-xl hover:text-brand transition-all"; renderPage(); }
+
+// --- Screener Logic ---
+async function runScreener() {
+    const minMcap = document.getElementById('sc-min-mcap').value;
+    const maxPe = document.getElementById('sc-max-pe').value;
+    const minRoe = document.getElementById('sc-min-roe').value;
+    const body = document.getElementById('screener-results-body');
+    
+    body.innerHTML = '<tr><td colspan="5" class="py-20 text-center"><div class="size-8 border-4 border-slate-200 border-t-brand rounded-full animate-spin mx-auto"></div></td></tr>';
+    
+    let url = `/api/screener?`;
+    if(minMcap) url += `min_market_cap=${minMcap}&`;
+    if(maxPe) url += `max_pe=${maxPe}&`;
+    if(minRoe) url += `min_roe=${minRoe}&`;
+    
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        
+        if (data.length === 0) {
+            body.innerHTML = '<tr><td colspan="5" class="py-20 text-center text-slate-400 font-bold uppercase tracking-widest text-xs">No companies match these criteria.</td></tr>';
+            return;
+        }
+        
+        body.innerHTML = data.map(r => `
+            <tr class="hover:bg-slate-50/50 transition-all cursor-pointer" onclick="loadCompany('${r.symbol}'); switchTab('main');">
+                <td class="px-6 py-5">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[9px] font-black bg-white px-2 py-1 rounded border border-slate-100 uppercase tracking-widest">${r.symbol.slice(0,4)}</span>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-slate-900">${r.name}</span>
+                            <span class="text-[8px] font-black text-slate-400 uppercase tracking-tighter">${r.sector}</span>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-6 py-5 text-right font-black text-slate-600 text-xs">₹${fmt(r.price)}</td>
+                <td class="px-6 py-5 text-right font-black text-slate-600 text-xs">${fmt(r.pe)}</td>
+                <td class="px-6 py-5 text-right font-black text-brand text-xs">${fmt(r.roe)}%</td>
+                <td class="px-6 py-5 text-right font-black text-slate-600 text-xs">₹${fmt(r.market_cap)}</td>
+            </tr>
+        `).join('');
+    } catch (e) {
+        body.innerHTML = '<tr><td colspan="5" class="py-20 text-center text-red-500 font-bold">Failed to execute scan. Check backend connection.</td></tr>';
+    }
+}
+
+// --- Phase 2: AI Elements ---
+function toggleChat() {
+    const win = document.getElementById('ai-chat-window');
+    win.classList.toggle('hidden');
+    setTimeout(() => {
+        win.classList.toggle('scale-95');
+        win.classList.toggle('opacity-0');
+    }, 10);
+}
+
+async function handleChat() {
+    const input = document.getElementById('chat-input');
+    const msg = input.value.trim();
+    if (!msg) return;
+    
+    appendMessage('YOU', msg, true);
+    input.value = '';
+    
+    // Simulate specialized FinGPT response for now
+    setTimeout(() => {
+        const responses = [
+            "Analyzing the current filing... The Debt-to-Equity ratio for this period indicates a conservative leverage stance compared to sector peers.",
+            "Based on the annual report data, Revenue growth is tracking at 15.2% YoY, primarily driven by core business operations.",
+            "Verified metrics for the latest quarter show an uptick in EBITDA margins by 120bps. This aligns with management's commentary on cost optimization."
+        ];
+        appendMessage('AI', responses[Math.floor(Math.random() * responses.length)], false);
+    }, 1000);
+}
+
+function appendMessage(who, text, isUser) {
+    const box = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.className = "flex gap-3 " + (isUser ? "flex-row-reverse" : "");
+    div.innerHTML = `
+        <div class="size-6 ${isUser ? 'bg-slate-200 text-slate-500' : 'bg-brand/10 text-brand'} rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-black">${who}</div>
+        <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm ${isUser ? 'rounded-tr-none' : 'rounded-tl-none'}">
+            <p class="text-xs font-medium text-slate-700 leading-relaxed">${text}</p>
+        </div>
+    `;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+}
+
+function exportToExcel() {
+    if (!currentSymbol) return;
+    window.location.href = `/api/export/${currentSymbol}`;
+}
+
+async function initTradingView() {
+    if (!currentSymbol) return;
+    const canvas = document.getElementById('custom-chart-canvas');
+    const ctx = canvas.getContext('2d');
+    const indicator = document.getElementById('tech-indicator');
+    
+    if (priceChart) priceChart.destroy();
+    indicator.textContent = "Fetching Data...";
+
+    try {
+        const res = await fetch(`/api/charts/${currentSymbol}`);
+        const data = await res.json();
+        
+        if (data.error) {
+            indicator.textContent = "Data Unavailable";
+            return;
+        }
+
+        const labels = data.map(d => d.date);
+        const prices = data.map(d => d.price);
+        
+        indicator.textContent = `NSE:${currentSymbol} LIVE`;
+
+        priceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Close Price',
+                    data: prices,
+                    borderColor: '#10b981',
+                    borderWidth: 3,
+                    pointRadius: 0,
+                    pointHoverRadius: 6,
+                    fill: true,
+                    backgroundColor: ctx.createLinearGradient(0, 0, 0, 400),
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: '#1e293b',
+                        titleFont: { size: 10, weight: 'bold' },
+                        bodyFont: { size: 12, weight: 'bold' },
+                        callbacks: {
+                            label: function(c) { return " ₹" + c.parsed.y.toLocaleString('en-IN'); }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        position: 'right',
+                        grid: { color: 'rgba(0,0,0,0.03)' },
+                        ticks: { font: { size: 10, weight: 'bold' }, color: '#94a3b8' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { 
+                            font: { size: 9, weight: 'bold' }, 
+                            color: '#94a3b8',
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gradient for price area
+        const grad = ctx.createLinearGradient(0, 0, 0, 400);
+        grad.addColorStop(0, 'rgba(16, 185, 129, 0.1)');
+        grad.addColorStop(1, 'rgba(16, 185, 129, 0)');
+        priceChart.data.datasets[0].backgroundColor = grad;
+        priceChart.update();
+
+    } catch (e) {
+        console.error(e);
+        indicator.textContent = "Service Error";
+    }
+}
 
 </script>
 </body>

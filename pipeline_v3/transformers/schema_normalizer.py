@@ -459,3 +459,53 @@ class SchemaNormalizer:
             year_entry[name] = val
         
         logger.info(f"Merged {len(segment_map)} segments for {year} from {source_name}")
+
+    def enforce_accounting_identities(self, target: CompanyFinancials) -> None:
+        """
+        Self-healing math loop that runs after all sources are merged.
+        Fixes unit scale mismatches (e.g., B/S in Lakhs vs P&L in Crores) and maps sector-specific quirks.
+        """
+        # 1. Financial Sector Revenue Remapping
+        # If it's a known financial co or revenue_from_operations is zero but total_income exists
+        is_financial = target.company_info.get("sector") in ["Financial Services", "Banks", "Insurance", "NBFC"]
+        if not is_financial:
+            # Simple heuristic if DB isn't tagged properly
+            is_financial = target.company_info.get("symbol", "").endswith("BANK")
+
+        # 2. Cross-period evaluations
+        for period_type in ["annual", "quarterly"]:
+            pl_dict = target.profit_loss.get(period_type, {})
+            bs_dict = target.balance_sheet.get(period_type, {})
+            
+            for year, pl in pl_dict.items():
+                bs = bs_dict.get(year)
+                
+                # --- A. Banking Re-map ---
+                if is_financial:
+                    rev = pl.revenue_from_operations or 0
+                    ti = pl.total_income or 0
+                    # For banks, interest earned + fees is total income, which serves as 'revenue'
+                    if (rev == 0 or rev < ti * 0.1) and ti > 0:
+                        pl.revenue_from_operations = ti
+                        logger.info(f"[{target.company_info.get('symbol')}] Re-mapped Total Income to Revenue for Financial entity.")
+
+                # --- B. Unit Scale Mismatch (Crores vs Lakhs) ---
+                if bs:
+                    assets = bs.total_assets
+                    rev = pl.revenue_from_operations
+                    if assets and rev and rev > 0:
+                        ratio = assets / rev
+                        # If B/S is artificially inflated by 50x-150x compared to P&L, it's a Lakh/Crore mismatch
+                        if 50 < ratio < 200:
+                            logger.warning(f"[{target.company_info.get('symbol')}] B/S to P&L ratio is {ratio:.1f}x for {year}. Auto-correcting B/S units (÷100).")
+                            for field in bs.__dataclass_fields__:
+                                val = getattr(bs, field)
+                                if val is not None and isinstance(val, (int, float)):
+                                    setattr(bs, field, round(val / 100.0, 2))
+
+                # --- C. Core Net Profit (Exceptional Items) ---
+                if pl.net_profit is not None and pl.exceptional_items is not None and pl.exceptional_items != 0:
+                    # By creating 'core_net_profit', we preserve 'net_profit' but can use core in analytics
+                    if not hasattr(pl, 'core_net_profit'):
+                        pl.core_net_profit = round(pl.net_profit - pl.exceptional_items, 2)
+
