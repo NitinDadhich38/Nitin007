@@ -5,7 +5,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Nifty50 AI Analyzer | Institutional Dashboard</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
@@ -133,7 +135,7 @@
                             <div class="flex items-center gap-5">
                                 <span id="display-sector" class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] bg-white shadow-sm border border-slate-100 px-3 py-1.5 rounded-xl">Sector</span>
                                 <div class="flex items-center gap-2 text-brand font-black text-lg">
-                                    <span class="material-symbols-outlined text-lg">trending_up</span>
+                                    <span class="material-icons text-brand text-xl">trending_up</span>
                                     <span id="display-price">₹0.00</span>
                                 </div>
                                 <button onclick="exportToExcel()" class="ml-4 flex items-center gap-2 bg-white border border-slate-200 px-3 py-1.5 rounded-xl text-[10px] font-black text-slate-500 hover:text-brand hover:border-brand/40 transition-all shadow-sm">
@@ -419,15 +421,7 @@ function renderBaseInfo() {
     document.getElementById('display-name').textContent = co.name || 'Unknown';
     document.getElementById('header-symbol').textContent = co.symbol || 'SYM';
     document.getElementById('display-sector').textContent = co.sector || 'General';
-    document.getElementById('display-price').textContent = `₹${parseFloat(md.price || 0).toLocaleString('en-IN')}`;
-    
-    // Standalone logic fix
-    const hasS = !!currentData.standalone_profit_loss;
-    const bs = document.getElementById('btn-std');
-    if (bs) {
-        bs.disabled = !hasS;
-        bs.classList.toggle('opacity-30', !hasS);
-    }
+    document.getElementById('display-price').innerHTML = `<span class="material-icons text-brand align-middle mr-1">trending_up</span> ₹${parseFloat(md.price || 0).toLocaleString('en-IN')}`;
 }
 
 function renderPage() {
@@ -706,7 +700,7 @@ async function initTradingView() {
         const data = await res.json();
         
         if (data.error) {
-            indicator.textContent = "Data Unavailable";
+            indicator.textContent = "Data Error: " + data.error;
             return;
         }
 

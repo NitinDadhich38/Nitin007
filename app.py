@@ -338,42 +338,53 @@ def get_insights(symbol: str):
 
 @app.get("/api/metrics/all/{symbol}")
 def get_all_metrics(symbol: str):
-    """Returns all available latest metrics for a company from the DB."""
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    
-    # Get latest annual metrics
-    cursor.execute("""
-    SELECT * FROM annual_metrics 
-    WHERE symbol = ? 
-    ORDER BY year DESC LIMIT 1
-    """, (symbol.upper(),))
-    row = cursor.fetchone()
-    
-    # Get company info
-    cursor.execute("SELECT * FROM companies WHERE symbol = ?", (symbol.upper(),))
-    co_row = cursor.fetchone()
-    
-    conn.close()
-    
-    if not co_row:
-        raise HTTPException(status_code=404, detail="Company not found")
+    """Returns all available latest metrics for a company, fallback to JSON if DB fails."""
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
         
-    res = dict(co_row)
-    if row:
-        row_dict = dict(row)
-        for k, v in row_dict.items():
-            if v is not None:
-                res[k] = v
-                
-    # Try to patch with live market data from cache
-    live_cache = _read_cache(f"live_{symbol.upper()}")
-    if live_cache:
-        for k, v in live_cache.items():
-            if v:
-                res[k] = v
-                
-    return res
+        # Get latest annual metrics
+        cursor.execute("""
+        SELECT * FROM annual_metrics 
+        WHERE symbol = ? 
+        ORDER BY year DESC LIMIT 1
+        """, (symbol.upper(),))
+        row = cursor.fetchone()
+        
+        # Get company info
+        cursor.execute("SELECT * FROM companies WHERE symbol = ?", (symbol.upper(),))
+        co_row = cursor.fetchone()
+        conn.close()
+        
+        if not co_row:
+            # Symbol not in DB, fallback to JSON
+            raise Exception("Not in DB")
+            
+        res = dict(co_row)
+        if row:
+            row_dict = dict(row)
+            for k, v in row_dict.items():
+                if v is not None:
+                    res[k] = v
+                    
+        return res
+    except Exception:
+        # DB failure or symbol missing -> FALLBACK TO JSON
+        try:
+            data = _load_company(symbol)
+            # Flatten some ratios from the JSON for the dashboard metrics bar
+            ratios = data.get("ratios", {})
+            metrics = {
+                "symbol": symbol.upper(),
+                "pe": ratios.get("pe"),
+                "roe": ratios.get("roe"),
+                "roce": ratios.get("roce"),
+                "market_cap": data.get("company_info", {}).get("market_cap"),
+                "dividend_yield": ratios.get("dividend_yield")
+            }
+            return metrics
+        except:
+            raise HTTPException(status_code=404, detail="Data unavailable")
 
 @app.get("/api/charts/{symbol}")
 def get_historical_charts(symbol: str):
