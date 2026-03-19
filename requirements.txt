@@ -1,9 +1,4 @@
 fastapi
-uvicorn[standard]
 yfinance
-pandas
-openpyxl
-cryptography
 python-multipart
-# Add a comment to force a new hash for Vercel
-# Deployment ID: 1710831625
+# Cache force: 1773907100
