@@ -29,11 +29,24 @@ logger = logging.getLogger("NiftyAPI")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
-ROOT          = Path(__file__).parent
+# The file is at Nitin007/api/index.py, ROOT should be Nitin007/api
+ROOT          = Path(__file__).parent.absolute()
+# DASHBOARD_DIR should be Nitin007/dashboard
 DASHBOARD_DIR = ROOT.parent / "dashboard"
 DATA_DIR      = DASHBOARD_DIR / "data"
-CACHE_DIR     = ROOT.parent / "cache"
-CACHE_DIR.mkdir(exist_ok=True)
+CACHE_DIR = ROOT.parent / "cache"
+try:
+    CACHE_DIR.mkdir(exist_ok=True)
+except OSError:
+    CACHE_DIR = Path("/tmp/cache")
+    CACHE_DIR.mkdir(exist_ok=True)
+
+MARKET_DATA_DIR = ROOT.parent / "dashboard" / "market_data"
+try:
+    MARKET_DATA_DIR.mkdir(parents=True, exist_ok=True)
+except OSError:
+    pass  # On Vercel, this is read-only but already exists since we committed it
+
 CACHE_TTL_HOURS = 24
 
 # ─── App ──────────────────────────────────────────────────────────────────────
@@ -90,8 +103,10 @@ def _load_company(symbol: str) -> Dict:
 def list_companies():
     """List all available companies."""
     companies_path = DASHBOARD_DIR / "companies.json"
+    logger.info(f"Accessing companies list at: {companies_path}")
     if not companies_path.exists():
-        raise HTTPException(status_code=503, detail="Companies index not found. Run generate_dashboard_data.py first.")
+        logger.error(f"Companies file NOT FOUND at: {companies_path.absolute()}")
+        raise HTTPException(status_code=503, detail=f"Companies index not found at {companies_path}")
     with open(companies_path) as f:
         return json.load(f)
 
@@ -228,6 +243,31 @@ def chat(symbol: str, query: str):
             "phase":   "B",
         },
     )
+
+
+@app.get("/api/prices")
+def get_prices(
+    symbol: str = Query(..., description="NSE Ticker symbol (e.g. RELIANCE)"),
+    period: str = Query("1y",   description="Time period: 1mo, 3mo, 6mo, 1y, 2y, 5y, max")
+):
+    """Returns historical OHLCV data with technical indicators (50/200 DMA)."""
+    target_file = MARKET_DATA_DIR / symbol.lower() / "prices.json"
+    
+    logger.info(f"API: Fetching prices for {symbol} from {MARKET_DATA_DIR}")
+    
+    if not target_file.exists():
+        logger.error(f"API: Market data not found for {symbol}")
+        raise HTTPException(status_code=404, detail=f"Market data not found for {symbol}")
+        
+    try:
+        with open(target_file, "r") as f:
+            data = json.load(f)
+    except Exception as e:
+        logger.error(f"API: Error reading market data for {symbol}: {e}")
+        raise HTTPException(status_code=500, detail="Error reading market data")
+    
+    logger.info(f"API: Successfully returning {len(data.get('prices', []))} days for {symbol}")
+    return data
 
 
 @app.get("/api/health")
