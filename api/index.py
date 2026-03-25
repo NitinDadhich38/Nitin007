@@ -34,10 +34,19 @@ ROOT          = Path(__file__).parent.absolute()
 # DASHBOARD_DIR should be Nitin007/dashboard
 DASHBOARD_DIR = ROOT.parent / "dashboard"
 DATA_DIR      = DASHBOARD_DIR / "data"
-CACHE_DIR     = ROOT.parent / "cache"
-CACHE_DIR.mkdir(exist_ok=True)
+CACHE_DIR = ROOT.parent / "cache"
+try:
+    CACHE_DIR.mkdir(exist_ok=True)
+except OSError:
+    CACHE_DIR = Path("/tmp/cache")
+    CACHE_DIR.mkdir(exist_ok=True)
+
 MARKET_DATA_DIR = ROOT.parent / "dashboard" / "market_data"
-MARKET_DATA_DIR.mkdir(parents=True, exist_ok=True)
+try:
+    MARKET_DATA_DIR.mkdir(parents=True, exist_ok=True)
+except OSError:
+    pass  # On Vercel, this is read-only but already exists since we committed it
+
 CACHE_TTL_HOURS = 24
 
 # ─── App ──────────────────────────────────────────────────────────────────────
