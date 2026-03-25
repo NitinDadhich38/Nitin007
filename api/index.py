@@ -24,7 +24,6 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
-from pipeline_v3.market_data.price_storage import PriceStorage
 
 logger = logging.getLogger("NiftyAPI")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -37,7 +36,7 @@ DASHBOARD_DIR = ROOT.parent / "dashboard"
 DATA_DIR      = DASHBOARD_DIR / "data"
 CACHE_DIR     = ROOT.parent / "cache"
 CACHE_DIR.mkdir(exist_ok=True)
-MARKET_DATA_DIR = ROOT.parent / "storage" / "market_data"
+MARKET_DATA_DIR = ROOT.parent / "dashboard" / "market_data"
 MARKET_DATA_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_TTL_HOURS = 24
 
@@ -243,24 +242,21 @@ def get_prices(
     period: str = Query("1y",   description="Time period: 1mo, 3mo, 6mo, 1y, 2y, 5y, max")
 ):
     """Returns historical OHLCV data with technical indicators (50/200 DMA)."""
-    storage = PriceStorage(base_dir=str(MARKET_DATA_DIR))
+    target_file = MARKET_DATA_DIR / symbol.lower() / "prices.json"
+    
     logger.info(f"API: Fetching prices for {symbol} from {MARKET_DATA_DIR}")
-    data = storage.load_prices(symbol)
     
-    if not data or not data.get("prices"):
-        logger.info(f"API: Market data cache miss for {symbol}, triggering fetch.")
-        # If not in storage, trigger a quick fetch (Lazy Loading)
-        from pipeline_v3.market_data.price_fetcher import PriceFetcher
-        fetcher = PriceFetcher()
-        df = fetcher.fetch_historical(symbol, period=period)
-        if not df.empty:
-            storage.save_prices(symbol, df)
-            data = storage.load_prices(symbol)
-    
-    if not data or not data.get("prices"):
-        logger.error(f"API: Failed to retrieve market data even after fetch for {symbol}")
+    if not target_file.exists():
+        logger.error(f"API: Market data not found for {symbol}")
         raise HTTPException(status_code=404, detail=f"Market data not found for {symbol}")
         
+    try:
+        with open(target_file, "r") as f:
+            data = json.load(f)
+    except Exception as e:
+        logger.error(f"API: Error reading market data for {symbol}: {e}")
+        raise HTTPException(status_code=500, detail="Error reading market data")
+    
     logger.info(f"API: Successfully returning {len(data.get('prices', []))} days for {symbol}")
     return data
 
