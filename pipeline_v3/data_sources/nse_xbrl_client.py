@@ -2,6 +2,7 @@ import logging
 import datetime
 from typing import Any, Dict, List, Tuple
 from .nse_api_client import NSEAPIClient
+from pipeline_v3.utils.periods import generate_active_periods
 
 logger = logging.getLogger(__name__)
 
@@ -25,6 +26,63 @@ class NSEXBRLClient:
         self.max_annual_filings = 30
         self.nse_client = NSEAPIClient()
 
+    @staticmethod
+    def _is_xml_payload(xml_data: bytes) -> bool:
+        head = (xml_data or b"")[:8000].lower().replace(b"\x00", b"")
+        return b"<xbrli:xbrl" in head or b"<xbrl" in head
+
+    def _append_result_xbrls(
+        self,
+        results: List[Tuple[bytes, Dict[str, Any]]],
+        seen_urls: set,
+        rows: List[Dict[str, Any]],
+        *,
+        period_type: str = None,
+        source_label: str,
+        max_rows: int,
+        source_name: str = "NSE_XBRL",
+        source_priority: int = 500,
+    ) -> None:
+        for fr in rows[:max_rows]:
+            xbrl_url = fr.get("xbrl", "")
+            if not xbrl_url or not xbrl_url.endswith(".xml"):
+                continue
+            if xbrl_url == "https://nsearchives.nseindia.com/corporate/xbrl/-" or xbrl_url in seen_urls:
+                continue
+
+            logger.info(f"Downloading NSE {source_label} XBRL: {xbrl_url}")
+            xml_data, xml_err = self.nse_client.http.get_bytes(xbrl_url)
+            if xml_data and self._is_xml_payload(xml_data):
+                row_period_type = period_type or self._infer_integrated_period_type(fr)
+                seq_id = str(fr.get("seqNumber") or fr.get("seq_Id") or "")
+                period_end = fr.get("toDate") or fr.get("qe_Date")
+                ann_date = fr.get("broadCastDate") or fr.get("broadcast_Date") or fr.get("creation_Date") or period_end or ""
+                seen_urls.add(xbrl_url)
+                results.append((xml_data, {
+                    "seq_id": seq_id,
+                    "attach_name": seq_id,
+                    "ann_date": ann_date,
+                    "period_type": row_period_type,
+                    "desc": f"{source_label} {fr.get('consolidated')} {period_end}",
+                    "source_url": xbrl_url,
+                    "from_date": fr.get("fromDate"),
+                    "to_date": period_end,
+                    "source_name": source_name,
+                    "source_priority": source_priority,
+                }))
+            else:
+                logger.warning(f"Failed to fetch {source_label} XBRL from {xbrl_url}: {xml_err}")
+
+    @staticmethod
+    def _infer_integrated_period_type(row: Dict[str, Any]) -> str:
+        """Infer annual vs quarterly for NSE Integrated Filing rows."""
+        qe_date = str(row.get("qe_Date") or row.get("toDate") or "").upper()
+        audited = str(row.get("audited") or "").lower()
+        is_audited = "audited" in audited and "un-audited" not in audited and "unaudited" not in audited
+        if qe_date.startswith("31-MAR") and is_audited:
+            return "annual"
+        return "quarterly"
+
     def fetch_all_for_symbol(self, symbol: str) -> List[Tuple[bytes, Dict[str, Any]]]:
         """
         Returns a list of tuples: (raw_xbrl_bytes, metadata)
@@ -42,8 +100,34 @@ class NSEXBRLClient:
         )
 
         results = []
+        seen_urls = set()
         import urllib.parse
         safe_symbol = urllib.parse.quote(symbol, safe="")
+        active_periods = generate_active_periods(lookback_years=3)
+
+        # 1b. Fetch the newer SEBI/NSE Integrated Filing - Financials XBRL.
+        # NSE started publishing current FY2025/FY2026 filings here while the
+        # older corporates-financial-results endpoint can lag or omit them.
+        logger.info(f"Fetching NSE Integrated Filing Financials XBRL for {symbol}")
+        integrated_url = (
+            "https://www.nseindia.com/api/integrated-filing-results"
+            f"?index=equities&symbol={safe_symbol}"
+            "&type=Integrated%20Filing-%20Financials&page=1&size=50"
+        )
+        integrated_data, err = self.nse_client.http.get_json(integrated_url)
+        if integrated_data and isinstance(integrated_data, dict):
+            rows = integrated_data.get("data") or []
+            if rows:
+                self._append_result_xbrls(
+                    results,
+                    seen_urls,
+                    rows,
+                    period_type=None,
+                    source_label="Integrated Filing Financials",
+                    max_rows=self.max_quarterly_filings,
+                    source_name="NSE_INTEGRATED_XBRL",
+                    source_priority=525,
+                )
         
         # 2. Fetch Annual Reports XBRL directly from NSE's dedicated XBRL annual reports API
         logger.info(f"Fetching Dedicated Annual Reports XBRL for {symbol}")
@@ -59,10 +143,8 @@ class NSEXBRLClient:
                     # XBRL instance root is commonly `<xbrli:xbrl>` (namespaced), but many
                     # NSE annual-report XBRLs are UTF-16 encoded, so the raw bytes contain
                     # NULs. Detect both UTF-8/ASCII and UTF-16LE/BE signatures.
-                    head_raw = (xml_data or b"")[:8000]
-                    head = head_raw.lower()
-                    head_sans_nuls = head.replace(b"\x00", b"")  # UTF-16 safety
-                    if xml_data and (b"<xbrli:xbrl" in head_sans_nuls or b"<xbrl" in head_sans_nuls):
+                    if xml_data and self._is_xml_payload(xml_data):
+                        seen_urls.add(file_name_url)
                         results.append((xml_data, {
                             "seq_id": "AR_" + ar.get("fromYr", "") + "_" + ar.get("toYr", ""),
                             "attach_name": "Annual Report",
@@ -82,25 +164,35 @@ class NSEXBRLClient:
         afr_data, err = self.nse_client.http.get_json(afr_url)
 
         if afr_data and isinstance(afr_data, list):
-            for fr in afr_data[: self.max_annual_filings]:
-                xbrl_url = fr.get("xbrl", "")
-                if xbrl_url and xbrl_url.endswith(".xml") and xbrl_url != "https://nsearchives.nseindia.com/corporate/xbrl/-":
-                    logger.info(f"Downloading NSE Annual Financial Results XBRL: {xbrl_url}")
-                    xml_data, xml_err = self.nse_client.http.get_bytes(xbrl_url)
-                    head_raw = (xml_data or b"")[:8000]
-                    head = head_raw.lower()
-                    head_sans_nuls = head.replace(b"\x00", b"")
-                    if xml_data and (b"<xbrli:xbrl" in head_sans_nuls or b"<xbrl" in head_sans_nuls):
-                        results.append((xml_data, {
-                            "seq_id": str(fr.get("seqNumber", "")),
-                            "attach_name": str(fr.get("seqNumber", "")),
-                            "ann_date": fr.get("broadCastDate") or fr.get("toDate", ""),
-                            "period_type": "annual",
-                            "desc": f"Annual Financial Results {fr.get('consolidated')} {fr.get('toDate')}",
-                            "source_url": xbrl_url,
-                        }))
-                    else:
-                        logger.warning(f"Failed to fetch Annual Financial Results XBRL from {xbrl_url}: {xml_err}")
+            self._append_result_xbrls(
+                results,
+                seen_urls,
+                afr_data,
+                period_type="annual",
+                source_label="Annual Financial Results",
+                max_rows=self.max_annual_filings,
+            )
+
+        # 3b. Date-window annual lookups for newly due FYs. NSE has changed
+        # response behavior over time, so we keep the broad endpoint above and
+        # union it with active-period searches instead of replacing it.
+        for period in [p for p in active_periods if p["period_type"] == "ANNUAL"][: self.max_annual_filings]:
+            from_date = period["start_date"].strftime("%d-%m-%Y")
+            to_date = (period["end_date"] + datetime.timedelta(days=75)).strftime("%d-%m-%Y")
+            url = (
+                "https://www.nseindia.com/api/corporates-financial-results"
+                f"?index=equities&symbol={safe_symbol}&period=Annual&from_date={from_date}&to_date={to_date}"
+            )
+            data, err = self.nse_client.http.get_json(url)
+            if data and isinstance(data, list):
+                self._append_result_xbrls(
+                    results,
+                    seen_urls,
+                    data,
+                    period_type="annual",
+                    source_label=f"Annual Financial Results {period['period']}",
+                    max_rows=10,
+                )
 
         # 4. Fetch Quarterly XBRL using the explicit financial results API.
         # NOTE: We intentionally fetch more than 12 so we can reconstruct multi-year
@@ -111,25 +203,35 @@ class NSEXBRLClient:
         
         if fr_data and isinstance(fr_data, list):
             # Limit downloads to keep runtime reasonable (covers ~5 years by default).
-            for fr in fr_data[: self.max_quarterly_filings]:
-                xbrl_url = fr.get("xbrl", "")
-                if xbrl_url and xbrl_url.endswith(".xml") and xbrl_url != "https://nsearchives.nseindia.com/corporate/xbrl/-":
-                    logger.info(f"Downloading NSE Quarterly XBRL: {xbrl_url}")
-                    xml_data, xml_err = self.nse_client.http.get_bytes(xbrl_url)
-                    head_raw = (xml_data or b"")[:8000]
-                    head = head_raw.lower()
-                    head_sans_nuls = head.replace(b"\x00", b"")
-                    if xml_data and (b"<xbrli:xbrl" in head_sans_nuls or b"<xbrl" in head_sans_nuls):
-                        results.append((xml_data, {
-                            "seq_id": str(fr.get("seqNumber", "")),
-                            "attach_name": str(fr.get("seqNumber", "")),
-                            "ann_date": fr.get("broadCastDate") or fr.get("toDate", ""),
-                            "period_type": "quarterly",
-                            "desc": f"Quarterly Results {fr.get('consolidated')} {fr.get('toDate')}",
-                            "source_url": xbrl_url
-                        }))
-                    else:
-                        logger.warning(f"Failed to fetch Quarterly XBRL from {xbrl_url}")
+            self._append_result_xbrls(
+                results,
+                seen_urls,
+                fr_data,
+                period_type="quarterly",
+                source_label="Quarterly Results",
+                max_rows=self.max_quarterly_filings,
+            )
+
+        # 4b. Date-window quarterly lookups for each due active quarter. This
+        # is what makes FY2026 quarters appear automatically once NSE publishes
+        # them, without a code change or hardcoded period list.
+        for period in [p for p in active_periods if p["period_type"] == "QUARTERLY"][: min(self.max_quarterly_filings, 8)]:
+            from_date = period["start_date"].strftime("%d-%m-%Y")
+            to_date = (period["end_date"] + datetime.timedelta(days=60)).strftime("%d-%m-%Y")
+            url = (
+                "https://www.nseindia.com/api/corporates-financial-results"
+                f"?index=equities&symbol={safe_symbol}&period=Quarterly&from_date={from_date}&to_date={to_date}"
+            )
+            data, err = self.nse_client.http.get_json(url)
+            if data and isinstance(data, list):
+                self._append_result_xbrls(
+                    results,
+                    seen_urls,
+                    data,
+                    period_type="quarterly",
+                    source_label=f"Quarterly Results {period['period']}",
+                    max_rows=10,
+                )
 
         logger.info(f"Total XBRL filings fetched for {symbol}: {len(results)}")
         return results

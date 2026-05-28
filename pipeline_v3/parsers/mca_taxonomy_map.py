@@ -36,6 +36,9 @@ MCA_LOCALNAME_MAP = {
             "RevenueFromOperationsOther",
             "TurnoverGrossIncome",
             "NetSalesTurnover",
+            # --- Life insurance taxonomy ---
+            "GrossPremiumIncome",
+            "NetPremiumIncome",
         ],
         "other_income": [
             "OtherIncome",
@@ -48,11 +51,16 @@ MCA_LOCALNAME_MAP = {
             "TotalIncomeFromOperations",
             "Income",
             "TotalRevenueFromOperations",
+            "ShareholdersAccountIncome",
+            "IncomeUnderShareholdersAccount",
         ],
         "operating_expenses": [
             "TotalExpenses",
             "Expenses",
             "TotalExpenditure",
+            "ExpensesOfManagement",
+            "OperatingExpensesRelatedToInsuranceBusiness",
+            "ShareholdersAccountExpenses",
         ],
         "interest": [
             "FinanceCosts",
@@ -93,6 +101,10 @@ MCA_LOCALNAME_MAP = {
             "TotalTaxExpenses",
             "IncomeTaxExpenseContinuingOperations",
             "CurrentAndDeferredTaxExpenseIncome",
+            "ProvisionForTax",
+            "ProvisionsForTaxes",
+            "CurrentTax",
+            "CurrentTaxes",
         ],
         "tax_discontinued_ops": [
             "TaxExpenseOfDiscontinuedOperations",
@@ -112,6 +124,8 @@ MCA_LOCALNAME_MAP = {
             "NetProfitLossForThePeriod",
             "ProfitLossFromContinuingOperations",
             "ProfitLossFromOrdinaryActivitiesAfterTax",
+            "ProfitLossAfterTaxBeforeExtraordinaryItems",
+            "ProfitLossAfterTaxAndExtraordinaryItems",
         ],
         "net_profit": [
             # Owner-attributable PAT variants. Keep `profit_for_period` separate for
@@ -123,6 +137,8 @@ MCA_LOCALNAME_MAP = {
             "ProfitAttributableToOwnersOfParent",
             # --- Banking / NBFC ---
             "ProfitLossAfterTaxesMinorityInterestAndShareOfProfitLossOfAssociates",
+            "ProfitLossAfterTaxAndExtraordinaryItems",
+            "ProfitLossAfterTaxBeforeExtraordinaryItems",
         ],
         "net_profit_attributable_to_owners": [
             "ProfitLossAttributableToOwnersOfParent",
@@ -153,6 +169,8 @@ MCA_LOCALNAME_MAP = {
             "BasicEarningsPerShare",
             "BasicEPSAfterExtraordinaryItems",
             "BasicEPSBeforeExtraordinaryItems",
+            "BasicAndDilutedEPSBeforeExtraordinaryItemsNetOfTaxExpenseForThePeriodNotToBeAnnualized",
+            "BasicAndDilutedEPSAfterExtraordinaryItemsNetOfTaxExpenseForThePeriodNotToBeAnnualized",
         ],
         "diluted_eps": [
             "DilutedEarningsLossPerShareFromContinuingOperations",
@@ -161,6 +179,8 @@ MCA_LOCALNAME_MAP = {
             "DilutedEarningsPerShare",
             "DilutedEPSAfterExtraordinaryItems",
             "DilutedEPSBeforeExtraordinaryItems",
+            "BasicAndDilutedEPSBeforeExtraordinaryItemsNetOfTaxExpenseForThePeriodNotToBeAnnualized",
+            "BasicAndDilutedEPSAfterExtraordinaryItemsNetOfTaxExpenseForThePeriodNotToBeAnnualized",
         ],
         "exceptional_items": [
             "ExceptionalItems",
@@ -186,6 +206,7 @@ MCA_LOCALNAME_MAP = {
         "equity_share_capital": [
             "EquityShareCapital",
             "ShareCapital",
+            "PaidUpEquityShareCapital",
             "PaidUpValueOfEquityShareCapital",
         ],
         "reserves": [
@@ -200,6 +221,7 @@ MCA_LOCALNAME_MAP = {
             "TotalEquityAttributableToOwnersOfParent",
             "TotalShareholdersEquity",
             "NetWorth",
+            "ShareholdersFunds",
         ],
         "non_controlling_interest": [
             "NonControllingInterest",
@@ -226,6 +248,10 @@ MCA_LOCALNAME_MAP = {
             "Liabilities",
             "TotalLiabilities",
             "TotalEquityAndLiabilities",
+            "PolicyLiabilities",
+            "LinkedLiabilities",
+            "ProvisionForLinkedLiabilities",
+            "CurrentLiabilitiesAndProvisions",
         ],
         "total_assets": [
             "Assets",
@@ -243,6 +269,9 @@ MCA_LOCALNAME_MAP = {
             "InvestmentsNoncurrent",
             "CurrentInvestments",
             "NoncurrentInvestments",
+            "InvestmentsShareholdersFund",
+            "InvestmentsPolicyholdersFundExcludingLinkedAssets",
+            "InvestmentsShareholders",
         ],
         "receivables": [
             "TradeReceivables",
@@ -257,6 +286,7 @@ MCA_LOCALNAME_MAP = {
             "PropertyPlantAndEquipment",
             "PropertyPlantAndEquipmentNet",
             "TangibleAssets",
+            "FixedAssets",
         ],
         "intangible_assets": [
             "IntangibleAssets",
@@ -267,6 +297,7 @@ MCA_LOCALNAME_MAP = {
         "current_assets": [
             "CurrentAssets",
             "TotalCurrentAssets",
+            "AdvancesAndOtherAssets",
         ],
         "current_liabilities": [
             "CurrentLiabilities",

@@ -11,6 +11,7 @@ class SchemaNormalizer:
     """Normalizes raw data into the unified schema with institutional guardrails."""
 
     DEFAULT_SOURCE_PRIORITY = {
+        "NSE_INTEGRATED_XBRL": 525,
         "NSE_XBRL": 500,
         "MCA_XBRL": 500,
         "NSE_API": 450,

@@ -61,6 +61,21 @@ def _sort_periods(periods: List[str]) -> List[str]:
         fy = re.match(r"FY(\d{4})", p)
         if fy:
             return (int(fy.group(1)), 12)
+        fy_short = re.match(r"FY(\d{2})$", p)
+        if fy_short:
+            return (2000 + int(fy_short.group(1)), 12)
+        qfy = re.match(r"Q([1-4])FY(\d{2,4})", p)
+        if qfy:
+            fy_year = int(qfy.group(2))
+            if fy_year < 100:
+                fy_year += 2000
+            q_end = {
+                "1": (fy_year - 1, 6),
+                "2": (fy_year - 1, 9),
+                "3": (fy_year - 1, 12),
+                "4": (fy_year, 3),
+            }[qfy.group(1)]
+            return q_end
         # "Mar 2024", "Dec 2024" etc.
         MONTHS = {"Jan":1,"Feb":2,"Mar":3,"Apr":4,"May":5,"Jun":6,
                   "Jul":7,"Aug":8,"Sep":9,"Oct":10,"Nov":11,"Dec":12}

@@ -153,7 +153,11 @@ CF_MAP = {
 
 
 def _map_period(raw: Dict, field_map: Dict) -> Dict:
-    out, seen = {}, set()
+    # Preserve canonical pipeline fields and add dashboard-friendly aliases.
+    # Older dashboard code only emitted mapped aliases, which hid many values
+    # that were present in the final company JSON.
+    out = {k: v for k, v in raw.items() if v is not None}
+    seen = set(out.keys())
     for src, tgt in field_map.items():
         if tgt in seen:
             continue
@@ -280,6 +284,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     raw_st_pl   = raw_data.get("standalone_profit_loss", {})
     raw_st_bs   = raw_data.get("standalone_balance_sheet", {})
     raw_st_cf   = raw_data.get("standalone_cash_flow", {})
+    raw_ratios  = raw_data.get("ratios", {})
     raw_meta    = raw_data.get("metadata", {})
     provenance  = raw_meta.get("provenance") or raw_meta.get("field_provenance", {})
 
@@ -345,19 +350,27 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
         }
 
     # ── Derived Metrics ───────────────────────────────────────────────────────
-    derived_metrics = compute_derived_metrics(pl_ann, bs_ann, cf_ann)
+    # Some BFSI/insurance symbols only publish standalone integrated filings.
+    # Use consolidated where it exists; otherwise derive UI metrics from the
+    # standalone official filing instead of rendering a hollow dashboard.
+    effective_pl_ann = pl_ann or st_pl_ann
+    effective_pl_q = pl_q or st_pl_q
+    effective_bs_ann = bs_ann or st_bs_ann
+    effective_cf_ann = cf_ann or st_cf_ann
+
+    derived_metrics = compute_derived_metrics(effective_pl_ann, effective_bs_ann, effective_cf_ann)
 
     # ── Anomalies ─────────────────────────────────────────────────────────────
-    anomalies = anomaly_det.detect(pl_ann, bs_ann, cf_ann)
+    anomalies = anomaly_det.detect(effective_pl_ann, effective_bs_ann, effective_cf_ann)
 
     # ── Rule-based Insights ───────────────────────────────────────────────────
     insights = insight_engine.generate(
         derived_metrics,
-        {"profit_loss": {"annual": pl_ann, "quarterly": pl_q}},
+        {"profit_loss": {"annual": effective_pl_ann, "quarterly": effective_pl_q}},
     )
 
     # ── Graph Data ────────────────────────────────────────────────────────────
-    graph_data = graph_engine.compute(pl_q, pl_ann, bs_ann, cf_ann)
+    graph_data = graph_engine.compute(effective_pl_q, effective_pl_ann, effective_bs_ann, effective_cf_ann)
 
     # ── Confidence Tags ───────────────────────────────────────────────────────
     flat_con = {
@@ -403,8 +416,8 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     llm_insights = None
     
     latest_year = None
-    if pl_ann:
-        latest_year = sorted(pl_ann.keys(), reverse=True)[0]
+    if effective_pl_ann:
+        latest_year = sorted(effective_pl_ann.keys(), reverse=True)[0]
     
     if pdf_path and latest_year:
         rag_engine = get_rag_engine()
@@ -443,6 +456,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             "standalone":    standalone,
         },
         "graph_data":      graph_data,
+        "ratios":          raw_ratios,
         "derived_metrics": derived_metrics,
         "anomalies":       anomalies,
         "insights":        insights,
@@ -460,6 +474,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             "confidence_breakdown": raw_meta.get("confidence_breakdown", {}),
             "accounting_schema":  raw_meta.get("accounting_schema"),
             "anomaly_flags":      raw_meta.get("anomaly_flags", []),
+            "active_period_window": raw_meta.get("active_period_window", []),
             "rag_context":       bool(ir_context),
         },
     }

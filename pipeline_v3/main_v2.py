@@ -26,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from pipeline_v3.data_sources.nse_api_client import NSEAPIClient
 from pipeline_v3.data_sources.nse_xbrl_client import NSEXBRLClient
 from pipeline_v3.data_sources.pdf_parser_wrapper import PDFParser
+from pipeline_v3.utils.periods import generate_active_periods, serializable_periods
 from pipeline_v3.parsers.xbrl_parser import MCAXBRLInstanceParser
 from pipeline_v3.transformers.schema_normalizer import SchemaNormalizer
 from pipeline_v3.transformers.sector_normalizer import normalize_by_sector, resolve_accounting_schema
@@ -188,6 +189,7 @@ class PipelineV2:
         # Contains full P&L, Balance Sheet, and Cash Flow.
         # ══════════════════════════════════════════════════════════════
         xbrl_count = 0
+        xbrl_source_counts = {}
         try:
             xbrl_results = self.nse_xbrl.fetch_all_for_symbol(symbol)
             if xbrl_results:
@@ -215,24 +217,39 @@ class PipelineV2:
                                 raw_period_type = "annual"  # H1 BS/CF goes into annual bucket
                             if isinstance(fy, str) and (fy.startswith("FY") or fy.startswith("CY")):
                                 period_type = "annual"
+                            elif raw_period_type == "annual" and stmt_type == "pl":
+                                # Integrated audited March filings contain both full-year
+                                # (FY2026) and Q4-only (Mar 2026) P&L contexts. Keep the
+                                # month label as quarterly instead of collapsing it into FY.
+                                period_type = "quarterly"
+                            elif raw_period_type == "annual":
+                                # Skip non-FY balance-sheet/cash-flow fragments from annual
+                                # filings. They are usually context artefacts, not a complete
+                                # quarterly BS/CF statement.
+                                continue
                             else:
                                 period_type = raw_period_type
                                 
                             desc_lower = meta.get("desc", "").lower()
                             is_std = "non-consolidated" in desc_lower or "standalone" in desc_lower
+                            source_name = meta.get("source_name", "NSE_XBRL")
                             
                             self.normalizer.merge_financials(
                                 fin, norm, fy,
                                 period_type=period_type,
-                                source_name="NSE_XBRL",
+                                source_name=source_name,
+                                source_priority=meta.get("source_priority"),
+                                source_meta=meta,
                                 is_standalone=is_std
                             )
                             xbrl_count += 1
+                            xbrl_source_counts[source_name] = xbrl_source_counts.get(source_name, 0) + 1
                             if is_std:
                                 fin.company_info["has_standalone"] = True
 
                 if xbrl_count > 0:
-                    data_sources.append({"type": "NSE_XBRL", "fields_merged": xbrl_count})
+                    for source_name, count in sorted(xbrl_source_counts.items()):
+                        data_sources.append({"type": source_name, "fields_merged": count})
                     logger.info(f"  ✅ Tier 1 (NSE XBRL): {xbrl_count} field-periods merged")
         except Exception as e:
             logger.warning(f"  ⚠️ Tier 1 (NSE XBRL) failed: {e}")
@@ -287,8 +304,8 @@ class PipelineV2:
         # PDF is *only* invoked if BOTH revenue AND net_profit are
         # missing after Tier 1 + Tier 2.
         # ══════════════════════════════════════════════════════════════
-        has_annual_pl = bool(fin.profit_loss.get("annual", {}))
-        has_quarterly_pl = bool(fin.profit_loss.get("quarterly", {}))
+        has_annual_pl = bool(fin.profit_loss.get("annual", {}) or fin.standalone_profit_loss.get("annual", {}))
+        has_quarterly_pl = bool(fin.profit_loss.get("quarterly", {}) or fin.standalone_profit_loss.get("quarterly", {}))
 
         if not has_annual_pl and not has_quarterly_pl:
             logger.warning(f"  🔴 SMART-TRIGGER: No P&L from Tier 1+2. PDF would be invoked here.")
@@ -404,6 +421,7 @@ class PipelineV2:
                 "last_updated": datetime.now(timezone.utc).isoformat(),
                 "parser_version": "v2.2-IntelligenceLayer",
                 "pipeline": "Update2.2-6LayerArchitecture",
+                "active_period_window": serializable_periods(generate_active_periods(lookback_years=3)),
                 "accounting_schema": accounting_schema,
                 "validation_passed": len(audit_flags) == 0,
                 "anomaly_flags": audit_flags,

@@ -23,3 +23,5 @@ cache/
 backend/stockdb.sqlite
 backend/.pytest_cache/
 backend/venv/
+.vercel
+.env*

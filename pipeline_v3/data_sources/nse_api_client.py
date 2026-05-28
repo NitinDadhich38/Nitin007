@@ -1,9 +1,11 @@
 import logging
 import requests
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, Optional
 from .http_client import HTTPClient
+from pipeline_v3.utils.periods import generate_active_periods
 
 logger = logging.getLogger(__name__)
 
@@ -48,6 +50,75 @@ class NSEAPIClient:
             logger.warning(f"NSE results-comparision failed ({symbol}, consolidated={consolidated}): {err}")
             return {}
         return data or {}
+
+    def get_results_comparison(self, symbol: str, period: str, period_type: str) -> Optional[Dict[str, Any]]:
+        """
+        Fetch the NSE comparison endpoint and match the requested active period
+        by its end date. This is used by period-loop callers; main_v2 still uses
+        fetch_results() for broad bulk ingestion.
+        """
+        period_map = {
+            "QUARTERLY": "Quarterly",
+            "HALF_YEARLY": "Half-Yearly",
+            "ANNUAL": "Annual",
+            "quarterly": "Quarterly",
+            "half_yearly": "Half-Yearly",
+            "annual": "Annual",
+        }
+        nse_period = period_map.get(period_type, period_type or "Quarterly")
+        data = self.fetch_results(symbol, period=nse_period, consolidated=True)
+        results_list = data.get("data", data) if isinstance(data, dict) else data
+        if not isinstance(results_list, list):
+            logger.warning("[NSE_API] Unexpected response shape for %s %s", symbol, period)
+            return None
+
+        active_periods = generate_active_periods(lookback_years=5)
+        period_meta = next(
+            (
+                p for p in active_periods
+                if period in {p.get("period"), p.get("period_long"), p.get("label"), p.get("fy")}
+            ),
+            None,
+        )
+        if not period_meta:
+            logger.warning("[NSE_API] Period %s is outside active window for %s", period, symbol)
+            return None
+
+        return self._match_period_in_results(results_list, period_meta)
+
+    def _match_period_in_results(self, results_list: list, period_meta: dict) -> Optional[Dict[str, Any]]:
+        target_end = period_meta["end_date"]
+        for entry in results_list:
+            if not isinstance(entry, dict):
+                continue
+            parsed_end = self._parse_nse_date(
+                entry.get("toDate")
+                or entry.get("to_date")
+                or entry.get("period")
+                or entry.get("xAxis")
+                or ""
+            )
+            if parsed_end and abs((parsed_end.date() - target_end).days) <= 15:
+                return entry
+        return None
+
+    @staticmethod
+    def _parse_nse_date(value: str) -> Optional[datetime]:
+        if not value:
+            return None
+        text = str(value).strip()
+        for fmt in ("%d-%b-%Y", "%d-%m-%Y", "%Y-%m-%d", "%b %Y", "%B %Y"):
+            try:
+                parsed = datetime.strptime(text, fmt)
+                if fmt in ("%b %Y", "%B %Y"):
+                    # Use the conventional month-end for comparison.
+                    import calendar
+                    last_day = calendar.monthrange(parsed.year, parsed.month)[1]
+                    parsed = parsed.replace(day=last_day)
+                return parsed
+            except ValueError:
+                continue
+        return None
 
     def fetch_equity_quote(self, symbol: str) -> Dict[str, Any]:
         """Fetches real-time quote for an equity symbol."""
