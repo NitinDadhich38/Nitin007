@@ -184,5 +184,11 @@ class RAGEngine:
             
         return f"--- Management Commentary (FY{year}) ---\n{text}"
 
-# Singleton instance
-rag_engine = RAGEngine()
+# Singleton instance (lazy init to avoid heavy model downloads during Phase A runs).
+rag_engine: Optional[RAGEngine] = None
+
+def get_rag_engine() -> RAGEngine:
+    global rag_engine
+    if rag_engine is None:
+        rag_engine = RAGEngine()
+    return rag_engine

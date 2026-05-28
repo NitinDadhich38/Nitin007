@@ -1,0 +1,9 @@
+{
+  "company": "NESTLEIND",
+  "sector": "FMCG",
+  "notes": "Nestle India has December year-end (Calendar Year). FY labels must map to CY. No NCI (100% subsidiary of Nestle SA).",
+  "fiscal_year_end": "December",
+  "special_rules": {
+    "calendar_year_company": true
+  }
+}

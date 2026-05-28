@@ -1,0 +1,25 @@
+{
+  "company": "ONGC",
+  "sector": "OilGas",
+  "notes": "ONGC reports Gross Revenue including Statutory Levies (Royalties, Cess, Production payments). Must subtract for Net Revenue. NCI is material (~20% via ONGC Videsh, HPCL).",
+  "revenue_tags": [
+    "RevenueFromOperations",
+    "RevenueFromOperationsGross"
+  ],
+  "statutory_levies_tags": [
+    "StatutoryLevies",
+    "RoyaltyCessAndOtherProductionCharges",
+    "OilAndNaturalGasCessExpense",
+    "ProductionSharingPayments"
+  ],
+  "special_rules": {
+    "subtract_levies_from_revenue": true,
+    "nci_material": true
+  },
+  "known_values": {
+    "FY2024": {
+      "revenue_from_operations": 598644,
+      "net_profit": 40526
+    }
+  }
+}

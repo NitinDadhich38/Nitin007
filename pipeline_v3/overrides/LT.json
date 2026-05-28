@@ -1,0 +1,21 @@
+{
+  "company": "LT",
+  "sector": "Infrastructure",
+  "notes": "L&T is a conglomerate with revenue split across Construction, IT (LTIMindtree), Financial Services. Standard tags only capture the core engineering segment.",
+  "revenue_tags": [
+    "RevenueFromOperations",
+    "ContractRevenue",
+    "RevenueFromContractsWithCustomers",
+    "RevenueFromLongTermContracts"
+  ],
+  "special_rules": {
+    "conglomerate_revenue_aggregation": true,
+    "nci_material": true
+  },
+  "known_values": {
+    "FY2024": {
+      "revenue_from_operations": 219115,
+      "net_profit": 13059
+    }
+  }
+}

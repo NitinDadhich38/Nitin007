@@ -41,13 +41,10 @@ Optional inputs:
 ## 📁 System Architecture
 
 ```text
-├── main.py                 # API Entrypoint (FastAPI)
-├── ingestion_engine.py      # Data Ingestion & Scheduler
-├── scrapers/               # NSE/BSE & Fallback Scrapers
-├── ingestion/              # Parallel Downloader Logic
-├── analysis/               # PDF Parsing & Metric Extraction
-├── db/                     # SQLAlchemy Models (SQLite/Postgres)
-└── scripts/                # Specialized Downloader & Analysis Scripts
+├── app.py                   # FastAPI server + serves dashboard/ + /api/*
+├── dashboard/               # Screener-style UI (static)
+├── pipeline_v3/             # Extraction engine (v2 entrypoint recommended)
+└── scripts/                 # Dashboard schema generator + utilities
 ```
 
 ## 🛠 Setup & Usage
@@ -57,15 +54,18 @@ Optional inputs:
    pip install -r requirements.txt
    ```
 
-2. **Run Ingestion**:
+2. **Generate Nifty 50 dataset (writes `data/` + `dashboard/data/`)**:
    ```bash
-   python3 scripts/nifty50_downloader.py
+   python3 -m pipeline_v3.main_v2 --all --generate-dashboard
    ```
 
-3. **Start API**:
+3. **Start API + UI**:
    ```bash
-   python3 main.py
+   uvicorn app:app --host 0.0.0.0 --port 8080 --reload
    ```
+
+Notes:
+- `data/`, `dashboard/data/`, and `cache/` are generated artifacts and are intentionally not committed.
 
 ## 📊 Sample Output (RELIANCE Q3 FY26)
 Matches official filings:

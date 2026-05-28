@@ -774,6 +774,9 @@
             <div class="co-meta">
               <span class="meta-tag" id="co-symbol"></span>
               <span class="meta-tag sector" id="co-sector"></span>
+              <span id="score-pill" class="meta-tag" style="background:var(--bg3); font-family:'JetBrains Mono', monospace; font-size:0.7rem;">
+                Confidence: <span id="co-score" style="font-weight:800;">--%</span>
+              </span>
             </div>
           </div>
         </div>
@@ -1016,6 +1019,16 @@
       document.getElementById('co-symbol').textContent = co.symbol;
       document.getElementById('co-sector').textContent = co.sector;
       document.getElementById('bc-sector').textContent = co.sector || 'Equities';
+
+      // Confidence Score
+      const score = (currentData.metadata?.confidence_score || 0) * 100;
+      const scoreEl = document.getElementById('co-score');
+      const pill = document.getElementById('score-pill');
+      scoreEl.textContent = score + '%';
+      if (score >= 90) { pill.style.background = 'var(--positive-bg)'; pill.style.color = 'var(--positive)'; }
+      else if (score >= 70) { pill.style.background = 'var(--warning-bg)'; pill.style.color = 'var(--warning)'; }
+      else { pill.style.background = 'var(--negative-bg)'; pill.style.color = 'var(--negative)'; }
+
 
       // Standalone toggle UI
       const hasStd = !!co.has_standalone;

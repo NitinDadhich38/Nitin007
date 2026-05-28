@@ -1,0 +1,33 @@
+{
+  "company": "COALINDIA",
+  "sector": "Mining",
+  "notes": "Coal India uses IGAAP-specific revenue tags. Standard Ind-AS RevenueFromOperations maps to OtherOperatingIncome only.",
+  "revenue_tags": [
+    "RevenueFromSaleOfCoalGross",
+    "RevenueFromSaleOfCoal",
+    "SaleOfCoal",
+    "SaleOfGoods",
+    "TurnoverGrossIncome",
+    "RevenueFromOperationsGross"
+  ],
+  "statutory_levies_tags": [
+    "StowingExciseDuty",
+    "CleanEnergyCess",
+    "RoyaltyExpense",
+    "StatutoryLevies"
+  ],
+  "special_rules": {
+    "subtract_levies_from_revenue": true,
+    "prefer_gross_revenue": true
+  },
+  "known_values": {
+    "FY2024": {
+      "revenue_from_operations": 138268,
+      "net_profit": 37402
+    },
+    "FY2025": {
+      "revenue_from_operations": 127074,
+      "net_profit": 37402
+    }
+  }
+}

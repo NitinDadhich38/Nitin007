@@ -13,10 +13,16 @@ class ProfitLoss:
     depreciation: Optional[float] = None
     profit_before_tax: Optional[float] = None
     tax: Optional[float] = None
+    share_of_associates_jv: Optional[float] = None
+    profit_for_period: Optional[float] = None
     net_profit: Optional[float] = None
+    net_profit_attributable_to_owners: Optional[float] = None
     eps: Optional[float] = None
     diluted_eps: Optional[float] = None
     exceptional_items: Optional[float] = None
+    excise_duty: Optional[float] = None
+    nci_profit: Optional[float] = None
+    statutory_levies: Optional[float] = None
 
 @dataclass
 class BalanceSheet:

@@ -1,9 +1,6 @@
-# Data
-# data/financial_results/
-# data/*.pdf
-# data/*.json
-# data/*.txt
-# db/*.db
+# Data (generated)
+data/
+dashboard/data/
 
 # Python
 __pycache__/
@@ -23,4 +20,6 @@ node_modules/
 *.log
 *.db
 cache/
-data/*.json
+backend/stockdb.sqlite
+backend/.pytest_cache/
+backend/venv/

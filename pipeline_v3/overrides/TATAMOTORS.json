@@ -1,0 +1,28 @@
+{
+  "symbol": "TATAMOTORS",
+  "reason": "NSE API returns 0 XBRL filings for Tata Motors standard query. Fallback via Override Registry.",
+  "known_values": {
+    "FY2024": {
+      "revenue_from_operations": 437927.8,
+      "total_income": 437927.8,
+      "ebitda": 42740,
+      "net_profit": 31399,
+      "profit_before_tax": 37170.5,
+      "eps": 82.26,
+      "total_assets": 354673,
+      "total_equity": 60134.4,
+      "total_liabilities": 294538.6
+    },
+    "FY2023": {
+      "revenue_from_operations": 345967,
+      "total_income": 345967,
+      "ebitda": 31830.4,
+      "net_profit": 2414.29,
+      "profit_before_tax": 3234.4,
+      "eps": 7.15,
+      "total_assets": 331393.3,
+      "total_equity": 45293,
+      "total_liabilities": 286100.3
+    }
+  }
+}

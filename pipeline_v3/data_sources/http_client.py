@@ -71,6 +71,32 @@ class HTTPClient:
                 time.sleep(self.backoff_s * (2**attempt))
         raise RuntimeError(f"GET failed for {url}: {last_err}") from last_err
 
+    def get_bytes(
+        self,
+        url: str,
+        *,
+        params: Optional[Dict[str, Any]] = None,
+        headers: Optional[Dict[str, str]] = None,
+    ) -> Tuple[Optional[bytes], Optional[str]]:
+        """Download raw bytes (for XML/PDF files). Returns (bytes, error)."""
+        try:
+            self._throttle()
+            last_err: Optional[BaseException] = None
+            for attempt in range(self.max_retries + 1):
+                try:
+                    r = self.session.get(url, params=params, headers=headers, timeout=self.timeout_s)
+                    if r.status_code != 200:
+                        return None, f"HTTP {r.status_code}"
+                    return r.content, None
+                except Exception as e:
+                    last_err = e
+                    if attempt >= self.max_retries:
+                        break
+                    time.sleep(self.backoff_s * (2 ** attempt))
+            return None, str(last_err)
+        except Exception as e:
+            return None, str(e)
+
     def get_json(
         self,
         url: str,

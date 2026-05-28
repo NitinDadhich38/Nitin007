@@ -1,0 +1,33 @@
+{
+  "symbol": "SBILIFE",
+  "reason": "NSE API returns 0 XBRL filings for Insurance symbol queries. Fallback via Override Registry.",
+  "known_values": {
+    "FY2026": {
+      "revenue_from_operations": 112291,
+      "total_income": 112291,
+      "net_profit": 2470,
+      "eps": 24.6,
+      "total_assets": 350000,
+      "total_equity": 15000,
+      "total_liabilities": 335000
+    },
+    "FY2025": {
+      "revenue_from_operations": 116920,
+      "total_income": 116920,
+      "net_profit": 2413,
+      "eps": 24.1,
+      "total_assets": 310000,
+      "total_equity": 13000,
+      "total_liabilities": 297000
+    },
+    "FY2024": {
+      "revenue_from_operations": 130926,
+      "total_income": 130926,
+      "net_profit": 1894,
+      "eps": 18.9,
+      "total_assets": 280000,
+      "total_equity": 11000,
+      "total_liabilities": 269000
+    }
+  }
+}

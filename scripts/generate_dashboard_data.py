@@ -41,7 +41,7 @@ from confidence_tagger import ConfidenceTagger
 from anomaly_detector  import AnomalyDetector
 from graph_engine      import GraphEngine
 from llm_router        import llm_router
-from rag_engine        import rag_engine
+from rag_engine        import get_rag_engine
 
 logger = logging.getLogger("DashboardGenerator")
 logging.basicConfig(
@@ -109,6 +109,10 @@ PL_MAP = {
     "depreciation":"depreciation",       "Reconciled Depreciation":"depreciation",
     "profit_before_tax":"profit_before_tax", "Pretax Income":"profit_before_tax",
     "tax":"tax",     "Tax Provision":"tax",
+    "share_of_associates_jv":"share_of_associates_jv",
+    "profit_for_period":"profit_for_period",
+    "net_profit_attributable_to_owners":"net_profit_attributable_to_owners",
+    "nci_profit":"nci_profit",
     "net_profit":"net_profit",           "Net Income":"net_profit",
     "eps":"eps",     "Basic EPS":"eps",  "Diluted EPS":"eps",
     "exceptional_items":"exceptional_items", "Gross Profit":"gross_profit",
@@ -277,7 +281,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     raw_st_bs   = raw_data.get("standalone_balance_sheet", {})
     raw_st_cf   = raw_data.get("standalone_cash_flow", {})
     raw_meta    = raw_data.get("metadata", {})
-    provenance  = raw_meta.get("provenance", {})
+    provenance  = raw_meta.get("provenance") or raw_meta.get("field_provenance", {})
 
     symbol = (ci.get("symbol") or ci.get("ticker") or "UNKNOWN").upper()
     name   = ci.get("name") or ci.get("company_name") or symbol
@@ -402,10 +406,12 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     if pl_ann:
         latest_year = sorted(pl_ann.keys(), reverse=True)[0]
     
-    if pdf_path and latest_year and rag_engine.enabled:
-        year_str = latest_year.replace("FY", "")
-        rag_engine.index_pdf(pdf_path, symbol, year_str)
-        ir_context = rag_engine.retrieve_context(symbol, year_str)
+    if pdf_path and latest_year:
+        rag_engine = get_rag_engine()
+        if rag_engine.enabled:
+            year_str = latest_year.replace("FY", "").replace("CY", "")
+            rag_engine.index_pdf(pdf_path, symbol, year_str)
+            ir_context = rag_engine.retrieve_context(symbol, year_str)
     
     # Generate LLM interpretation (returns None if LLM is disabled)
     if derived_metrics:
@@ -447,8 +453,13 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             "data_sources":      sources,
             "last_updated":      datetime.now(timezone.utc).isoformat(),
             "unit":              "₹ Crores",
-            "parser_version":    "v4.0-PhaseB",
+            "parser_version":    "v4.1-IntelligenceLayer",
+            "pipeline":          raw_meta.get("pipeline", "Update2.2-6LayerArchitecture"),
             "validation_passed": raw_meta.get("validation_passed", False),
+            "confidence_score":  raw_meta.get("confidence_score"),
+            "confidence_breakdown": raw_meta.get("confidence_breakdown", {}),
+            "accounting_schema":  raw_meta.get("accounting_schema"),
+            "anomaly_flags":      raw_meta.get("anomaly_flags", []),
             "rag_context":       bool(ir_context),
         },
     }

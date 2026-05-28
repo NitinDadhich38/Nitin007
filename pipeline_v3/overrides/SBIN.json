@@ -1,0 +1,20 @@
+{
+  "symbol": "SBIN",
+  "reason": "XBRL tags for InterestEarned missing proper contexts in Mar 2021/2022 filings; overriding to ensure total accuracy.",
+  "known_values": {
+    "FY2022": {
+      "revenue_from_operations": 275457,
+      "total_income": 316021,
+      "net_profit": 31676,
+      "profit_before_tax": 42776,
+      "eps": 35.49
+    },
+    "FY2021": {
+      "revenue_from_operations": 265151,
+      "total_income": 308147,
+      "net_profit": 20410,
+      "profit_before_tax": 27537,
+      "eps": 22.87
+    }
+  }
+}

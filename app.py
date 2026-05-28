@@ -202,6 +202,16 @@ def get_graph_data(
     }
 
 
+@app.get("/api/prices")
+def get_prices(symbol: str, period: str = Query("max")):
+    """Returns price data for charting (OHLCV + DMAs)."""
+    prices_path = DASHBOARD_DIR / "market_data" / symbol.lower() / "prices.json"
+    if not prices_path.exists():
+        raise HTTPException(status_code=404, detail=f"Price data not found for {symbol}")
+    with open(prices_path) as f:
+        return json.load(f)
+
+
 @app.get("/api/insights/{symbol}")
 def get_insights(symbol: str):
     """Returns rule-based insights and anomaly flags."""

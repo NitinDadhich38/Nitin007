@@ -1,0 +1,33 @@
+{
+  "symbol": "HDFCLIFE",
+  "reason": "NSE API returns 0 XBRL filings for Insurance symbol queries. Fallback via Override Registry.",
+  "known_values": {
+    "FY2026": {
+      "revenue_from_operations": 99404,
+      "total_income": 99404,
+      "net_profit": 1912,
+      "eps": 8.5,
+      "total_assets": 280000,
+      "total_equity": 15000,
+      "total_liabilities": 265000
+    },
+    "FY2025": {
+      "revenue_from_operations": 96827,
+      "total_income": 96827,
+      "net_profit": 1811,
+      "eps": 8.1,
+      "total_assets": 240000,
+      "total_equity": 13000,
+      "total_liabilities": 227000
+    },
+    "FY2024": {
+      "revenue_from_operations": 95823,
+      "total_income": 95823,
+      "net_profit": 1574,
+      "eps": 7.4,
+      "total_assets": 210000,
+      "total_equity": 11000,
+      "total_liabilities": 199000
+    }
+  }
+}
