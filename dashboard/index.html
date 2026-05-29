@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nifty 50 Financial Intelligence Dashboard</title>
+  <title>Nifty 100 Financial Intelligence Dashboard</title>
   <meta name="description"
     content="Institutional-grade financial analysis. 100% data from official NSE/BSE filings with zero hallucination policy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,6 +161,12 @@
       font-weight: 600;
     }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
     .chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
     .chart-controls { display: flex; gap: 8px; }
     .chart-btn { padding: 4px 10px; border-radius: 4px; border: 1px solid var(--card-border); background: var(--bg2); cursor: pointer; font-size: 12px; transition: 0.2s; }
@@ -183,6 +189,36 @@
     .search-wrap {
       padding: 1.25rem 1rem;
       border-bottom: 1px solid var(--bg3);
+    }
+
+    .index-select {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+      background: var(--bg3);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 4px;
+    }
+
+    .index-btn {
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.45rem 0.35rem;
+      transition: var(--transition);
+    }
+
+    .index-btn.active {
+      background: #fff;
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
     }
 
     #company-search {
@@ -266,6 +302,19 @@
       max-width: 160px;
     }
 
+    .coverage-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-left: auto;
+      flex: 0 0 auto;
+      background: var(--warning);
+    }
+
+    .coverage-dot.parsed {
+      background: var(--positive);
+    }
+
     /* ─── Main Panel ────────────────────────────────────────────────────────── */
     main {
       overflow-y: auto;
@@ -320,9 +369,41 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
+      gap: 1rem;
       margin-bottom: 1.5rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid var(--card-border);
+    }
+
+    .co-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.45rem;
+    }
+
+    .export-btn {
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text2);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.45rem 0.7rem;
+      transition: var(--transition);
+    }
+
+    .export-btn:hover {
+      color: var(--primary);
+      border-color: rgba(18, 87, 210, 0.3);
+      background: var(--primary-dim);
+    }
+
+    .export-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
     }
 
     .co-title h1 {
@@ -352,6 +433,31 @@
       color: var(--primary);
       background: var(--primary-dim);
       border-color: rgba(18, 87, 210, 0.1);
+    }
+
+    .meta-tag.coverage-ok {
+      color: var(--positive);
+      background: var(--positive-bg);
+    }
+
+    .meta-tag.coverage-missing {
+      color: var(--warning);
+      background: var(--warning-bg);
+    }
+
+    .coverage-empty {
+      padding: 2rem;
+      background: #fff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      color: var(--text2);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .coverage-empty h3 {
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
 
     .toggles-bar {
@@ -768,13 +874,20 @@
         <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none">
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
           </svg></div>
-        <div class="logo-text">Nifty<span>50</span> Intelligence</div>
+        <div class="logo-text">Nifty<span>100</span> Intelligence</div>
       </div>
-      <div class="header-pill">⚡ PHASE A · Zero Hallucination Mode</div>
+      <div class="header-actions">
+        <button class="export-btn" onclick="bulkExportCurrentIndex()">Bulk Excel ZIP</button>
+        <div class="header-pill">PHASE 2 · Index Coverage + Exports</div>
+      </div>
     </header>
 
     <aside class="sidebar">
       <div class="search-wrap">
+        <div class="index-select">
+          <button class="index-btn active" id="idx-NIFTY50" onclick="setIndex('NIFTY50')">Nifty 50</button>
+          <button class="index-btn" id="idx-NIFTY100" onclick="setIndex('NIFTY100')">Nifty 100</button>
+        </div>
         <input id="company-search" type="text" placeholder="Search symbol…">
       </div>
       <div id="company-list"></div>
@@ -783,8 +896,7 @@
     <main id="main">
       <div id="welcome">
         <h2>Financial Intelligence Dashboard</h2>
-        <p style="color:var(--text3);font-size:0.9rem;">Phase A: Deterministic Rule Engine + Authenticated
-          Visualisations</p>
+        <p style="color:var(--text3);font-size:0.9rem;">Phase 2: Nifty50/Nifty100 coverage, filing checks, and export-ready financials</p>
       </div>
 
       <div id="loader">
@@ -800,13 +912,21 @@
         <div class="co-header">
           <div class="co-title">
             <h1 id="co-name">—</h1>
-            <div class="co-meta">
+          <div class="co-meta">
               <span class="meta-tag" id="co-symbol"></span>
               <span class="meta-tag sector" id="co-sector"></span>
+              <span class="meta-tag" id="co-coverage"></span>
               <span id="score-pill" class="meta-tag" style="background:var(--bg3); font-family:'JetBrains Mono', monospace; font-size:0.7rem;">
                 Confidence: <span id="co-score" style="font-weight:800;">--%</span>
               </span>
             </div>
+          </div>
+          <div class="co-actions">
+            <button class="export-btn" id="export-xlsx" onclick="exportCompany('xlsx')">Excel</button>
+            <button class="export-btn" id="export-csv" onclick="exportCompany('csv')">CSV</button>
+            <button class="export-btn" id="export-json" onclick="exportCompany('json')">JSON</button>
+            <button class="export-btn" id="export-xbrl" onclick="exportCompany('xbrl')">Raw XBRL</button>
+            <button class="export-btn" id="export-pdf" onclick="exportCompany('pdf')">PDF filing</button>
           </div>
         </div>
 
@@ -834,7 +954,7 @@
         <div class="metrics-bar" id="metrics-bar"></div>
 
         <!-- Graph Section -->
-        <div class="section-card">
+        <div class="section-card" id="card-graphs">
           <div class="section-head" onclick="toggleSec('sec-graphs')">
             <h2>Financial Trajectory (Authentic Points Only)</h2>
           </div>
@@ -844,7 +964,7 @@
         </div>
 
         <!-- Market Chart Section -->
-        <div class="section-card">
+        <div class="section-card" id="card-market">
           <div class="section-head chart-header">
             <h2>Market Performance</h2>
             <div class="chart-controls">
@@ -966,6 +1086,9 @@
   <script>
     // ─── STATE ───────────────────────────────────────────────────────────────────
     let allCompanies = [];
+    let visibleCompanies = [];
+    let currentIndex = 'NIFTY50';
+    let currentCompanyMeta = null;
     let currentSymbol = null;
     let currentData = null;      // the big JSON payload from backend
     let currentType = 'consolidated'; // or 'standalone'
@@ -979,25 +1102,34 @@
     let charts = [];
 
     (async function init() {
+      await setIndex(currentIndex);
+    })();
+
+    async function setIndex(indexCode) {
+      currentIndex = indexCode;
+      document.querySelectorAll('.index-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(`idx-${indexCode}`)?.classList.add('active');
       try {
-        const r = await fetch('/api/companies');
+        const r = await fetch(`/api/indices/${indexCode}/companies`);
         if (!r.ok) throw new Error(`API index returned ${r.status}`);
-        allCompanies = await r.json();
-        renderSidebar(allCompanies);
+        visibleCompanies = await r.json();
       } catch (e) {
-        console.warn('Company API unavailable; falling back to static index', e);
-        // Fallback to static if API failed
+        console.warn('Index API unavailable; falling back to static company index', e);
         try {
           const r = await fetch('companies.json?t=' + Date.now());
-          allCompanies = await r.json();
-          renderSidebar(allCompanies);
+          const all = await r.json();
+          visibleCompanies = all.filter(c => (c.indexes || []).includes(indexCode));
         } catch (e2) { console.error('Static fallback also failed', e2); }
       }
-    })();
+      allCompanies = visibleCompanies;
+      document.getElementById('company-search').value = '';
+      renderSidebar(visibleCompanies);
+      show('welcome');
+    }
 
     document.getElementById('company-search').addEventListener('input', e => {
       const q = e.target.value.toUpperCase();
-      renderSidebar(allCompanies.filter(c => c.symbol.includes(q) || c.name.toUpperCase().includes(q)));
+      renderSidebar(visibleCompanies.filter(c => c.symbol.includes(q) || c.name.toUpperCase().includes(q)));
     });
 
     function renderSidebar(list) {
@@ -1009,6 +1141,7 @@
         <div class="co-symbol">${c.symbol}</div>
         <div class="co-name">${c.name}</div>
       </div>
+      <span class="coverage-dot ${c.coverage_status === 'parsed' ? 'parsed' : ''}" title="${c.filing_status || c.coverage_status || 'missing'}"></span>
     </div>
   `).join('');
     }
@@ -1016,6 +1149,7 @@
     // ─── LOAD DATA ──────────────────────────────────────────────────────────────
     async function loadCompany(symbol) {
       currentSymbol = symbol;
+      currentCompanyMeta = visibleCompanies.find(c => c.symbol === symbol) || allCompanies.find(c => c.symbol === symbol) || { symbol };
       document.querySelectorAll('.co-item').forEach(i => i.classList.remove('active'));
       document.getElementById(`li-${symbol}`)?.classList.add('active');
 
@@ -1023,7 +1157,11 @@
       try {
         // Fetch full company state from pre-generated JSON
         const r = await fetch(`data/${symbol}.json?t=${Date.now()}`);
-        if (!r.ok) throw new Error("Static file not found");
+        if (!r.ok) {
+          renderMissingCompany(symbol, currentCompanyMeta);
+          show('company-page');
+          return;
+        }
         currentData = await r.json();
 
         // Check if BAJFINANCE specific issue exists in data
@@ -1033,9 +1171,46 @@
         show('company-page');
       } catch (e) {
         console.error('Loader error:', e);
-        alert('Failed to load data for ' + symbol);
-        show('welcome');
+        renderMissingCompany(symbol, currentCompanyMeta);
+        show('company-page');
       }
+    }
+
+    function renderMissingCompany(symbol, meta) {
+      currentData = {
+        company: {
+          symbol,
+          name: meta?.name || symbol,
+          sector: meta?.sector || 'Nifty 100',
+          industry: meta?.industry || meta?.sector || 'Coverage pending',
+          has_standalone: false
+        },
+        financials: { consolidated: null, standalone: null },
+        metadata: { confidence_score: 0, validation_passed: false },
+        graph_data: {},
+        derived_metrics: {},
+        ratios: {},
+        peers: [],
+        insights: [],
+        anomalies: []
+      };
+      document.getElementById('co-name').textContent = meta?.name || symbol;
+      document.getElementById('co-symbol').textContent = symbol;
+      document.getElementById('co-sector').textContent = meta?.sector || 'Nifty 100';
+      document.getElementById('bc-sector').textContent = currentIndex;
+      const cov = document.getElementById('co-coverage');
+      cov.textContent = 'Filing: Missing';
+      cov.className = 'meta-tag coverage-missing';
+      document.getElementById('co-score').textContent = '0%';
+      document.getElementById('score-pill').style.display = 'none';
+      document.querySelectorAll('.co-actions .export-btn').forEach(btn => btn.disabled = true);
+      document.querySelector('.toggles-bar').style.display = 'none';
+      document.getElementById('qtr-notice').style.display = 'none';
+      document.getElementById('metrics-bar').innerHTML = '';
+      document.getElementById('sec-graphs').innerHTML = `<div class="coverage-empty"><h3>Coverage pending</h3><p>${symbol} is part of ${currentIndex}, but parsed financial data for 31-Mar-2026 has not been generated yet. Run the filing checker or pipeline ingestion for this company, then rebuild the dashboard index.</p></div>`;
+      ['card-market','card-ratios','card-bs','card-cf','card-bank','card-meta','card-peers'].forEach(id => document.getElementById(id).style.display = 'none');
+      document.getElementById('pl-table').innerHTML = `<tr><td style="text-align:center;padding:1.5rem;color:var(--text3);">No parsed financial statements available yet.</td></tr>`;
+      document.getElementById('insights-grid').innerHTML = '';
     }
 
     function show(id) {
@@ -1101,11 +1276,23 @@
 
     // ─── RENDER ──────────────────────────────────────────────────────────────────
     function renderPage() {
+      if (!document.getElementById('chart-grid')) {
+        document.getElementById('sec-graphs').innerHTML = '<div class="chart-grid" id="chart-grid"></div>';
+      }
+      document.getElementById('score-pill').style.display = 'inline-flex';
+      document.querySelectorAll('.co-actions .export-btn').forEach(btn => btn.disabled = false);
+      document.querySelector('.toggles-bar').style.display = 'flex';
+      ['card-market','card-ratios','card-bs','card-cf','card-bank','card-meta','card-peers'].forEach(id => document.getElementById(id).style.display = 'block');
       const co = currentData.company || {};
       document.getElementById('co-name').textContent = co.name || co.symbol;
       document.getElementById('co-symbol').textContent = co.symbol;
       document.getElementById('co-sector').textContent = co.sector;
       document.getElementById('bc-sector').textContent = co.sector || 'Equities';
+      const coverage = document.getElementById('co-coverage');
+      const status = currentCompanyMeta?.filing_status || (currentCompanyMeta?.coverage_status === 'parsed' ? 'PARSED' : 'MISSING');
+      coverage.textContent = `Filing: ${status}`;
+      coverage.className = `meta-tag ${status === 'PARSED' ? 'coverage-ok' : 'coverage-missing'}`;
+      updateFilingAssetButtons(co.symbol || currentSymbol);
 
       // Confidence Score
       const score = (currentData.metadata?.confidence_score || 0) * 100;
@@ -1136,6 +1323,44 @@
       }
 
       renderPageContent();
+    }
+
+    function exportCompany(format) {
+      if (!currentSymbol || currentCompanyMeta?.coverage_status !== 'parsed') return;
+      const url = `/api/companies/${currentSymbol}/export?format=${encodeURIComponent(format)}&period_end=2026-03-31&result_type=all`;
+      window.open(url, '_blank');
+    }
+
+    async function updateFilingAssetButtons(symbol) {
+      ['export-xlsx', 'export-csv', 'export-json'].forEach(id => document.getElementById(id).disabled = false);
+      document.getElementById('export-xbrl').disabled = true;
+      document.getElementById('export-pdf').disabled = true;
+      try {
+        const r = await fetch(`/api/companies/${symbol}/filings?period_end=2026-03-31`);
+        if (!r.ok) return;
+        const status = await r.json();
+        if (symbol !== currentSymbol) return;
+        document.getElementById('export-xbrl').disabled = !status.raw_xbrl;
+        document.getElementById('export-pdf').disabled = !status.pdf;
+      } catch (e) {
+        console.warn('Filing asset availability check failed', e);
+      }
+    }
+
+    async function bulkExportCurrentIndex() {
+      try {
+        const r = await fetch('/api/admin/exports/bulk', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ index_code: currentIndex, period_end: '2026-03-31' })
+        });
+        if (!r.ok) throw new Error(`Bulk export failed with ${r.status}`);
+        const job = await r.json();
+        window.location.href = job.download_url;
+      } catch (e) {
+        console.error(e);
+        alert('Bulk export failed. Check the API server logs for details.');
+      }
     }
 
     function renderPageContent() {
@@ -1805,8 +2030,8 @@
 
       } catch (e) {
         console.warn('Market chart fetch failed for', symbol, e);
-        if (debugEl) debugEl.textContent = `Error: ${e.message}`;
-        if (legend) legend.style.display = 'flex';
+        if (debugEl) debugEl.textContent = `Price history unavailable for ${symbol}`;
+        if (legend) legend.style.display = 'none';
       }
     }
 

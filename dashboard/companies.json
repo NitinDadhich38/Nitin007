@@ -1,296 +1,1452 @@
 [
   {
+    "symbol": "ABB",
+    "name": "ABB India Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE117A01022",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ABB.json"
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "name": "Adani Energy Solutions Ltd.",
+    "sector": "Power",
+    "industry": "Power",
+    "isin": "INE931S01010",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ADANIENSOL.json"
+  },
+  {
     "symbol": "ADANIENT",
     "name": "Adani Enterprises Limited",
     "sector": "Services",
-    "path": "data/adanient/final/company_financials.json"
+    "industry": "Commercial Services",
+    "isin": "INE423A01024",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ADANIENT.json"
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "name": "Adani Green Energy Ltd.",
+    "sector": "Power",
+    "industry": "Power",
+    "isin": "INE364U01010",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ADANIGREEN.json"
   },
   {
     "symbol": "ADANIPORTS",
     "name": "Adani Ports and Special Economic Zone Limited",
     "sector": "Services",
-    "path": "data/adaniports/final/company_financials.json"
+    "industry": "Transport Services",
+    "isin": "INE742F01042",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ADANIPORTS.json"
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "name": "Adani Power Ltd.",
+    "sector": "Power",
+    "industry": "Power",
+    "isin": "INE814H01029",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ADANIPOWER.json"
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "name": "Ambuja Cements Ltd.",
+    "sector": "Construction Materials",
+    "industry": "Construction Materials",
+    "isin": "INE079A01024",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/AMBUJACEM.json"
   },
   {
     "symbol": "APOLLOHOSP",
     "name": "Apollo Hospitals Enterprise Limited",
     "sector": "Healthcare",
-    "path": "data/apollohosp/final/company_financials.json"
+    "industry": "Healthcare Services",
+    "isin": "INE437A01024",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/APOLLOHOSP.json"
   },
   {
     "symbol": "ASIANPAINT",
     "name": "Asian Paints Limited",
     "sector": "Consumer Durables",
-    "path": "data/asianpaint/final/company_financials.json"
+    "industry": "Consumer Durables",
+    "isin": "INE021A01026",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "missing",
+    "filing_status": "AVAILABLE_RAW",
+    "period_end": "2026-03-31",
+    "path": "data/ASIANPAINT.json"
   },
   {
     "symbol": "AXISBANK",
     "name": "Axis Bank Limited",
     "sector": "Financial Services",
-    "path": "data/bank/axisbank/final/company_financials.json"
+    "industry": "Banks",
+    "isin": "INE238A01034",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/AXISBANK.json"
   },
   {
     "symbol": "BAJAJ-AUTO",
     "name": "Bajaj Auto Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/bajaj-auto/final/company_financials.json"
+    "industry": "Automobiles",
+    "isin": "INE917I01010",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BAJAJ-AUTO.json"
   },
   {
     "symbol": "BAJAJFINSV",
     "name": "Bajaj Finserv Limited",
     "sector": "Financial Services",
-    "path": "data/nbfc/bajajfinsv/final/company_financials.json"
+    "industry": "Finance",
+    "isin": "INE918I01026",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BAJAJFINSV.json"
+  },
+  {
+    "symbol": "BAJAJHLDNG",
+    "name": "Bajaj Holdings & Investment Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE118A01012",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BAJAJHLDNG.json"
   },
   {
     "symbol": "BAJFINANCE",
     "name": "Bajaj Finance Limited",
     "sector": "Financial Services",
-    "path": "data/nbfc/bajfinance/final/company_financials.json"
+    "industry": "Finance",
+    "isin": "INE296A01032",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BAJFINANCE.json"
+  },
+  {
+    "symbol": "BANKBARODA",
+    "name": "Bank of Baroda",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE028A01039",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BANKBARODA.json"
+  },
+  {
+    "symbol": "BEL",
+    "name": "Bharat Electronics Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE263A01024",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "missing",
+    "filing_status": "AVAILABLE_RAW",
+    "period_end": "2026-03-31",
+    "path": "data/BEL.json"
   },
   {
     "symbol": "BHARTIARTL",
     "name": "Bharti Airtel Limited",
     "sector": "Telecommunication",
-    "path": "data/bhartiartl/final/company_financials.json"
+    "industry": "Telecom - Services",
+    "isin": "INE397D01024",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BHARTIARTL.json"
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "name": "Bosch Ltd.",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobile and Auto Components",
+    "isin": "INE323A01026",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BOSCHLTD.json"
   },
   {
     "symbol": "BPCL",
     "name": "Bharat Petroleum Corporation Limited",
     "sector": "Energy",
-    "path": "data/bpcl/final/company_financials.json"
+    "industry": "Oil & Gas",
+    "isin": "INE029A01011",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BPCL.json"
   },
   {
     "symbol": "BRITANNIA",
     "name": "Britannia Industries Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/britannia/final/company_financials.json"
+    "industry": "Food Products",
+    "isin": "INE216A01030",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/BRITANNIA.json"
+  },
+  {
+    "symbol": "CANBK",
+    "name": "Canara Bank",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE476A01022",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/CANBK.json"
+  },
+  {
+    "symbol": "CGPOWER",
+    "name": "CG Power and Industrial Solutions Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE067A01029",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/CGPOWER.json"
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "name": "Cholamandalam Investment and Finance Company Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE121A01024",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/CHOLAFIN.json"
   },
   {
     "symbol": "CIPLA",
     "name": "Cipla Limited",
     "sector": "Healthcare",
-    "path": "data/cipla/final/company_financials.json"
+    "industry": "Pharmaceuticals",
+    "isin": "INE059A01026",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/CIPLA.json"
   },
   {
     "symbol": "COALINDIA",
     "name": "Coal India Limited",
     "sector": "Metals & Mining",
-    "path": "data/coalindia/final/company_financials.json"
+    "industry": "Consumable Fuels",
+    "isin": "INE522F01014",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/COALINDIA.json"
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "name": "Cummins India Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE298A01020",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/CUMMINSIND.json"
   },
   {
     "symbol": "DIVISLAB",
     "name": "Divi's Laboratories Limited",
     "sector": "Healthcare",
-    "path": "data/divislab/final/company_financials.json"
+    "industry": "Pharmaceuticals",
+    "isin": "INE361B01024",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/DIVISLAB.json"
+  },
+  {
+    "symbol": "DLF",
+    "name": "DLF Ltd.",
+    "sector": "Realty",
+    "industry": "Realty",
+    "isin": "INE271C01023",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/DLF.json"
+  },
+  {
+    "symbol": "DMART",
+    "name": "Avenue Supermarts Ltd.",
+    "sector": "Consumer Services",
+    "industry": "Consumer Services",
+    "isin": "INE192R01011",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/DMART.json"
   },
   {
     "symbol": "DRREDDY",
     "name": "Dr. Reddy's Laboratories Limited",
     "sector": "Healthcare",
-    "path": "data/drreddy/final/company_financials.json"
+    "industry": "Pharmaceuticals",
+    "isin": "INE089A01031",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/DRREDDY.json"
   },
   {
     "symbol": "EICHERMOT",
     "name": "Eicher Motors Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/eichermot/final/company_financials.json"
+    "industry": "Automobiles",
+    "isin": "INE066A01021",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/EICHERMOT.json"
+  },
+  {
+    "symbol": "ENRIN",
+    "name": "Siemens Energy India Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE1NPP01017",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ENRIN.json"
+  },
+  {
+    "symbol": "ETERNAL",
+    "name": "Eternal Ltd.",
+    "sector": "Consumer Services",
+    "industry": "Consumer Services",
+    "isin": "INE758T01015",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ETERNAL.json"
+  },
+  {
+    "symbol": "GAIL",
+    "name": "GAIL (India) Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "industry": "Oil Gas & Consumable Fuels",
+    "isin": "INE129A01019",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/GAIL.json"
+  },
+  {
+    "symbol": "GODREJCP",
+    "name": "Godrej Consumer Products Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "industry": "Fast Moving Consumer Goods",
+    "isin": "INE102D01028",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/GODREJCP.json"
   },
   {
     "symbol": "GRASIM",
     "name": "Grasim Industries Limited",
     "sector": "Construction Materials",
-    "path": "data/grasim/final/company_financials.json"
+    "industry": "Cement & Cement Products",
+    "isin": "INE047A01021",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/GRASIM.json"
+  },
+  {
+    "symbol": "HAL",
+    "name": "Hindustan Aeronautics Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE066F01020",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HAL.json"
   },
   {
     "symbol": "HCLTECH",
     "name": "HCL Technologies Limited",
     "sector": "IT",
-    "path": "data/hcltech/final/company_financials.json"
+    "industry": "IT - Software",
+    "isin": "INE860A01027",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HCLTECH.json"
+  },
+  {
+    "symbol": "HDFCAMC",
+    "name": "HDFC Asset Management Company Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE127D01025",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HDFCAMC.json"
   },
   {
     "symbol": "HDFCBANK",
     "name": "HDFC Bank Limited",
     "sector": "Financial Services",
-    "path": "data/bank/hdfcbank/final/company_financials.json"
+    "industry": "Banks",
+    "isin": "INE040A01034",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HDFCBANK.json"
   },
   {
     "symbol": "HDFCLIFE",
     "name": "HDFC Life Insurance Company Limited",
     "sector": "Financial Services",
-    "path": "data/insurance/hdfclife/final/company_financials.json"
-  },
-  {
-    "symbol": "HEROMOTOCO",
-    "name": "Hero MotoCorp Limited",
-    "sector": "Automobile and Auto Components",
-    "path": "data/heromotoco/final/company_financials.json"
+    "industry": "Insurance",
+    "isin": "INE795G01014",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HDFCLIFE.json"
   },
   {
     "symbol": "HINDALCO",
     "name": "Hindalco Industries Limited",
     "sector": "Metals & Mining",
-    "path": "data/hindalco/final/company_financials.json"
+    "industry": "Metals",
+    "isin": "INE038A01020",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HINDALCO.json"
   },
   {
     "symbol": "HINDUNILVR",
     "name": "Hindustan Unilever Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/hindunilvr/final/company_financials.json"
+    "industry": "Diversified FMCG",
+    "isin": "INE030A01027",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HINDUNILVR.json"
+  },
+  {
+    "symbol": "HINDZINC",
+    "name": "Hindustan Zinc Ltd.",
+    "sector": "Metals & Mining",
+    "industry": "Metals & Mining",
+    "isin": "INE267A01025",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HINDZINC.json"
+  },
+  {
+    "symbol": "HYUNDAI",
+    "name": "Hyundai Motor India Ltd.",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobile and Auto Components",
+    "isin": "INE0V6F01027",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/HYUNDAI.json"
   },
   {
     "symbol": "ICICIBANK",
     "name": "ICICI Bank Limited",
     "sector": "Financial Services",
-    "path": "data/bank/icicibank/final/company_financials.json"
+    "industry": "Banks",
+    "isin": "INE090A01021",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ICICIBANK.json"
   },
   {
-    "symbol": "INDUSINDBK",
-    "name": "IndusInd Bank Limited",
-    "sector": "Financial Services",
-    "path": "data/bank/indusindbk/final/company_financials.json"
+    "symbol": "INDHOTEL",
+    "name": "Indian Hotels Co. Ltd.",
+    "sector": "Consumer Services",
+    "industry": "Consumer Services",
+    "isin": "INE053A01029",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/INDHOTEL.json"
+  },
+  {
+    "symbol": "INDIGO",
+    "name": "InterGlobe Aviation Ltd.",
+    "sector": "Services",
+    "industry": "Services",
+    "isin": "INE646L01027",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "missing",
+    "filing_status": "AVAILABLE_RAW",
+    "period_end": "2026-03-31",
+    "path": "data/INDIGO.json"
   },
   {
     "symbol": "INFY",
     "name": "Infosys Limited",
     "sector": "IT",
-    "path": "data/infy/final/company_financials.json"
+    "industry": "IT - Software",
+    "isin": "INE009A01021",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/INFY.json"
+  },
+  {
+    "symbol": "IOC",
+    "name": "Indian Oil Corporation Ltd.",
+    "sector": "Oil Gas & Consumable Fuels",
+    "industry": "Oil Gas & Consumable Fuels",
+    "isin": "INE242A01010",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/IOC.json"
+  },
+  {
+    "symbol": "IRFC",
+    "name": "Indian Railway Finance Corporation Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE053F01010",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/IRFC.json"
   },
   {
     "symbol": "ITC",
     "name": "ITC Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/itc/final/company_financials.json"
+    "industry": "Diversified FMCG",
+    "isin": "INE154A01025",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ITC.json"
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "name": "Jindal Steel Ltd.",
+    "sector": "Metals & Mining",
+    "industry": "Metals & Mining",
+    "isin": "INE749A01030",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/JINDALSTEL.json"
+  },
+  {
+    "symbol": "JIOFIN",
+    "name": "Jio Financial Services Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE758E01017",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/JIOFIN.json"
   },
   {
     "symbol": "JSWSTEEL",
     "name": "JSW Steel Limited",
     "sector": "Metals & Mining",
-    "path": "data/jswsteel/final/company_financials.json"
+    "industry": "Metals",
+    "isin": "INE019A01038",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/JSWSTEEL.json"
   },
   {
     "symbol": "KOTAKBANK",
     "name": "Kotak Mahindra Bank Limited",
     "sector": "Financial Services",
-    "path": "data/bank/kotakbank/final/company_financials.json"
+    "industry": "Banks",
+    "isin": "INE237A01036",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/KOTAKBANK.json"
+  },
+  {
+    "symbol": "LODHA",
+    "name": "Lodha Developers Ltd.",
+    "sector": "Realty",
+    "industry": "Realty",
+    "isin": "INE670K01029",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/LODHA.json"
   },
   {
     "symbol": "LT",
     "name": "Larsen & Toubro Limited",
     "sector": "Construction",
-    "path": "data/lt/final/company_financials.json"
+    "industry": "Civil Construction",
+    "isin": "INE018A01030",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/LT.json"
+  },
+  {
+    "symbol": "LTM",
+    "name": "LTM Ltd.",
+    "sector": "Information Technology",
+    "industry": "Information Technology",
+    "isin": "INE214T01019",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/LTM.json"
   },
   {
     "symbol": "M&M",
     "name": "Mahindra & Mahindra Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/m&m/final/company_financials.json"
+    "industry": "Automobiles",
+    "isin": "INE101A01026",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/M&M.json"
   },
   {
     "symbol": "MARUTI",
     "name": "Maruti Suzuki India Limited",
     "sector": "Automobile and Auto Components",
-    "path": "data/maruti/final/company_financials.json"
+    "industry": "Automobiles",
+    "isin": "INE585B01010",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/MARUTI.json"
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "name": "Max Healthcare Institute Ltd.",
+    "sector": "Healthcare",
+    "industry": "Healthcare",
+    "isin": "INE027H01010",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/MAXHEALTH.json"
+  },
+  {
+    "symbol": "MAZDOCK",
+    "name": "Mazagoan Dock Shipbuilders Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE249Z01020",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/MAZDOCK.json"
+  },
+  {
+    "symbol": "MOTHERSON",
+    "name": "Samvardhana Motherson International Ltd.",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobile and Auto Components",
+    "isin": "INE775A01035",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/MOTHERSON.json"
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "name": "Muthoot Finance Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE414G01012",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/MUTHOOTFIN.json"
   },
   {
     "symbol": "NESTLEIND",
     "name": "Nestle India Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/nestleind/final/company_financials.json"
+    "industry": "Food Products",
+    "isin": "INE239A01024",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/NESTLEIND.json"
   },
   {
     "symbol": "NTPC",
     "name": "NTPC Limited",
     "sector": "Power",
-    "path": "data/utility/ntpc/final/company_financials.json"
+    "industry": "Power",
+    "isin": "INE733E01010",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/NTPC.json"
   },
   {
     "symbol": "ONGC",
     "name": "Oil and Natural Gas Corporation Limited",
     "sector": "Energy",
-    "path": "data/ongc/final/company_financials.json"
+    "industry": "Oil & Gas",
+    "isin": "INE213A01029",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ONGC.json"
+  },
+  {
+    "symbol": "PFC",
+    "name": "Power Finance Corporation Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE134E01011",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/PFC.json"
+  },
+  {
+    "symbol": "PIDILITIND",
+    "name": "Pidilite Industries Ltd.",
+    "sector": "Chemicals",
+    "industry": "Chemicals",
+    "isin": "INE318A01026",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/PIDILITIND.json"
+  },
+  {
+    "symbol": "PNB",
+    "name": "Punjab National Bank",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE160A01022",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/PNB.json"
   },
   {
     "symbol": "POWERGRID",
     "name": "Power Grid Corporation of India Limited",
     "sector": "Power",
-    "path": "data/utility/powergrid/final/company_financials.json"
+    "industry": "Power",
+    "isin": "INE752E01010",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/POWERGRID.json"
+  },
+  {
+    "symbol": "RECLTD",
+    "name": "REC Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE020B01018",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/RECLTD.json"
   },
   {
     "symbol": "RELIANCE",
     "name": "Reliance Industries Limited",
-    "sector": "Diversified",
-    "path": "data/reliance/final/company_financials.json"
+    "sector": "Energy",
+    "industry": "Oil & Gas",
+    "isin": "INE002A01018",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/RELIANCE.json"
   },
   {
     "symbol": "SBILIFE",
     "name": "SBI Life Insurance Company Limited",
     "sector": "Financial Services",
-    "path": "data/insurance/sbilife/final/company_financials.json"
+    "industry": "Insurance",
+    "isin": "INE123W01016",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/SBILIFE.json"
   },
   {
     "symbol": "SBIN",
     "name": "State Bank of India",
     "sector": "Financial Services",
-    "path": "data/bank/sbin/final/company_financials.json"
+    "industry": "Banks",
+    "isin": "INE062A01020",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/SBIN.json"
   },
   {
     "symbol": "SHREECEM",
     "name": "Shree Cement Limited",
     "sector": "Construction Materials",
-    "path": "data/shreecem/final/company_financials.json"
+    "industry": "Cement & Cement Products",
+    "isin": "INE070A01015",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/SHREECEM.json"
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "name": "Shriram Finance Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE721A01047",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/SHRIRAMFIN.json"
+  },
+  {
+    "symbol": "SIEMENS",
+    "name": "Siemens Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE003A01024",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "missing",
+    "filing_status": "AVAILABLE_RAW",
+    "period_end": "2026-03-31",
+    "path": "data/SIEMENS.json"
+  },
+  {
+    "symbol": "SOLARINDS",
+    "name": "Solar Industries India Ltd.",
+    "sector": "Chemicals",
+    "industry": "Chemicals",
+    "isin": "INE343H01029",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/SOLARINDS.json"
   },
   {
     "symbol": "SUNPHARMA",
     "name": "Sun Pharmaceutical Industries Limited",
     "sector": "Healthcare",
-    "path": "data/sunpharma/final/company_financials.json"
+    "industry": "Pharmaceuticals",
+    "isin": "INE044A01036",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/SUNPHARMA.json"
+  },
+  {
+    "symbol": "TATACAP",
+    "name": "Tata Capital Ltd.",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE976I01016",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TATACAP.json"
   },
   {
     "symbol": "TATACONSUM",
     "name": "Tata Consumer Products Limited",
     "sector": "Fast Moving Consumer Goods",
-    "path": "data/tataconsum/final/company_financials.json"
+    "industry": "Food Products",
+    "isin": "INE192A01025",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TATACONSUM.json"
+  },
+  {
+    "symbol": "TATAPOWER",
+    "name": "Tata Power Co. Ltd.",
+    "sector": "Power",
+    "industry": "Power",
+    "isin": "INE245A01021",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TATAPOWER.json"
   },
   {
     "symbol": "TATASTEEL",
     "name": "Tata Steel Limited",
     "sector": "Metals & Mining",
-    "path": "data/tatasteel/final/company_financials.json"
+    "industry": "Metals",
+    "isin": "INE081A01020",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TATASTEEL.json"
   },
   {
     "symbol": "TCS",
     "name": "Tata Consultancy Services Limited",
     "sector": "IT",
-    "path": "data/tcs/final/company_financials.json"
+    "industry": "IT - Software",
+    "isin": "INE467B01029",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TCS.json"
   },
   {
     "symbol": "TECHM",
     "name": "Tech Mahindra Limited",
     "sector": "IT",
-    "path": "data/techm/final/company_financials.json"
+    "industry": "IT - Software",
+    "isin": "INE669C01036",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TECHM.json"
   },
   {
     "symbol": "TITAN",
     "name": "Titan Company Limited",
     "sector": "Consumer Durables",
-    "path": "data/titan/final/company_financials.json"
+    "industry": "Consumer Durables",
+    "isin": "INE280A01028",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TITAN.json"
+  },
+  {
+    "symbol": "TMCV",
+    "name": "Tata Motors Ltd.",
+    "sector": "Capital Goods",
+    "industry": "Capital Goods",
+    "isin": "INE1TAE01010",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TMCV.json"
+  },
+  {
+    "symbol": "TMPV",
+    "name": "Tata Motors Passenger Vehicles Ltd.",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobile and Auto Components",
+    "isin": "INE155A01022",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TMPV.json"
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "name": "Torrent Pharmaceuticals Ltd.",
+    "sector": "Healthcare",
+    "industry": "Healthcare",
+    "isin": "INE685A01028",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TORNTPHARM.json"
+  },
+  {
+    "symbol": "TRENT",
+    "name": "Trent Ltd.",
+    "sector": "Consumer Services",
+    "industry": "Consumer Services",
+    "isin": "INE849A01020",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TRENT.json"
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "name": "TVS Motor Company Ltd.",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobile and Auto Components",
+    "isin": "INE494B01023",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/TVSMOTOR.json"
   },
   {
     "symbol": "ULTRACEMCO",
     "name": "UltraTech Cement Limited",
     "sector": "Construction Materials",
-    "path": "data/ultracemco/final/company_financials.json"
+    "industry": "Cement & Cement Products",
+    "isin": "INE481G01011",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ULTRACEMCO.json"
   },
   {
-    "symbol": "UPL",
-    "name": "UPL Limited",
-    "sector": "Chemicals",
-    "path": "data/upl/final/company_financials.json"
+    "symbol": "UNIONBANK",
+    "name": "Union Bank of India",
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "isin": "INE692A01016",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/UNIONBANK.json"
+  },
+  {
+    "symbol": "UNITDSPR",
+    "name": "United Spirits Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "industry": "Fast Moving Consumer Goods",
+    "isin": "INE854D01024",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/UNITDSPR.json"
+  },
+  {
+    "symbol": "VBL",
+    "name": "Varun Beverages Ltd.",
+    "sector": "Fast Moving Consumer Goods",
+    "industry": "Fast Moving Consumer Goods",
+    "isin": "INE200M01039",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/VBL.json"
+  },
+  {
+    "symbol": "VEDL",
+    "name": "Vedanta Ltd.",
+    "sector": "Metals & Mining",
+    "industry": "Metals & Mining",
+    "isin": "INE205A01025",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/VEDL.json"
   },
   {
     "symbol": "WIPRO",
     "name": "Wipro Limited",
     "sector": "IT",
-    "path": "data/wipro/final/company_financials.json"
+    "industry": "IT - Software",
+    "isin": "INE075A01022",
+    "indexes": [
+      "NIFTY50",
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/WIPRO.json"
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "name": "Zydus Lifesciences Ltd.",
+    "sector": "Healthcare",
+    "industry": "Healthcare",
+    "isin": "INE010B01027",
+    "indexes": [
+      "NIFTY100"
+    ],
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
+    "period_end": "2026-03-31",
+    "path": "data/ZYDUSLIFE.json"
   }
 ]

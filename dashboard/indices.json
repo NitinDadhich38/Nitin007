@@ -1,0 +1,18 @@
+{
+  "NIFTY50": {
+    "code": "NIFTY50",
+    "name": "Nifty 50",
+    "description": "Large-cap Nifty 50 index coverage.",
+    "company_count": 50,
+    "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+    "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+  },
+  "NIFTY100": {
+    "code": "NIFTY100",
+    "name": "Nifty 100",
+    "description": "Nifty 100 index coverage, excluding temporary dummy demerger rows.",
+    "company_count": 100,
+    "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+    "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+  }
+}

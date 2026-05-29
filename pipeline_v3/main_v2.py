@@ -1,7 +1,7 @@
 """
 pipeline_v3/main_v2.py — Update 2.0 Entry Point
 =================================================
-Runs the v2 hierarchical pipeline for all Nifty 50 companies.
+Runs the v2 hierarchical pipeline for all Nifty 100 companies.
 
 Data source hierarchy (strictly enforced):
   Tier 1: NSE_XBRL  (score 500)
@@ -51,9 +51,10 @@ class PipelineV2:
     REMOVED: MCA XBRL, Yahoo Finance
     """
 
-    def __init__(self):
+    def __init__(self, *, xbrl_lookback_days: int = 2000, max_quarterly_filings: int = 40, max_annual_filings: int = 30):
         self.nse_api = NSEAPIClient()
-        self.nse_xbrl = NSEXBRLClient()
+        self.nse_xbrl = NSEXBRLClient(lookback_days=xbrl_lookback_days, max_quarterly_filings=max_quarterly_filings)
+        self.nse_xbrl.max_annual_filings = max_annual_filings
         self.xbrl_parser = MCAXBRLInstanceParser(target_unit="INR_CRORE", prefer_consolidated=True)
         self.normalizer = SchemaNormalizer()
         self.ratio_engine = RatioEngine()
@@ -467,9 +468,12 @@ class PipelineV2:
 def main():
     ap = argparse.ArgumentParser(description="Update 2.0 — Zero-Hallucination Financial Pipeline")
     ap.add_argument("--symbol", help="Process a single symbol (e.g., RELIANCE)")
-    ap.add_argument("--all", action="store_true", help="Process all Nifty 50 companies")
-    ap.add_argument("--universe", default="pipeline_v3/config/nifty50_universe.json")
+    ap.add_argument("--all", action="store_true", help="Process all Nifty 100 companies")
+    ap.add_argument("--universe", default="pipeline_v3/config/nifty100_universe.json")
     ap.add_argument("--generate-dashboard", action="store_true", help="Also regenerate dashboard JSON after pipeline")
+    ap.add_argument("--xbrl-lookback-days", type=int, default=2000)
+    ap.add_argument("--max-quarterly-filings", type=int, default=40)
+    ap.add_argument("--max-annual-filings", type=int, default=30)
     args = ap.parse_args()
 
     universe = load_universe(args.universe)
@@ -477,7 +481,11 @@ def main():
         logger.error("Universe file empty or not found.")
         return 1
 
-    pipe = PipelineV2()
+    pipe = PipelineV2(
+        xbrl_lookback_days=args.xbrl_lookback_days,
+        max_quarterly_filings=args.max_quarterly_filings,
+        max_annual_filings=args.max_annual_filings,
+    )
     results = []
 
     if args.all:

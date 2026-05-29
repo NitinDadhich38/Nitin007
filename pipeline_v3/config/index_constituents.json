@@ -1,0 +1,1523 @@
+{
+  "generated_at": "2026-05-29T05:32:22.628078+00:00",
+  "indices": {
+    "NIFTY50": {
+      "code": "NIFTY50",
+      "name": "Nifty 50",
+      "description": "Large-cap Nifty 50 index coverage.",
+      "company_count": 50,
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    "NIFTY100": {
+      "code": "NIFTY100",
+      "name": "Nifty 100",
+      "description": "Nifty 100 index coverage, excluding temporary dummy demerger rows.",
+      "company_count": 100,
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    }
+  },
+  "constituents": [
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ADANIENT",
+      "name": "Adani Enterprises Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE423A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ADANIPORTS",
+      "name": "Adani Ports and Special Economic Zone Ltd.",
+      "industry": "Services",
+      "isin": "INE742F01042",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "APOLLOHOSP",
+      "name": "Apollo Hospitals Enterprise Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE437A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ASIANPAINT",
+      "name": "Asian Paints Ltd.",
+      "industry": "Consumer Durables",
+      "isin": "INE021A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "AXISBANK",
+      "name": "Axis Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE238A01034",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "BAJAJ-AUTO",
+      "name": "Bajaj Auto Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE917I01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "BAJFINANCE",
+      "name": "Bajaj Finance Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE296A01032",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "BAJAJFINSV",
+      "name": "Bajaj Finserv Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE918I01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "BEL",
+      "name": "Bharat Electronics Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE263A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "BHARTIARTL",
+      "name": "Bharti Airtel Ltd.",
+      "industry": "Telecommunication",
+      "isin": "INE397D01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "CIPLA",
+      "name": "Cipla Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE059A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "COALINDIA",
+      "name": "Coal India Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE522F01014",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "DRREDDY",
+      "name": "Dr. Reddy's Laboratories Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE089A01031",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "EICHERMOT",
+      "name": "Eicher Motors Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE066A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ETERNAL",
+      "name": "Eternal Ltd.",
+      "industry": "Consumer Services",
+      "isin": "INE758T01015",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "GRASIM",
+      "name": "Grasim Industries Ltd.",
+      "industry": "Construction Materials",
+      "isin": "INE047A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "HCLTECH",
+      "name": "HCL Technologies Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE860A01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "HDFCBANK",
+      "name": "HDFC Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE040A01034",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "HDFCLIFE",
+      "name": "HDFC Life Insurance Company Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE795G01014",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "HINDALCO",
+      "name": "Hindalco Industries Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE038A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "HINDUNILVR",
+      "name": "Hindustan Unilever Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE030A01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ICICIBANK",
+      "name": "ICICI Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE090A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ITC",
+      "name": "ITC Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE154A01025",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "INFY",
+      "name": "Infosys Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE009A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "INDIGO",
+      "name": "InterGlobe Aviation Ltd.",
+      "industry": "Services",
+      "isin": "INE646L01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "JSWSTEEL",
+      "name": "JSW Steel Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE019A01038",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "JIOFIN",
+      "name": "Jio Financial Services Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE758E01017",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "KOTAKBANK",
+      "name": "Kotak Mahindra Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE237A01036",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "LT",
+      "name": "Larsen & Toubro Ltd.",
+      "industry": "Construction",
+      "isin": "INE018A01030",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "M&M",
+      "name": "Mahindra & Mahindra Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE101A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "MARUTI",
+      "name": "Maruti Suzuki India Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE585B01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "MAXHEALTH",
+      "name": "Max Healthcare Institute Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE027H01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "NTPC",
+      "name": "NTPC Ltd.",
+      "industry": "Power",
+      "isin": "INE733E01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "NESTLEIND",
+      "name": "Nestle India Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE239A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ONGC",
+      "name": "Oil & Natural Gas Corporation Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE213A01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "POWERGRID",
+      "name": "Power Grid Corporation of India Ltd.",
+      "industry": "Power",
+      "isin": "INE752E01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE002A01018",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "SBILIFE",
+      "name": "SBI Life Insurance Company Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE123W01016",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "SHRIRAMFIN",
+      "name": "Shriram Finance Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE721A01047",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "SBIN",
+      "name": "State Bank of India",
+      "industry": "Financial Services",
+      "isin": "INE062A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "SUNPHARMA",
+      "name": "Sun Pharmaceutical Industries Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE044A01036",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE467B01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "TATACONSUM",
+      "name": "Tata Consumer Products Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE192A01025",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "TMPV",
+      "name": "Tata Motors Passenger Vehicles Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE155A01022",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "TATASTEEL",
+      "name": "Tata Steel Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE081A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "TECHM",
+      "name": "Tech Mahindra Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE669C01036",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "TITAN",
+      "name": "Titan Company Ltd.",
+      "industry": "Consumer Durables",
+      "isin": "INE280A01028",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "TRENT",
+      "name": "Trent Ltd.",
+      "industry": "Consumer Services",
+      "isin": "INE849A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "ULTRACEMCO",
+      "name": "UltraTech Cement Ltd.",
+      "industry": "Construction Materials",
+      "isin": "INE481G01011",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY50",
+      "symbol": "WIPRO",
+      "name": "Wipro Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE075A01022",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ABB",
+      "name": "ABB India Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE117A01022",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ADANIENSOL",
+      "name": "Adani Energy Solutions Ltd.",
+      "industry": "Power",
+      "isin": "INE931S01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ADANIENT",
+      "name": "Adani Enterprises Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE423A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ADANIGREEN",
+      "name": "Adani Green Energy Ltd.",
+      "industry": "Power",
+      "isin": "INE364U01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ADANIPORTS",
+      "name": "Adani Ports and Special Economic Zone Ltd.",
+      "industry": "Services",
+      "isin": "INE742F01042",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ADANIPOWER",
+      "name": "Adani Power Ltd.",
+      "industry": "Power",
+      "isin": "INE814H01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "AMBUJACEM",
+      "name": "Ambuja Cements Ltd.",
+      "industry": "Construction Materials",
+      "isin": "INE079A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "APOLLOHOSP",
+      "name": "Apollo Hospitals Enterprise Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE437A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ASIANPAINT",
+      "name": "Asian Paints Ltd.",
+      "industry": "Consumer Durables",
+      "isin": "INE021A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "DMART",
+      "name": "Avenue Supermarts Ltd.",
+      "industry": "Consumer Services",
+      "isin": "INE192R01011",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "AXISBANK",
+      "name": "Axis Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE238A01034",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BAJAJ-AUTO",
+      "name": "Bajaj Auto Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE917I01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BAJFINANCE",
+      "name": "Bajaj Finance Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE296A01032",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BAJAJFINSV",
+      "name": "Bajaj Finserv Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE918I01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BAJAJHLDNG",
+      "name": "Bajaj Holdings & Investment Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE118A01012",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BANKBARODA",
+      "name": "Bank of Baroda",
+      "industry": "Financial Services",
+      "isin": "INE028A01039",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BEL",
+      "name": "Bharat Electronics Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE263A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BPCL",
+      "name": "Bharat Petroleum Corporation Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE029A01011",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BHARTIARTL",
+      "name": "Bharti Airtel Ltd.",
+      "industry": "Telecommunication",
+      "isin": "INE397D01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BOSCHLTD",
+      "name": "Bosch Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE323A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "BRITANNIA",
+      "name": "Britannia Industries Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE216A01030",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "CGPOWER",
+      "name": "CG Power and Industrial Solutions Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE067A01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "CANBK",
+      "name": "Canara Bank",
+      "industry": "Financial Services",
+      "isin": "INE476A01022",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "CHOLAFIN",
+      "name": "Cholamandalam Investment and Finance Company Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE121A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "CIPLA",
+      "name": "Cipla Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE059A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "COALINDIA",
+      "name": "Coal India Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE522F01014",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "CUMMINSIND",
+      "name": "Cummins India Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE298A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "DLF",
+      "name": "DLF Ltd.",
+      "industry": "Realty",
+      "isin": "INE271C01023",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "DIVISLAB",
+      "name": "Divi's Laboratories Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE361B01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "DRREDDY",
+      "name": "Dr. Reddy's Laboratories Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE089A01031",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "EICHERMOT",
+      "name": "Eicher Motors Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE066A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ETERNAL",
+      "name": "Eternal Ltd.",
+      "industry": "Consumer Services",
+      "isin": "INE758T01015",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "GAIL",
+      "name": "GAIL (India) Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE129A01019",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "GODREJCP",
+      "name": "Godrej Consumer Products Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE102D01028",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "GRASIM",
+      "name": "Grasim Industries Ltd.",
+      "industry": "Construction Materials",
+      "isin": "INE047A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HCLTECH",
+      "name": "HCL Technologies Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE860A01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HDFCAMC",
+      "name": "HDFC Asset Management Company Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE127D01025",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HDFCBANK",
+      "name": "HDFC Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE040A01034",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HDFCLIFE",
+      "name": "HDFC Life Insurance Company Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE795G01014",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HINDALCO",
+      "name": "Hindalco Industries Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE038A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HAL",
+      "name": "Hindustan Aeronautics Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE066F01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HINDUNILVR",
+      "name": "Hindustan Unilever Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE030A01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HINDZINC",
+      "name": "Hindustan Zinc Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE267A01025",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "HYUNDAI",
+      "name": "Hyundai Motor India Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE0V6F01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ICICIBANK",
+      "name": "ICICI Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE090A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ITC",
+      "name": "ITC Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE154A01025",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "INDHOTEL",
+      "name": "Indian Hotels Co. Ltd.",
+      "industry": "Consumer Services",
+      "isin": "INE053A01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "IOC",
+      "name": "Indian Oil Corporation Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE242A01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "IRFC",
+      "name": "Indian Railway Finance Corporation Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE053F01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "INFY",
+      "name": "Infosys Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE009A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "INDIGO",
+      "name": "InterGlobe Aviation Ltd.",
+      "industry": "Services",
+      "isin": "INE646L01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "JSWSTEEL",
+      "name": "JSW Steel Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE019A01038",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "JINDALSTEL",
+      "name": "Jindal Steel Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE749A01030",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "JIOFIN",
+      "name": "Jio Financial Services Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE758E01017",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "KOTAKBANK",
+      "name": "Kotak Mahindra Bank Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE237A01036",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "LTM",
+      "name": "LTM Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE214T01019",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "LT",
+      "name": "Larsen & Toubro Ltd.",
+      "industry": "Construction",
+      "isin": "INE018A01030",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "LODHA",
+      "name": "Lodha Developers Ltd.",
+      "industry": "Realty",
+      "isin": "INE670K01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "M&M",
+      "name": "Mahindra & Mahindra Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE101A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "MARUTI",
+      "name": "Maruti Suzuki India Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE585B01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "MAXHEALTH",
+      "name": "Max Healthcare Institute Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE027H01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "MAZDOCK",
+      "name": "Mazagoan Dock Shipbuilders Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE249Z01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "MUTHOOTFIN",
+      "name": "Muthoot Finance Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE414G01012",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "NTPC",
+      "name": "NTPC Ltd.",
+      "industry": "Power",
+      "isin": "INE733E01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "NESTLEIND",
+      "name": "Nestle India Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE239A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ONGC",
+      "name": "Oil & Natural Gas Corporation Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE213A01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "PIDILITIND",
+      "name": "Pidilite Industries Ltd.",
+      "industry": "Chemicals",
+      "isin": "INE318A01026",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "PFC",
+      "name": "Power Finance Corporation Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE134E01011",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "POWERGRID",
+      "name": "Power Grid Corporation of India Ltd.",
+      "industry": "Power",
+      "isin": "INE752E01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "PNB",
+      "name": "Punjab National Bank",
+      "industry": "Financial Services",
+      "isin": "INE160A01022",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "RECLTD",
+      "name": "REC Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE020B01018",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries Ltd.",
+      "industry": "Oil Gas & Consumable Fuels",
+      "isin": "INE002A01018",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "SBILIFE",
+      "name": "SBI Life Insurance Company Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE123W01016",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "MOTHERSON",
+      "name": "Samvardhana Motherson International Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE775A01035",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "SHREECEM",
+      "name": "Shree Cement Ltd.",
+      "industry": "Construction Materials",
+      "isin": "INE070A01015",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "SHRIRAMFIN",
+      "name": "Shriram Finance Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE721A01047",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ENRIN",
+      "name": "Siemens Energy India Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE1NPP01017",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "SIEMENS",
+      "name": "Siemens Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE003A01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "SOLARINDS",
+      "name": "Solar Industries India Ltd.",
+      "industry": "Chemicals",
+      "isin": "INE343H01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "SBIN",
+      "name": "State Bank of India",
+      "industry": "Financial Services",
+      "isin": "INE062A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "SUNPHARMA",
+      "name": "Sun Pharmaceutical Industries Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE044A01036",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TVSMOTOR",
+      "name": "TVS Motor Company Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE494B01023",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TATACAP",
+      "name": "Tata Capital Ltd.",
+      "industry": "Financial Services",
+      "isin": "INE976I01016",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE467B01029",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TATACONSUM",
+      "name": "Tata Consumer Products Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE192A01025",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TMCV",
+      "name": "Tata Motors Ltd.",
+      "industry": "Capital Goods",
+      "isin": "INE1TAE01010",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TMPV",
+      "name": "Tata Motors Passenger Vehicles Ltd.",
+      "industry": "Automobile and Auto Components",
+      "isin": "INE155A01022",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TATAPOWER",
+      "name": "Tata Power Co. Ltd.",
+      "industry": "Power",
+      "isin": "INE245A01021",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TATASTEEL",
+      "name": "Tata Steel Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE081A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TECHM",
+      "name": "Tech Mahindra Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE669C01036",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TITAN",
+      "name": "Titan Company Ltd.",
+      "industry": "Consumer Durables",
+      "isin": "INE280A01028",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TORNTPHARM",
+      "name": "Torrent Pharmaceuticals Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE685A01028",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "TRENT",
+      "name": "Trent Ltd.",
+      "industry": "Consumer Services",
+      "isin": "INE849A01020",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ULTRACEMCO",
+      "name": "UltraTech Cement Ltd.",
+      "industry": "Construction Materials",
+      "isin": "INE481G01011",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "UNIONBANK",
+      "name": "Union Bank of India",
+      "industry": "Financial Services",
+      "isin": "INE692A01016",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "UNITDSPR",
+      "name": "United Spirits Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE854D01024",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "VBL",
+      "name": "Varun Beverages Ltd.",
+      "industry": "Fast Moving Consumer Goods",
+      "isin": "INE200M01039",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "VEDL",
+      "name": "Vedanta Ltd.",
+      "industry": "Metals & Mining",
+      "isin": "INE205A01025",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "WIPRO",
+      "name": "Wipro Ltd.",
+      "industry": "Information Technology",
+      "isin": "INE075A01022",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    },
+    {
+      "index_code": "NIFTY100",
+      "symbol": "ZYDUSLIFE",
+      "name": "Zydus Lifesciences Ltd.",
+      "industry": "Healthcare",
+      "isin": "INE010B01027",
+      "series": "EQ",
+      "source_url": "https://www.niftyindices.com/IndexConstituent/ind_nifty100list.csv",
+      "last_verified_at": "2026-05-29T05:32:22.299589+00:00"
+    }
+  ]
+}

@@ -411,6 +411,44 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
         or isinstance(s, str) and s not in {"YFINANCE"}
     ]
 
+    def collect_filing_assets() -> Dict[str, Any]:
+        urls = []
+        seen = set()
+
+        def walk(node: Any) -> None:
+            if isinstance(node, dict):
+                meta = node.get("meta")
+                if isinstance(meta, dict):
+                    url = meta.get("source_url")
+                    if url and url not in seen:
+                        seen.add(url)
+                        urls.append(
+                            {
+                                "url": url,
+                                "source": node.get("source") or meta.get("source_name"),
+                                "period_type": meta.get("period_type"),
+                                "to_date": meta.get("to_date"),
+                                "ann_date": meta.get("ann_date"),
+                                "is_standalone": meta.get("is_standalone"),
+                                "desc": meta.get("desc"),
+                            }
+                        )
+                for child in node.values():
+                    walk(child)
+            elif isinstance(node, list):
+                for child in node:
+                    walk(child)
+
+        walk(provenance)
+        latest = next((item for item in urls if item.get("to_date") == "31-MAR-2026" and not item.get("is_standalone")), None)
+        latest = latest or next((item for item in urls if item.get("to_date") == "31-MAR-2026"), None)
+        latest = latest or (urls[0] if urls else None)
+        return {
+            "xbrl": latest.get("url") if latest else None,
+            "xbrl_files": urls,
+            "pdf": pdf_path,
+        }
+
     # ── RAG & LLM Insights (Phase B) ──────────────────────────────────────────
     ir_context = None
     llm_insights = None
@@ -475,6 +513,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             "accounting_schema":  raw_meta.get("accounting_schema"),
             "anomaly_flags":      raw_meta.get("anomaly_flags", []),
             "active_period_window": raw_meta.get("active_period_window", []),
+            "filing_assets":      collect_filing_assets(),
             "rag_context":       bool(ir_context),
         },
     }

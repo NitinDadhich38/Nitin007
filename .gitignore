@@ -20,6 +20,7 @@ node_modules/
 *.log
 *.db
 cache/
+exports/
 backend/stockdb.sqlite
 backend/.pytest_cache/
 backend/venv/

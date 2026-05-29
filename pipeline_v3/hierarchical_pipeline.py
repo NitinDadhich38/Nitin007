@@ -415,7 +415,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--symbol", help="NSE symbol (e.g., RELIANCE)")
     ap.add_argument("--all", action="store_true", help="Process all companies in universe")
-    ap.add_argument("--universe", default="pipeline_v3/config/nifty50_universe.json", help="Universe JSON")
+    ap.add_argument("--universe", default="pipeline_v3/config/nifty100_universe.json", help="Universe JSON")
     ap.add_argument("--mca-base-dir", default="storage/raw/mca_xbrl", help="Local MCA XBRL store")
     ap.add_argument("--pdf", action="append", default=[], help="Fallback PDF path (repeatable)")
     args = ap.parse_args()
@@ -450,4 +450,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

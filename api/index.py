@@ -24,6 +24,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
+from pipeline_v3.services.phase2_routes import register_phase2_routes
 
 logger = logging.getLogger("NiftyAPI")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -62,6 +63,8 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+register_phase2_routes(app)
 
 
 # ─── Cache helpers ────────────────────────────────────────────────────────────
