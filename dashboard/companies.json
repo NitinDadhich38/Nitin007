@@ -124,8 +124,8 @@
       "NIFTY50",
       "NIFTY100"
     ],
-    "coverage_status": "missing",
-    "filing_status": "AVAILABLE_RAW",
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
     "period_end": "2026-03-31",
     "path": "data/ASIANPAINT.json"
   },
@@ -227,8 +227,8 @@
       "NIFTY50",
       "NIFTY100"
     ],
-    "coverage_status": "missing",
-    "filing_status": "AVAILABLE_RAW",
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
     "period_end": "2026-03-31",
     "path": "data/BEL.json"
   },
@@ -689,8 +689,8 @@
       "NIFTY50",
       "NIFTY100"
     ],
-    "coverage_status": "missing",
-    "filing_status": "AVAILABLE_RAW",
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
     "period_end": "2026-03-31",
     "path": "data/INDIGO.json"
   },
@@ -1140,8 +1140,8 @@
     "indexes": [
       "NIFTY100"
     ],
-    "coverage_status": "missing",
-    "filing_status": "AVAILABLE_RAW",
+    "coverage_status": "parsed",
+    "filing_status": "PARSED",
     "period_end": "2026-03-31",
     "path": "data/SIEMENS.json"
   },

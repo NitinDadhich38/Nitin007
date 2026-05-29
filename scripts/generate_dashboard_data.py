@@ -57,6 +57,21 @@ CRORE         = 1_00_00_000
 MAX_SANE_CRORE = 20_00_000.0   # 20 Lakh Crores upper bound
 
 
+def _active_nifty100_symbols() -> Optional[set]:
+    index_file = Path("pipeline_v3/config/index_constituents.json")
+    if not index_file.exists():
+        return None
+    try:
+        payload = json.loads(index_file.read_text(encoding="utf-8"))
+        return {
+            str(row.get("symbol", "")).upper()
+            for row in payload.get("constituents", [])
+            if row.get("index_code") == "NIFTY100" and row.get("symbol")
+        }
+    except Exception:
+        return None
+
+
 # ─── Unit Normalizer ──────────────────────────────────────────────────────────
 class UnitNormalizer:
     def normalize_statement(self, statement: Dict) -> Dict:
@@ -101,9 +116,15 @@ class UnitNormalizer:
 
 # ─── Field Maps (raw → unified) ───────────────────────────────────────────────
 PL_MAP = {
+    "gross_revenue_from_operations":"gross_revenue_from_operations",
+    "sales_screener_basis":"sales_screener_basis",
+    "sales_adjustment":"sales_adjustment",
     "revenue_from_operations":"revenue", "Total Revenue":"revenue",
     "Operating Revenue":"revenue",       "total_income":"total_income",
     "other_income":"other_income",       "ebitda":"ebitda", "EBITDA":"ebitda",
+    "ebitda_like_profit_before_interest_depreciation_tax":"ebitda_like_profit_before_interest_depreciation_tax",
+    "operating_profit":"operating_profit",
+    "operating_profit_screener_basis":"operating_profit_screener_basis",
     "ebit":"ebit",   "EBIT":"ebit",      "Operating Income":"ebit",
     "interest":"interest",               "Interest Expense":"interest",
     "depreciation":"depreciation",       "Reconciled Depreciation":"depreciation",
@@ -111,7 +132,10 @@ PL_MAP = {
     "tax":"tax",     "Tax Provision":"tax",
     "share_of_associates_jv":"share_of_associates_jv",
     "profit_for_period":"profit_for_period",
+    "screener_net_profit":"screener_net_profit",
     "net_profit_attributable_to_owners":"net_profit_attributable_to_owners",
+    "pat_attributable_to_owners":"pat_attributable_to_owners",
+    "minority_interest_profit":"minority_interest_profit",
     "nci_profit":"nci_profit",
     "net_profit":"net_profit",           "Net Income":"net_profit",
     "eps":"eps",     "Basic EPS":"eps",  "Diluted EPS":"eps",
@@ -125,14 +149,33 @@ BS_MAP = {
     "Stockholders Equity":"total_equity",
     "long_term_borrowings":"long_term_debt","Long Term Debt":"long_term_debt",
     "short_term_borrowings":"short_term_debt","Current Debt":"short_term_debt",
+    "current_maturities_of_long_term_debt":"current_maturities_of_long_term_debt",
+    "lease_liabilities_current":"lease_liabilities_current",
+    "lease_liabilities_non_current":"lease_liabilities_non_current",
+    "debt_securities":"debt_securities",
+    "subordinated_liabilities":"subordinated_liabilities",
+    "deposits":"deposits",
+    "deposits_for_banks":"deposits_for_banks",
+    "borrowings":"borrowings",
+    "screener_borrowings":"screener_borrowings",
     "total_debt":"total_debt",              "Total Debt":"total_debt",
     "total_assets":"total_assets",          "Total Assets":"total_assets",
     "total_liabilities":"total_liabilities",
     "Total Liabilities Net Minority Interest":"total_liabilities",
     "cash_and_equivalents":"cash",          "Cash And Cash Equivalents":"cash",
     "investments":"investments",            "receivables":"receivables",
+    "current_investments":"current_investments",
+    "non_current_investments":"non_current_investments",
+    "investments_in_associates_jv":"investments_in_associates_jv",
+    "other_financial_asset_investments":"other_financial_asset_investments",
+    "screener_investments":"screener_investments",
     "Accounts Receivable":"receivables",    "inventory":"inventory",
     "Inventory":"inventory",                "ppe":"fixed_assets",
+    "capital_work_in_progress":"capital_work_in_progress",
+    "right_of_use_assets":"right_of_use_assets",
+    "intangible_assets":"intangible_assets",
+    "intangible_assets_under_development":"intangible_assets_under_development",
+    "screener_fixed_assets":"screener_fixed_assets",
     "Net PPE":"fixed_assets",
     "current_assets":"current_assets",      "Current Assets":"current_assets",
     "current_liabilities":"current_liabilities","Current Liabilities":"current_liabilities",
@@ -147,6 +190,8 @@ CF_MAP = {
     "cash_from_financing":"financing_cf",   "Financing Cash Flow":"financing_cf",
     "capital_expenditure":"capex",          "Capital Expenditure":"capex",
     "Capital Expenditure Reported":"capex",
+    "reported_net_cash_flow":"reported_net_cash_flow",
+    "computed_net_cash_flow":"computed_net_cash_flow",
     "free_cash_flow":"free_cash_flow",      "Free Cash Flow":"free_cash_flow",
     "net_cash_flow":"net_cash_flow",
 }
@@ -198,6 +243,88 @@ def _safe(d: Dict, *keys) -> Optional[float]:
     return None
 
 
+def _near_equal(a: Any, b: Any, tol_pct: float = 0.005) -> bool:
+    av = _safe({"v": a}, "v")
+    bv = _safe({"v": b}, "v")
+    if av is None or bv is None:
+        return False
+    return abs(av - bv) / max(abs(bv), 1.0) <= tol_pct
+
+
+def _fy_for_mar(label: str) -> Optional[str]:
+    if isinstance(label, str) and label.startswith("Mar "):
+        return f"FY{label[-4:]}"
+    return None
+
+
+def _remove_duplicate_annual_quarters(pl_q: Dict, pl_ann: Dict) -> List[str]:
+    removed = []
+    for label, qrow in list((pl_q or {}).items()):
+        fy = _fy_for_mar(label)
+        if not fy or fy not in (pl_ann or {}):
+            continue
+        arow = pl_ann.get(fy) or {}
+        qvals = [qrow.get("revenue_from_operations") or qrow.get("revenue"), qrow.get("profit_before_tax"), qrow.get("profit_for_period") or qrow.get("screener_net_profit") or qrow.get("net_profit")]
+        avals = [arow.get("revenue_from_operations") or arow.get("revenue"), arow.get("profit_before_tax"), arow.get("profit_for_period") or arow.get("screener_net_profit") or arow.get("net_profit")]
+        comparisons = [_near_equal(qv, av) for qv, av in zip(qvals, avals) if qv is not None and av is not None]
+        if comparisons and sum(1 for x in comparisons if x) >= max(1, len(comparisons) - 1):
+            pl_q.pop(label, None)
+            removed.append(label)
+    return removed
+
+
+def _normalization_validation(pl_q: Dict, pl_ann: Dict, bs_ann: Dict, cf_ann: Dict, accounting_schema: str = "") -> Dict[str, Any]:
+    flags: List[str] = []
+    warnings: List[str] = []
+    critical_errors: List[str] = []
+
+    for label, qrow in (pl_q or {}).items():
+        fy = _fy_for_mar(label)
+        if not fy or fy not in (pl_ann or {}):
+            continue
+        arow = pl_ann.get(fy) or {}
+        if _near_equal(qrow.get("revenue_from_operations") or qrow.get("revenue"), arow.get("revenue_from_operations") or arow.get("revenue")):
+            flags.append("PERIOD_DUPLICATE")
+            critical_errors.append(f"{label} duplicates {fy} annual revenue")
+
+    schema = (accounting_schema or "").lower()
+    is_bfsi = schema in {"banking", "nbfc", "insurance"}
+
+    for period, bs in (bs_ann or {}).items():
+        assets = _safe(bs, "total_assets")
+        borrowings = _safe(bs, "screener_borrowings", "total_debt")
+        short_term = _safe(bs, "short_term_borrowings", "short_term_debt")
+        long_term = _safe(bs, "long_term_borrowings", "long_term_debt")
+        if schema != "insurance" and assets and (borrowings is None or (short_term is not None and long_term is None and borrowings < assets * 0.08)):
+            flags.append("BORROWINGS_INCOMPLETE")
+            warnings.append(f"{period}: borrowings grouping may be incomplete")
+        fixed = _safe(bs, "screener_fixed_assets")
+        ppe = _safe(bs, "ppe", "fixed_assets")
+        if not is_bfsi and ppe is not None and fixed is not None and fixed <= ppe and any(_safe(bs, k) is None for k in ("capital_work_in_progress", "right_of_use_assets")):
+            warnings.append(f"{period}: fixed-assets grouping has limited components")
+
+    for period, cf in (cf_ann or {}).items():
+        cfo = _safe(cf, "cash_from_operations", "operating_cf")
+        cfi = _safe(cf, "cash_from_investing", "investing_cf")
+        cff = _safe(cf, "cash_from_financing", "financing_cf")
+        net = _safe(cf, "net_cash_flow")
+        if cfo is not None and cfi is not None and cff is not None and net is not None:
+            est = round(cfo + cfi + cff, 2)
+            if abs(net - est) > max(25.0, abs(est) * 0.05):
+                flags.append("CASH_FLOW_MISMATCH")
+                warnings.append(f"{period}: net cash flow differs from CFO+CFI+CFF")
+
+    flags = sorted(set(flags))
+    score = max(0.0, 1.0 - 0.12 * len(flags) - 0.25 * len(critical_errors))
+    return {
+        "export_safe": not critical_errors,
+        "flags": flags,
+        "warnings": warnings,
+        "critical_errors": critical_errors,
+        "score": round(score, 2),
+    }
+
+
 # ─── Derived Metrics ──────────────────────────────────────────────────────────
 def compute_derived_metrics(pl_ann: Dict, bs_ann: Dict, cf_ann: Dict) -> Dict:
     years = sorted(set(pl_ann) | set(bs_ann) | set(cf_ann), reverse=True)
@@ -208,13 +335,13 @@ def compute_derived_metrics(pl_ann: Dict, bs_ann: Dict, cf_ann: Dict) -> Dict:
         cf = cf_ann.get(year, {})
         dm: Dict[str, Any] = {}
 
-        rev      = _safe(pl, "revenue")
-        np_      = _safe(pl, "net_profit")
-        ebitda   = _safe(pl, "ebitda")
+        rev      = _safe(pl, "sales_screener_basis", "revenue", "revenue_from_operations")
+        np_      = _safe(pl, "screener_net_profit", "profit_for_period", "net_profit")
+        ebitda   = _safe(pl, "operating_profit", "operating_profit_screener_basis", "ebitda")
         ebit     = _safe(pl, "ebit")
         equity   = _safe(bs, "total_equity")
         assets   = _safe(bs, "total_assets")
-        debt     = _safe(bs, "total_debt")
+        debt     = _safe(bs, "screener_borrowings", "total_debt")
         cur_a    = _safe(bs, "current_assets")
         cur_l    = _safe(bs, "current_liabilities")
         cfo      = _safe(cf, "operating_cf")
@@ -310,6 +437,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     pl_q   = con_pl.get("quarterly", {})
     bs_ann = con_bs.get("annual", {})
     cf_ann = con_cf.get("annual", {})
+    removed_con_quarters = _remove_duplicate_annual_quarters(pl_q, pl_ann)
 
     # ── Consolidated financials structure (quarterly: P&L only) ──────────────
     # RULE: Balance Sheet and Cash Flow are NOT shown in quarterly view
@@ -334,6 +462,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     
     st_cf = process_bucket(raw_st_cf, CF_MAP)
     st_cf_ann = st_cf.get("annual", {})
+    removed_st_quarters = _remove_duplicate_annual_quarters(st_pl_q, st_pl_ann)
     
     has_standalone = bool(st_pl_q or st_pl_ann or st_bs_ann or st_cf_ann)
     standalone = None
@@ -357,6 +486,16 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     effective_pl_q = pl_q or st_pl_q
     effective_bs_ann = bs_ann or st_bs_ann
     effective_cf_ann = cf_ann or st_cf_ann
+    validation = _normalization_validation(
+        effective_pl_q,
+        effective_pl_ann,
+        effective_bs_ann,
+        effective_cf_ann,
+        raw_meta.get("accounting_schema") or "",
+    )
+    removed_quarters = removed_con_quarters + removed_st_quarters
+    if removed_quarters:
+        validation["warnings"].append("Removed annual-sized quarterly rows: " + ", ".join(sorted(set(removed_quarters))))
 
     derived_metrics = compute_derived_metrics(effective_pl_ann, effective_bs_ann, effective_cf_ann)
 
@@ -515,6 +654,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             "active_period_window": raw_meta.get("active_period_window", []),
             "filing_assets":      collect_filing_assets(),
             "rag_context":       bool(ir_context),
+            "validation":        validation,
         },
     }
 
@@ -523,6 +663,9 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
 def generate_dashboard():
     DASHBOARD_DIR.mkdir(exist_ok=True)
     DATA_OUT_DIR.mkdir(exist_ok=True)
+    for old_file in DATA_OUT_DIR.glob("*.json"):
+        old_file.unlink()
+    active_symbols = _active_nifty100_symbols()
 
     candidates: Dict[str, List] = {}
     logger.info(f"Scanning {BASE_DIR} for company_financials.json …")
@@ -540,6 +683,8 @@ def generate_dashboard():
             symbol = (ci.get("symbol") or ci.get("ticker") or "").upper()
             if not symbol:
                 symbol = path.parent.parent.name.upper()
+            if active_symbols and symbol not in active_symbols:
+                continue
             candidates.setdefault(symbol, []).append((score + boost, path, data))
         except Exception as e:
             logger.warning(f"Error reading {path}: {e}")

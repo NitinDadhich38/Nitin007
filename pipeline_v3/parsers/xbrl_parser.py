@@ -56,14 +56,15 @@ class XBRLContext:
                 if d.month == 12 and d.day >= 30:
                     return f"CY{d.year}"
         elif self.period_type == "instant":
-            # Balance sheets are point-in-time statements. For Indian fiscal-year reporters,
-            # March 31 instants should be labeled as FY even when the filing is "quarterly"
-            # (Q4 balance sheet is the year-end snapshot). For calendar-year reporters,
-            # December 31 instants map to CY.
-            if d.month == 3 and d.day >= 30:
-                return f"FY{d.year}"
-            if d.month == 12 and d.day >= 30:
-                return f"CY{d.year}"
+            # Balance sheets are point-in-time statements. A March/December instant is
+            # only a year-end snapshot when the same instance also contains a matching
+            # full-year duration context. Otherwise quarterly filings such as Dec 2025
+            # would be mislabelled as annual data.
+            if self.is_year_end:
+                if d.month == 3 and d.day >= 30:
+                    return f"FY{d.year}"
+                if d.month == 12 and d.day >= 30:
+                    return f"CY{d.year}"
 
         MONTH_MAP = {
             1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun",
@@ -346,6 +347,13 @@ class MCAXBRLInstanceParser:
         """
         if stmt not in out:
             return False
+        if stmt in {"pl", "cf"} and ctx.period_type == "duration":
+            duration = ctx.duration_days()
+            # Quarterly/integrated XBRLs often include YTD contexts ending in the
+            # same month as the true quarter. Those are not quarter rows and should
+            # not compete with current-quarter contexts.
+            if filing_period_type != "annual" and duration is not None and 121 <= duration < 300:
+                return False
         out.setdefault(stmt, {})
         out[stmt].setdefault(fy, {})
 

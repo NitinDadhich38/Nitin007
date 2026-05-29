@@ -192,6 +192,9 @@ MCA_LOCALNAME_MAP = {
             "ExciseDutyOnSalesOfGoods",
             "ExciseDutyExpense",
             "ExciseDutyOnDomesticSales",
+            "StatutoryDuties",
+            "GovernmentLevies",
+            "TaxesOnRevenue",
         ],
         "statutory_levies": [
             "StatutoryLevies",
@@ -230,14 +233,57 @@ MCA_LOCALNAME_MAP = {
         ],
         "long_term_borrowings": [
             "BorrowingsNonCurrent",
+            "BorrowingsNoncurrent",
             "NonCurrentBorrowings",
+            "NoncurrentBorrowings",
             "LongTermBorrowings",
             "NoncurrentBorrowings",
+            "LongTermDebt",
+            "NonCurrentLeaseLiabilities",
         ],
         "short_term_borrowings": [
             "BorrowingsCurrent",
             "CurrentBorrowings",
             "ShortTermBorrowings",
+            "ShortTermDebt",
+        ],
+        "current_maturities_of_long_term_debt": [
+            "CurrentMaturitiesOfLongTermBorrowings",
+            "CurrentMaturitiesOfLongTermDebt",
+            "CurrentMaturitiesOfFinanceLeaseObligations",
+            "CurrentMaturitiesOfLeaseLiabilities",
+        ],
+        "lease_liabilities_current": [
+            "LeaseLiabilitiesCurrent",
+            "CurrentLeaseLiabilities",
+        ],
+        "lease_liabilities_non_current": [
+            "LeaseLiabilitiesNonCurrent",
+            "NonCurrentLeaseLiabilities",
+        ],
+        "debt_securities": [
+            "DebtSecurities",
+            "DebtSecuritiesIssued",
+            "DebtSecuritiesBorrowings",
+        ],
+        "subordinated_liabilities": [
+            "SubordinatedLiabilities",
+            "SubordinatedDebt",
+        ],
+        "deposits": [
+            "Deposits",
+            "DepositsFromCustomers",
+            "CustomerDeposits",
+        ],
+        "deposits_for_banks": [
+            "Deposits",
+            "DepositsFromCustomers",
+            "CustomerDeposits",
+        ],
+        "borrowings": [
+            "Borrowings",
+            "TotalBorrowings",
+            "TotalDebt",
         ],
         "total_debt": [
             "Borrowings",
@@ -266,9 +312,25 @@ MCA_LOCALNAME_MAP = {
         "investments": [
             "Investments",
             "FinancialAssets",
-            "InvestmentsNoncurrent",
+        ],
+        "current_investments": [
             "CurrentInvestments",
+            "InvestmentsCurrent",
+        ],
+        "non_current_investments": [
+            "InvestmentsNoncurrent",
             "NoncurrentInvestments",
+            "NonCurrentInvestments",
+        ],
+        "investments_in_associates_jv": [
+            "InvestmentsInAssociates",
+            "InvestmentsInJointVentures",
+            "InvestmentsAccountedForUsingEquityMethod",
+            "InvestmentsInAssociatesAndJointVentures",
+        ],
+        "other_financial_asset_investments": [
+            "OtherFinancialAssetsInvestments",
+            "OtherInvestments",
             "InvestmentsShareholdersFund",
             "InvestmentsPolicyholdersFundExcludingLinkedAssets",
             "InvestmentsShareholders",
@@ -288,11 +350,25 @@ MCA_LOCALNAME_MAP = {
             "TangibleAssets",
             "FixedAssets",
         ],
+        "capital_work_in_progress": [
+            "CapitalWorkInProgress",
+            "CapitalWorkInProgressPropertyPlantAndEquipment",
+            "CapitalWorkInProgressAndIntangibleAssetsUnderDevelopment",
+        ],
+        "right_of_use_assets": [
+            "RightOfUseAssets",
+            "RightOfUseAsset",
+            "RightOfUseAssetsNet",
+        ],
         "intangible_assets": [
             "IntangibleAssets",
             "IntangibleAssetsOtherThanGoodwill",
             "GoodwillOnConsolidation",
             "Goodwill",
+        ],
+        "intangible_assets_under_development": [
+            "IntangibleAssetsUnderDevelopment",
+            "IntangibleAssetsUnderDevelopmentNet",
         ],
         "current_assets": [
             "CurrentAssets",

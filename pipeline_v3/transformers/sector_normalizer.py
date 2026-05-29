@@ -8,9 +8,9 @@ from .financial_mapper import CompanyFinancials, ProfitLoss
 logger = logging.getLogger(__name__)
 
 
-BANK_SYMBOLS = {"HDFCBANK", "ICICIBANK", "SBIN", "AXISBANK", "KOTAKBANK", "INDUSINDBK"}
-NBFC_SYMBOLS = {"BAJFINANCE", "BAJAJFINSV"}
-INSURANCE_SYMBOLS = {"HDFCLIFE", "SBILIFE"}
+BANK_SYMBOLS = {"HDFCBANK", "ICICIBANK", "SBIN", "AXISBANK", "KOTAKBANK", "INDUSINDBK", "BANKBARODA", "CANBK", "PNB", "UNIONBANK", "IDFCFIRSTB"}
+NBFC_SYMBOLS = {"BAJFINANCE", "BAJAJFINSV", "CHOLAFIN", "JIOFIN", "MUTHOOTFIN", "PFC", "RECLTD", "SHRIRAMFIN", "IRFC", "TATACAP"}
+INSURANCE_SYMBOLS = {"HDFCLIFE", "SBILIFE", "ICICIGI"}
 UTILITY_SYMBOLS = {"NTPC", "POWERGRID"}
 OIL_GAS_SYMBOLS = {"RELIANCE", "ONGC", "BPCL"}
 CONGLOMERATE_SYMBOLS = {"RELIANCE", "GRASIM", "LT", "ADANIENT", "ADANIPORTS", "M&M", "TATAMOTORS"}
@@ -58,6 +58,14 @@ def _apply_owner_pat(pl: ProfitLoss) -> None:
         pl.net_profit = pl.net_profit_attributable_to_owners
     elif pl.net_profit is None and pl.profit_for_period is not None:
         pl.net_profit = pl.profit_for_period
+    if pl.profit_for_period is not None:
+        pl.screener_net_profit = pl.profit_for_period
+    elif pl.net_profit is not None:
+        pl.screener_net_profit = pl.net_profit
+    if pl.net_profit_attributable_to_owners is not None:
+        pl.pat_attributable_to_owners = pl.net_profit_attributable_to_owners
+    if pl.nci_profit is not None:
+        pl.minority_interest_profit = pl.nci_profit
 
 
 def _repair_absurd_nci(pl: ProfitLoss, *, symbol: str, period_name: str, label: str) -> None:
@@ -150,7 +158,10 @@ def _reconcile_pat_fields(pl: ProfitLoss, *, symbol: str, period_name: str, labe
             share = float(pl.share_of_associates_jv or 0.0)
             implied_pbt = round(float(pl.profit_for_period) + float(pl.tax) - share, 2)
             pbt = float(pl.profit_before_tax)
+            revenue_basis = float(pl.total_income or pl.revenue_from_operations or 0.0)
         except Exception:
+            return
+        if revenue_basis > 0 and abs(implied_pbt) > revenue_basis * 2.0:
             return
         if abs(implied_pbt - pbt) > max(100.0, abs(implied_pbt) * 0.05):
             logger.info(
@@ -177,6 +188,9 @@ def _repair_pbt_tieout(pl: ProfitLoss, *, symbol: str, period_name: str, label: 
         return
 
     implied_pbt = round(total_pat + tax - share, 2)
+    revenue_basis = float(pl.total_income or pl.revenue_from_operations or 0.0)
+    if revenue_basis > 0 and abs(implied_pbt) > revenue_basis * 2.0:
+        return
     delta = abs(pbt - implied_pbt)
     tolerance = max(1000.0, abs(implied_pbt) * 0.50)
     if delta <= tolerance:
@@ -194,6 +208,28 @@ def _repair_pbt_tieout(pl: ProfitLoss, *, symbol: str, period_name: str, label: 
             implied_pbt,
         )
         pl.profit_before_tax = implied_pbt
+
+
+def _drop_absurd_tax(pl: ProfitLoss, *, symbol: str, period_name: str, label: str) -> None:
+    if pl.tax is None:
+        return
+    try:
+        tax = abs(float(pl.tax))
+        revenue_basis = abs(float(pl.total_income or pl.revenue_from_operations or 0.0))
+        pbt = abs(float(pl.profit_before_tax or 0.0))
+    except Exception:
+        return
+    basis = max(revenue_basis, pbt, abs(float(pl.profit_for_period or 0.0)), 1.0)
+    if tax > max(10_000.0, basis * 2.0):
+        logger.info(
+            "[SECTOR-NORMALIZER] %s %s %s: dropping impossible tax %.2f (basis %.2f)",
+            symbol,
+            period_name,
+            label,
+            float(pl.tax),
+            basis,
+        )
+        pl.tax = None
 
 
 def _blank_non_applicable_metrics(pl: ProfitLoss, accounting_schema: str) -> None:
@@ -215,6 +251,7 @@ def normalize_by_sector(fin: CompanyFinancials, *, symbol: str, sector: str = ""
             if not isinstance(pl, ProfitLoss):
                 continue
             _repair_absurd_nci(pl, symbol=symbol, period_name=period_name, label=label)
+            _drop_absurd_tax(pl, symbol=symbol, period_name=period_name, label=label)
             _apply_owner_pat(pl)
             _reconcile_pat_fields(pl, symbol=symbol, period_name=period_name, label=label, accounting_schema=accounting_schema)
             if accounting_schema not in {"banking", "nbfc", "insurance"}:

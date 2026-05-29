@@ -93,6 +93,8 @@ class PipelineV2:
             made = 0
             if not isinstance(q_bucket, dict) or not isinstance(a_bucket, dict):
                 return 0
+            if a_bucket:
+                return 0
             # Group quarters by FY
             by_fy: Dict[str, Dict[str, Any]] = {}
             for label, pl in q_bucket.items():
@@ -112,6 +114,21 @@ class PipelineV2:
                 yr = int(fy[2:])
                 need = [f"Jun {yr-1}", f"Sep {yr-1}", f"Dec {yr-1}", f"Mar {yr}"]
                 if not all(k in qmap for k in need):
+                    continue
+                try:
+                    prev_revs = []
+                    for q in need[:3]:
+                        qd = asdict(qmap[q]) if hasattr(qmap[q], "__dataclass_fields__") else (qmap[q] or {})
+                        rv = qd.get("revenue_from_operations") or qd.get("total_income")
+                        if rv is not None:
+                            prev_revs.append(float(rv))
+                    q4d = asdict(qmap[need[3]]) if hasattr(qmap[need[3]], "__dataclass_fields__") else (qmap[need[3]] or {})
+                    q4_rev = q4d.get("revenue_from_operations") or q4d.get("total_income")
+                    if q4_rev is not None and prev_revs:
+                        median_prev = sorted(prev_revs)[len(prev_revs) // 2]
+                        if median_prev > 0 and float(q4_rev) > 2.2 * median_prev:
+                            continue
+                except Exception:
                     continue
 
                 # Sum flow fields. EPS is not additive; keep None.
@@ -219,10 +236,10 @@ class PipelineV2:
                             if isinstance(fy, str) and (fy.startswith("FY") or fy.startswith("CY")):
                                 period_type = "annual"
                             elif raw_period_type == "annual" and stmt_type == "pl":
-                                # Integrated audited March filings contain both full-year
-                                # (FY2026) and Q4-only (Mar 2026) P&L contexts. Keep the
-                                # month label as quarterly instead of collapsing it into FY.
-                                period_type = "quarterly"
+                                # Annual filings frequently expose full-year values with
+                                # month labels. Do not create quarterly rows from annual
+                                # filings; Q4 should come from the quarterly/API source.
+                                continue
                             elif raw_period_type == "annual":
                                 # Skip non-FY balance-sheet/cash-flow fragments from annual
                                 # filings. They are usually context artefacts, not a complete
@@ -316,14 +333,17 @@ class PipelineV2:
         else:
             logger.info(f"  ✅ SMART-TRIGGER: Core metrics present. PDF SKIPPED.")
 
-        # BFSI fallback: derive annual P&L from quarterly when annual series is missing.
-        # Must run before analytics so ratios/growth include derived annuals.
-        derived_periods = self._synthesize_annual_from_quarterly(fin)
+        accounting_schema = resolve_accounting_schema(symbol, company.sector or "", company.industry or "")
+
+        # BFSI fallback: derive annual P&L from quarterly only when no annual series
+        # exists. Industrial companies must use official annual filings.
+        derived_periods = 0
+        if accounting_schema in {"banking", "nbfc", "insurance"}:
+            derived_periods = self._synthesize_annual_from_quarterly(fin)
         if derived_periods > 0:
             data_sources.append({"type": "DERIVED_QUARTER_SUM", "periods": derived_periods})
             logger.info(f"  ✅ Derived annual P&L from quarterly: {derived_periods} FY period(s)")
 
-        accounting_schema = resolve_accounting_schema(symbol, company.sector or "", company.industry or "")
         normalize_by_sector(fin, symbol=symbol, sector=company.sector or "", industry=company.industry or "")
 
         # ══════════════════════════════════════════════════════════════

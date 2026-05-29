@@ -20,7 +20,10 @@ MIN_POINTS = 2   # minimum data points to include a metric in graph_data
 GRAPH_METRICS = {
     # key in unified schema → display label
     "revenue":           "Revenue",
+    "sales_screener_basis": "Sales",
     "net_profit":        "Net Profit",
+    "screener_net_profit": "Net Profit",
+    "operating_profit":  "Operating Profit",
     "ebitda":            "EBITDA",
     "eps":               "EPS (₹)",
     "profit_before_tax": "Profit Before Tax",
@@ -28,9 +31,12 @@ GRAPH_METRICS = {
 }
 
 BS_GRAPH_METRICS = {
+    "screener_borrowings": "Borrowings",
     "total_debt":   "Total Debt",
     "total_equity": "Total Equity",
     "total_assets": "Total Assets",
+    "screener_fixed_assets": "Fixed Assets",
+    "screener_investments": "Investments",
 }
 
 CF_GRAPH_METRICS = {

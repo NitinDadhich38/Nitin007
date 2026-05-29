@@ -106,9 +106,7 @@ class SchemaNormalizer:
             # NSE API may have excise duty in re_excise_duty or similar fields
             excise_val = self._safe_float(item.get("re_excise_duty") or item.get("re_duties_and_taxes"))
             if excise_val is not None and excise_val > 0 and pl.revenue_from_operations is not None:
-                # excise_val is already scaled (Lakhs -> Crores happened above)
-                pl.excise_duty = excise_val
-                pl.revenue_from_operations = round(pl.revenue_from_operations - excise_val, 2)
+                pl.excise_duty = round(excise_val / 100.0, 2)
                 logger.info(f"[ACCT-NSE] Excise duty subtracted from revenue: {excise_val}")
 
             # FIX #3: NCI — Use net_profit from consolidated which NSE API
@@ -266,11 +264,8 @@ class SchemaNormalizer:
         
         Also applies FIX #1 (Excise Duty) and FIX #3 (NCI) accounting corrections.
         """
-        # FIX #1: If excise_duty exists and revenue hasn't been adjusted yet
-        if getattr(pl, 'excise_duty', None) and pl.excise_duty > 0 and pl.revenue_from_operations is not None:
-            # Check if revenue looks like it still includes excise (gross)
-            # We only subtract if it hasn't been subtracted yet (idempotency guard)
-            pass  # Already handled at extraction time in normalize_nse_pnl and xbrl_parser
+        if pl.revenue_from_operations is not None and pl.gross_revenue_from_operations is None:
+            pl.gross_revenue_from_operations = pl.revenue_from_operations
 
         # Keep total consolidated PAT and owner-attributable PAT separate.
         # Legacy `net_profit` remains the UI-facing owner PAT when available.
@@ -292,13 +287,23 @@ class SchemaNormalizer:
             pl.net_profit = pl.net_profit_attributable_to_owners
         elif pl.net_profit is None and pl.profit_for_period is not None:
             pl.net_profit = pl.profit_for_period
+        if pl.profit_for_period is not None:
+            pl.screener_net_profit = pl.profit_for_period
+        elif pl.screener_net_profit is None and pl.net_profit is not None:
+            pl.screener_net_profit = pl.net_profit
+        if pl.net_profit_attributable_to_owners is not None:
+            pl.pat_attributable_to_owners = pl.net_profit_attributable_to_owners
+        if pl.nci_profit is not None:
+            pl.minority_interest_profit = pl.nci_profit
 
-        # FIX #1b: Statutory Levy Subtraction (ONGC, Oil & Gas PSUs)
-        # Subtract government mandated royalties/cess from gross revenue
-        stat_levy = getattr(pl, 'statutory_levies', None)
-        if stat_levy is not None and stat_levy > 0 and pl.revenue_from_operations is not None:
-            pl.revenue_from_operations = round(pl.revenue_from_operations - stat_levy, 2)
-            logger.info(f"[ACCT] Statutory levies {stat_levy} subtracted from revenue")
+        adjustment = 0.0
+        if pl.excise_duty is not None:
+            adjustment += float(pl.excise_duty)
+        if pl.statutory_levies is not None:
+            adjustment += float(pl.statutory_levies)
+        if pl.gross_revenue_from_operations is not None:
+            pl.sales_adjustment = round(adjustment, 2)
+            pl.sales_screener_basis = round(float(pl.gross_revenue_from_operations) - adjustment, 2)
             
         # Reconstruction fallback for missing total PAT only. Do not overwrite
         # explicit owner PAT with total PAT.
@@ -340,9 +345,17 @@ class SchemaNormalizer:
                 # However, many financial systems use Operating Profit as EBITDA or EBIT.
                 # To be accurate and avoid the "they are the same" error:
                 pl.ebitda = None
+        if pl.ebitda is not None:
+            pl.ebitda_like_profit_before_interest_depreciation_tax = pl.ebitda
+            if pl.other_income is not None:
+                pl.operating_profit = round(float(pl.ebitda) - float(pl.other_income), 2)
+                pl.operating_profit_screener_basis = pl.operating_profit
+        elif pl.total_income is not None and pl.operating_expenses is not None:
+            pl.operating_profit = round(float(pl.total_income) - float(pl.operating_expenses) - float(pl.other_income or 0), 2)
+            pl.operating_profit_screener_basis = pl.operating_profit
         
         # Absolute Cap Sanity Check
-        for field in ["revenue_from_operations", "total_income", "ebitda", "net_profit"]:
+        for field in ["revenue_from_operations", "total_income", "ebitda", "net_profit", "screener_net_profit"]:
             val = getattr(pl, field)
             if val is not None and val > self.MAX_CRORE_VALUE:
                  logger.warning(f"Absurd value detected in {field}: {val}. Possible unit error.")
@@ -353,14 +366,70 @@ class SchemaNormalizer:
             # Total Equity = Equity Share Capital + Other Equity + Non-Controlling Interest
             bs.total_equity = round((bs.equity_share_capital or 0) + (bs.reserves or 0) + (bs.non_controlling_interest or 0), 2)
         
-        if bs.long_term_borrowings is not None or bs.short_term_borrowings is not None:
-            bs.total_debt = round((bs.long_term_borrowings or 0) + (bs.short_term_borrowings or 0), 2)
+        borrowing_parts = [
+            bs.long_term_borrowings,
+            bs.short_term_borrowings,
+            bs.current_maturities_of_long_term_debt,
+            bs.lease_liabilities_current,
+            bs.lease_liabilities_non_current,
+            bs.debt_securities,
+            bs.subordinated_liabilities,
+        ]
+        if any(v is not None for v in borrowing_parts):
+            bs.screener_borrowings = round(sum(float(v or 0) for v in borrowing_parts), 2)
+            bs.total_debt = bs.screener_borrowings
+        elif bs.borrowings is not None:
+            bs.screener_borrowings = bs.borrowings
+            bs.total_debt = bs.borrowings
+        elif bs.total_debt is not None:
+            bs.screener_borrowings = bs.total_debt
+        if bs.deposits is not None and bs.deposits_for_banks is None:
+            bs.deposits_for_banks = bs.deposits
+
+        fixed_parts = [
+            bs.ppe,
+            bs.capital_work_in_progress,
+            bs.right_of_use_assets,
+            bs.intangible_assets,
+            bs.intangible_assets_under_development,
+        ]
+        if any(v is not None for v in fixed_parts):
+            bs.screener_fixed_assets = round(sum(float(v or 0) for v in fixed_parts), 2)
+
+        investment_parts = [
+            bs.current_investments,
+            bs.non_current_investments,
+            bs.investments_in_associates_jv,
+            bs.other_financial_asset_investments,
+        ]
+        if any(v is not None for v in investment_parts):
+            bs.screener_investments = round(sum(float(v or 0) for v in investment_parts), 2)
+        elif bs.investments is not None:
+            bs.screener_investments = bs.investments
             
         if bs.current_assets is not None and bs.current_liabilities is not None:
             bs.working_capital = round((bs.current_assets or 0) - (bs.current_liabilities or 0), 2)
 
     def _apply_cf_math(self, cf: CashFlow):
         """Computes Free Cash Flow."""
+        if cf.cash_from_operations is not None and cf.cash_from_investing is not None and cf.cash_from_financing is not None:
+            computed = round(
+                float(cf.cash_from_operations or 0) +
+                float(cf.cash_from_investing or 0) +
+                float(cf.cash_from_financing or 0),
+                2,
+            )
+            cf.computed_net_cash_flow = computed
+            if cf.net_cash_flow is None:
+                cf.net_cash_flow = computed
+            else:
+                try:
+                    reported = float(cf.net_cash_flow)
+                    if abs(reported - computed) > max(25.0, abs(computed) * 0.05):
+                        cf.reported_net_cash_flow = reported
+                        cf.net_cash_flow = computed
+                except Exception:
+                    pass
         if cf.cash_from_operations is not None and cf.capital_expenditure is not None:
             cf.free_cash_flow = round(float(cf.cash_from_operations) - abs(float(cf.capital_expenditure)), 2)
 

@@ -40,6 +40,10 @@ def main() -> None:
         }
 
     companies = sorted(by_symbol.values(), key=lambda c: c["symbol"])
+    active_symbols = set(by_symbol)
+    for stale in DASHBOARD_DATA_DIR.glob("*.json"):
+        if stale.stem.upper() not in active_symbols:
+            stale.unlink()
     DASHBOARD_DIR.mkdir(parents=True, exist_ok=True)
     (DASHBOARD_DIR / "companies.json").write_text(json.dumps(companies, ensure_ascii=False, indent=2), encoding="utf-8")
     (DASHBOARD_DIR / "indices.json").write_text(json.dumps(load_indices(), ensure_ascii=False, indent=2), encoding="utf-8")
